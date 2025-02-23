@@ -1,25 +1,30 @@
-import os
-from openai import OpenAI
 import dashscope
 import replicate
+import os
+
 from http import HTTPStatus
-from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+from openai import OpenAI
 
 class DEEPSEEKR1:
     
     def __init__(self) -> None:
-        self.tokenizer = AutoTokenizer.from_pretrained("deepseek-ai/DeepSeek-R1", trust_remote_code=True)
-        self.model = AutoModelForCausalLM.from_pretrained("deepseek-ai/DeepSeek-R1", trust_remote_code=True)
-        self.generator = pipeline("text-generation", model=self.model, tokenizer=self.tokenizer)
+        self.client = OpenAI(
+            base_url="https://openrouter.ai/api/v1",
+            api_key="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",
+        )
 
     def response(self, mes):
-        response = self.generator(mes)
-        return response[0]['generated_responses'][0]['response']
+        response = self.client.chat.completions.create(
+            extra_body={},
+            model="deepseek/deepseek-r1:free",
+            messages=mes)
+
+        return response.choices[0].message.content
 
 class GPT35API:
 
     def __init__(self) -> None:
-        client = OpenAI(api_key="YOUR KEY")
+        self.client = OpenAI(api_key="YOUR KEY")
 
     def response(self, mes):
         response = self.client.chat.completions.create(model='gpt-3.5-turbo',
@@ -32,7 +37,7 @@ class GPT35API:
 class GPT4API:
 
     def __init__(self) -> None:
-        client = OpenAI(api_key="YOUR KEY")
+        self.client = OpenAI(api_key="YOUR KEY")
 
     def response(self, mes):
         response = self.client.chat.completions.create(model='gpt-4',

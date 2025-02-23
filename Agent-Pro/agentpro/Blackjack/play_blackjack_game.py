@@ -1,13 +1,15 @@
 import json
 import random
 import rlcard
-from rlcard.agents import RandomAgent
-from rlcard.utils import get_device
-from agentpro.Blackjack.LLMAPIs import GPT35API
-from agentpro.Blackjack.LLMAPIs import GPT4API
-from agentpro.Blackjack.LLMAPIs import llama2_70b_chatAPI
-from agentpro.Blackjack.LLMAPIs import QwenAPI
 import rlcard.envs
+
+from LLMAPIs import GPT35API
+from LLMAPIs import GPT4API
+from LLMAPIs import llama2_70b_chatAPI
+from LLMAPIs import QwenAPI
+from LLMAPIs import DEEPSEEKR1
+from rlcard.agents import RandomAgent
+
 
 
 class Round:
@@ -37,10 +39,7 @@ def play(game_num, model, game_style, storage_name):
             p = []
             begin_info = "You are a player in blackjack. Please beat the dealer and win the game.\n"
             game_rule = "Game Rule:\n1. Please try to get your card total to as close to 21 as possible, without going over, and still having a higher total than the dealer.\n2. If anyone's point total exceeds 21, he or she loses the game. \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"}. If you choose to Stand, you will stop taking cards and wait for the dealer to finish. If you choose to Hit, you can continue to take a card, but there is also the risk of losing the game over 21 points. \n4. After all players have completed their hands, the dealer reveals their hidden card. Dealers must hit until their cards total 17 or higher.\n"
-            game_info = "The dealer's current card is {" + card2string(
-                deal_card
-            ) + "}. The dealer has another hidden card. You don't know what it is. Your current cards are {" + card2string(
-                hand_card) + "}. "
+            game_info = "The dealer's current card is {" + card2string(deal_card) + "}. The dealer has another hidden card. You don't know what it is. Your current cards are {" + card2string(hand_card) + "}. "
 
             if game_style == 'Vanilla':
                 p.append({"role": "system", "content": begin_info + game_rule})
@@ -92,6 +91,8 @@ def play(game_num, model, game_style, storage_name):
             return llama2_70b_chatAPI()
         if model == "Qwen":
             return QwenAPI()
+        if model == "deepseek":
+            return DEEPSEEKR1()
 
     def extract_choice(text):
         text = to_lower(text)
@@ -118,13 +119,13 @@ def play(game_num, model, game_style, storage_name):
         str = str.replace('T', '10')
         return str
 
-    device = get_device()
     num_players = 1
-    env = rlcard.make('blackjack',
-                      config={
-                          'game_num_players': num_players,
-                          "seed": random.randint(0, 10**10)
-                      })
+    env = rlcard.make(
+        'blackjack',
+        config={
+            'game_num_players': num_players,
+            "seed": random.randint(0, 10**10)
+        })
 
     llm_agent = LlmAgent(num_actions=env.num_actions)
 
@@ -162,5 +163,5 @@ def play(game_num, model, game_style, storage_name):
 
     num_matches = game_num
 
-    for i in range(num_matches):
+    for _ in range(num_matches):
         play_game(env)
