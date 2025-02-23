@@ -1,5 +1,9 @@
-def decode_actions(action):
-    if action == "Hit":
-        return 0
-    elif action == "Stand":
-        return 1
+def card2string(cardList):
+        str = ''
+        str = ','.join(cardList)
+        str = str.replace('C', 'Club ')
+        str = str.replace('S', 'Spade ')
+        str = str.replace('H', 'Heart ')
+        str = str.replace('D', 'Diamond ')
+        str = str.replace('T', '10')
+        return str
