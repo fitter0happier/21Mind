@@ -19,7 +19,7 @@ class DEEPSEEKR1:
 class GPT35API:
 
     def __init__(self) -> None:
-        client = OpenAI(api_key="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")
+        client = OpenAI(api_key="YOUR KEY")
 
     def response(self, mes):
         response = self.client.chat.completions.create(model='gpt-3.5-turbo',
@@ -32,7 +32,7 @@ class GPT35API:
 class GPT4API:
 
     def __init__(self) -> None:
-        client = OpenAI(api_key="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")
+        client = OpenAI(api_key="YOUR KEY")
 
     def response(self, mes):
         response = self.client.chat.completions.create(model='gpt-4',
