@@ -10,7 +10,7 @@ class DEEPSEEKR1:
     def __init__(self) -> None:
         self.client = OpenAI(
             base_url="https://openrouter.ai/api/v1",
-            api_key="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",
+            api_key="PLACEHOLDER",
         )
 
     def response(self, mes):
