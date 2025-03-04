@@ -1,8 +1,9 @@
-name = "agentpro"
-__version__ = "1.0.1"
+from play_blackjack_game import play
 
-from agentpro.LimitTexasHoldem.agent_env import AgentEnv
-from agentpro.LimitTexasHoldem.LimittexasholdemAgent import LimitTexasHoldemAgent
-from agentpro.LimitTexasHoldem.information_extraction import InfExtra
-from agentpro.LimitTexasHoldem.play import Play, reproduce
-from agentpro.Blackjack.play_blackjack_game import play
+if __name__ == "__main__":
+    number_of_game = 1
+    model = 'deepseek'
+    game_style = 'agentpro'
+    storage_name = "/Users/fitter0happier/Desktop/Coding/NLP/21Mind/Agent-Pro/my_data/deepseek/agentpro"
+
+    play(number_of_game,model,game_style,storage_name)

@@ -1,6 +1,7 @@
 import dashscope
 import replicate
 import os
+import yaml
 
 from http import HTTPStatus
 from openai import OpenAI
@@ -8,14 +9,18 @@ from openai import OpenAI
 class DEEPSEEKR1:
     
     def __init__(self) -> None:
+
+        with open("/Users/fitter0happier/Desktop/Coding/NLP/21Mind/config.yaml", "r") as file:
+            config = yaml.safe_load(file)
+            api_key = config["Keys"]["DEEPSEEKR1"]
+
         self.client = OpenAI(
             base_url="https://openrouter.ai/api/v1",
-            api_key="PLACEHOLDER",
+            api_key=api_key,
         )
 
     def response(self, mes):
         response = self.client.chat.completions.create(
-            extra_body={},
             model="deepseek/deepseek-r1:free",
             messages=mes)
 

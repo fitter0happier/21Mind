@@ -10,8 +10,6 @@ from LLMAPIs import QwenAPI
 from LLMAPIs import DEEPSEEKR1
 from rlcard.agents import RandomAgent
 
-
-
 class Round:
     round = 0
     num_hit = 0
@@ -42,20 +40,20 @@ def play(game_num, model, game_style, storage_name):
             game_info = "The dealer's current card is {" + card2string(deal_card) + "}. The dealer has another hidden card. You don't know what it is. Your current cards are {" + card2string(hand_card) + "}. "
 
             if game_style == 'Vanilla':
-                p.append({"role": "system", "content": begin_info + game_rule})
+                p.append({"role": "developer", "content": begin_info + game_rule})
                 game_info += "Please output your action in following format: ###My action is {your action}, without any other text."
                 p.append({"role": "user", "content": game_info})
             if game_style == 'Radical':
                 begin_info = "You are an aggressive player of blackjack who likes to take risks to earn high returns. Please beat the dealer and win the game."
-                p.append({"role": "system", "content": begin_info + game_rule})
+                p.append({"role": "developer", "content": begin_info + game_rule})
                 game_info += "Please output your action in following format: ###My action is {your action}, without any other text."
                 p.append({"role": "user", "content": game_info})
             if game_style == 'ReAct':
-                p.append({"role": "system", "content": begin_info + game_rule})
+                p.append({"role": "developer", "content": begin_info + game_rule})
                 game_info += "Please first think and reason about the current hand and then generate your action as follows: ###My thought is {Your Thought}. My action is {your action}."
                 p.append({"role": "user", "content": game_info})
             if game_style == 'ReFlexion':
-                p.append({"role": "system", "content": begin_info + game_rule})
+                p.append({"role": "developer", "content": begin_info + game_rule})
                 game_info += "Please first think and reason about the current hand and then generate your action as follows: ###My thought is {Your Thought}. My action is {your action}."
                 p.append({"role": "user", "content": game_info})
                 llm_res = llm.response(p)
@@ -64,7 +62,7 @@ def play(game_num, model, game_style, storage_name):
                 p.append({"role": "user", "content": reflexion_info})
             if game_style == 'agentpro':
                 begin_info = "You are an aggressive player of blackjack who likes to take risks to earn high returns. Please beat the dealer and win the game."
-                p.append({"role": "system", "content": begin_info + game_rule})
+                p.append({"role": "developer", "content": begin_info + game_rule})
                 game_info += "Please read the behavoiral guideline and world modeling carefully . Then you should analyze your own cards and your strategies in Self-belief and then analyze the dealer cards in World-belief. Lastly, please select your action from {\"Stand\",\"Hit\"}.### Output Format: Self-Belief is {Belief about youself}. World-Belief is {Belief about the dealer}. My action is {Your action}. Please output in the given format."
                 p.append({"role": "user", "content": game_info})
             llm_res = llm.response(p)
