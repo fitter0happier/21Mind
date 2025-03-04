@@ -12,7 +12,7 @@ class DEEPSEEKR1:
 
         with open("/Users/fitter0happier/Desktop/Coding/NLP/21Mind/config.yaml", "r") as file:
             config = yaml.safe_load(file)
-            api_key = config["Keys"]["DEEPSEEKR1"]
+            api_key = config["Keys"]["DEEPSEEKR1PAID"]
 
         self.client = OpenAI(
             base_url="https://openrouter.ai/api/v1",
