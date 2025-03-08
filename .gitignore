@@ -182,3 +182,4 @@ cython_debug/
 *.vsix
 
 config.yaml
+my_data/
