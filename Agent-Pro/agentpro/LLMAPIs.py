@@ -10,7 +10,7 @@ class DEEPSEEKR1:
     
     def __init__(self) -> None:
 
-        with open("/Users/fitter0happier/Desktop/Coding/NLP/21Mind/config.yaml", "r") as file:
+        with open("", "r") as file:
             config = yaml.safe_load(file)
             api_key = config["Keys"]["DEEPSEEKR1PAID"]
 
