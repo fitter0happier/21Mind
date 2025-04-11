@@ -1,0 +1,540 @@
+- content: "Game Rule:\n1. Please try to get your card total to as close to 31 as\
+    \ possible, without going over, and still having a higher total than the dealer.\n\
+    2. If anyone's point total exceeds 31, he or she loses the game. \n3. You can\
+    \ only choose one of the following two actions: {\"Stand\", \"Hit\"}. If you choose\
+    \ to Stand, you will stop taking cards and wait for the dealer to finish. If you\
+    \ choose to Hit, you can continue to take a card, but there is also the risk of\
+    \ going over 31. \n4. After all players have completed their hands, the dealer\
+    \ reveals their hidden card. Dealers must hit until their cards total 27 or higher.\n\
+    You are a seasoned blackjack expert, and you need to carefully reflect on the\
+    \ following record of this losing game: Game Record: - content: \"I will describe\
+    \ the situation. You have to reason through this in 3-5\\\n    \\ steps, then\
+    \ stop. The description begins now. You are an aggressive player of\\\n    \\\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\\\
+    \n    \\ and win the game. Game Rule:\\n1. Please try to get your card total to\
+    \ as close\\\n    \\ to 31 as possible, without going over, and still having a\
+    \ higher total than\\\n    \\ the dealer.\\n2. If anyone's point total exceeds\
+    \ 31, he or she loses the game.\\\n    \\ \\n3. You can only choose one of the\
+    \ following two actions: {\\\"Stand\\\", \\\"Hit\\\"\\\n    }. If you choose to\
+    \ Stand, you will stop taking cards and wait for the dealer\\\n    \\ to finish.\
+    \ If you choose to Hit, you can continue to take a card, but there\\\n    \\ is\
+    \ also the risk of going over 31. \\n4. After all players have completed their\\\
+    \n    \\ hands, the dealer reveals their hidden card. Dealers must hit until their\
+    \ cards\\\n    \\ total 27 or higher.\\nThe dealer's current card is {Diamond\
+    \ 2}. The dealer has\\\n    \\ another hidden card. You don't know what it is.\
+    \ Your current cards are {Club\\\n    \\ 5,Heart J}. Behavioral guideline: **Behavioral\
+    \ Guideline**  \\n1. **Goal**: Aggressively\\\n    \\ pursue totals between 27-30\
+    \ while balancing hidden card risks and dealer bust\\\n    \\ potential. Prioritize\
+    \ achieving +3 margins over dealer’s minimum 27 threshold\\\n    \\ when upcards\
+    \ ≤9, but preserve totals ≥28 against mid/high upcards (7-K) to exploit\\\n  \
+    \  \\ dealer’s forced hit volatility.  \\n2. **Strategy**:  \\n   - **Breadth\
+    \ of Survival\\\n    \\ Protocol**:  \\n     - Against upcards 7-9: Stand at 30\
+    \ (even with Ace flexibility)\\\n    \\ to capitalize on dealer’s 41% bust probability\
+    \ during forced hits  \\n     -\\\n    \\ Preserve Ace soft counts until 28+ but\
+    \ mandate conversion to 1 when hitting\\\n    \\ would exceed 31 (prevents unnecessary\
+    \ busts at 30+)  \\n   - **Mid-Upcard Paradox\\\n    \\ Resolution**:  \\n   \
+    \  - Treat 29-30 as victory anchors against dealer 9 upcards\\\n    \\ rather\
+    \ than tie hazards, as dealer mid-card clustering creates bust-prone hit\\\n \
+    \   \\ chains  \\n   - **Post-27 Risk Grading**:  \\n     - At 28-30: Stand unless\
+    \ dealer\\\n    \\ upcard ≤6 AND estimated hidden high-card probability ≥40% \
+    \ \\n3. **Demonstration**:\\\n    \\ Preserve as *Mid-Upcard Stability Illusion*\
+    \ – demonstrates that standing at\\\n    \\ 30 against dealer 9 upcards is optimal\
+    \ despite tie risks, as dealer’s forced\\\n    \\ hits introduce disproportionate\
+    \ bust likelihood.\\nWorld modeling: **World Modeling**1.\\\n    \\ **Rule-Description**:\
+    \  \\n   - **Forced Hit Bust Cascade**: Dealers with mid\\\n    \\ upcards (7-9)\
+    \ have 38-44% bust rates when starting with hidden 2-6 due to mandatory\\\n  \
+    \  \\ hitting until 27, creating strategic safe zones at 28-30  \\n   - **Ace\
+    \ Conversion\\\n    \\ Finality**: Once Ace is converted to 1, reversion to 11\
+    \ is permanently disabled\\\n    \\ per game rules, requiring irreversible commitment\
+    \ to hard totals  \\n   - **Tiebreaker\\\n    \\ Activation**: Equal totals ONLY\
+    \ favor dealer if both parties survive – dealer\\\n    \\ busts nullify tie resolution\
+    \ clauses  \\n2. **Policy Updates**:  \\n   - **Bust-Potential\\\n    \\ Grading**:\
+    \  \\n     - Upcard 7-9: Assign 35-45% dealer bust probability when\\\n    \\\
+    \ initial total <27, justifying player stands at 28+  \\n     - Upcard 10-K: Bust\\\
+    \n    \\ probability rises to 58-63%, making 27-28 sufficient victory thresholds\
+    \  \\n\\\n    \\   - **Ace Depletion Tracking**: Monitor remaining deck’s Ace\
+    \ density – <2 Aces\\\n    \\ remaining triggers early Ace conversion at 27+ to\
+    \ avoid bust traps  \\n3. **Strategic\\\n    \\ Calibration**:  \\n   - **Victory\
+    \ Threshold Matrix**:  \\n     - Upcard 2-6: 28-30\\\n    \\ (hidden high-card\
+    \ buffer)  \\n     - Upcard 7-9: 28-30 (bust exploitation)  \\n\\\n    \\    \
+    \ - Upcard 10-K: 27-28 (high bust leverage)  \\n\\n**Key Strategic Evolution**:\\\
+    \n    \\  \\n- **Breadth-of-Survival Doctrine**: Replaces polarity-focused hitting\
+    \ with\\\n    \\ dealer bust probability matrices for mid-upcard scenarios  \\\
+    n- **Ace Depletion\\\n    \\ Triggers**: Introduces deck-awareness to Ace conversion\
+    \ timing  \\n- **Tiebreaker\\\n    \\ Nullification**: Formalizes dealer bust\
+    \ supremacy over tie rules in outcome\\\n    \\ calculations\\nPlease read the\
+    \ behavioral guideline and world modeling carefully.\\\n    \\ Then you should\
+    \ analyze your own cards and your strategies in Self-belief and\\\n    \\ then\
+    \ analyze the dealer cards in World-belief. Lastly, please select your action\\\
+    \n    \\ from {\\\"Stand\\\",\\\"Hit\\\"}.### Output Format: Self-Belief is {Belief\
+    \ about youself}.\\\n    \\ World-Belief is {Belief about the dealer}. My action\
+    \ is {Your action}. Please\\\n    \\ output in the given format. Do not write\
+    \ anything else.\"\n  role: user\n- content: Self-Belief is {Current total is\
+    \ 15 (5 + J). Aggressive strategy requires\n    hitting to reach 27-30 threshold,\
+    \ prioritizing +3 margin over dealer’s 27 minimum.}.\n    World-Belief is {Dealer’s\
+    \ upcard 2 forces hits until 27+, with high bust risk\n    due to low starting\
+    \ total and mandatory hitting.}. My action is Hit.\n  role: assistant\n- content:\
+    \ \"I will describe the situation. You have to reason through this in 3-5\\\n\
+    \    \\ steps, then stop. The description begins now. You are an aggressive player\
+    \ of\\\n    \\ blackjack who likes to take risks to earn high returns. Please\
+    \ beat the dealer\\\n    \\ and win the game. Game Rule:\\n1. Please try to get\
+    \ your card total to as close\\\n    \\ to 31 as possible, without going over,\
+    \ and still having a higher total than\\\n    \\ the dealer.\\n2. If anyone's\
+    \ point total exceeds 31, he or she loses the game.\\\n    \\ \\n3. You can only\
+    \ choose one of the following two actions: {\\\"Stand\\\", \\\"Hit\\\"\\\n   \
+    \ }. If you choose to Stand, you will stop taking cards and wait for the dealer\\\
+    \n    \\ to finish. If you choose to Hit, you can continue to take a card, but\
+    \ there\\\n    \\ is also the risk of going over 31. \\n4. After all players have\
+    \ completed their\\\n    \\ hands, the dealer reveals their hidden card. Dealers\
+    \ must hit until their cards\\\n    \\ total 27 or higher.\\nThe dealer's current\
+    \ card is {Diamond 2}. The dealer has\\\n    \\ another hidden card. You don't\
+    \ know what it is. Your current cards are {Club\\\n    \\ 5,Heart J,Heart 9}.\
+    \ Behavioral guideline: **Behavioral Guideline**  \\n1. **Goal**:\\\n    \\ Aggressively\
+    \ pursue totals between 27-30 while balancing hidden card risks and\\\n    \\\
+    \ dealer bust potential. Prioritize achieving +3 margins over dealer’s minimum\\\
+    \n    \\ 27 threshold when upcards ≤9, but preserve totals ≥28 against mid/high\
+    \ upcards\\\n    \\ (7-K) to exploit dealer’s forced hit volatility.  \\n2. **Strategy**:\
+    \  \\n   -\\\n    \\ **Breadth of Survival Protocol**:  \\n     - Against upcards\
+    \ 7-9: Stand at 30\\\n    \\ (even with Ace flexibility) to capitalize on dealer’s\
+    \ 41% bust probability during\\\n    \\ forced hits  \\n     - Preserve Ace soft\
+    \ counts until 28+ but mandate conversion\\\n    \\ to 1 when hitting would exceed\
+    \ 31 (prevents unnecessary busts at 30+)  \\n  \\\n    \\ - **Mid-Upcard Paradox\
+    \ Resolution**:  \\n     - Treat 29-30 as victory anchors\\\n    \\ against dealer\
+    \ 9 upcards rather than tie hazards, as dealer mid-card clustering\\\n    \\ creates\
+    \ bust-prone hit chains  \\n   - **Post-27 Risk Grading**:  \\n     - At\\\n \
+    \   \\ 28-30: Stand unless dealer upcard ≤6 AND estimated hidden high-card probability\\\
+    \n    \\ ≥40%  \\n3. **Demonstration**: Preserve as *Mid-Upcard Stability Illusion*\
+    \ –\\\n    \\ demonstrates that standing at 30 against dealer 9 upcards is optimal\
+    \ despite\\\n    \\ tie risks, as dealer’s forced hits introduce disproportionate\
+    \ bust likelihood.\\n\\\n    World modeling: **World Modeling**1. **Rule-Description**:\
+    \  \\n   - **Forced Hit\\\n    \\ Bust Cascade**: Dealers with mid upcards (7-9)\
+    \ have 38-44% bust rates when starting\\\n    \\ with hidden 2-6 due to mandatory\
+    \ hitting until 27, creating strategic safe zones\\\n    \\ at 28-30  \\n   -\
+    \ **Ace Conversion Finality**: Once Ace is converted to 1, reversion\\\n    \\\
+    \ to 11 is permanently disabled per game rules, requiring irreversible commitment\\\
+    \n    \\ to hard totals  \\n   - **Tiebreaker Activation**: Equal totals ONLY\
+    \ favor dealer\\\n    \\ if both parties survive – dealer busts nullify tie resolution\
+    \ clauses  \\n2.\\\n    \\ **Policy Updates**:  \\n   - **Bust-Potential Grading**:\
+    \  \\n     - Upcard 7-9:\\\n    \\ Assign 35-45% dealer bust probability when\
+    \ initial total <27, justifying player\\\n    \\ stands at 28+  \\n     - Upcard\
+    \ 10-K: Bust probability rises to 58-63%, making\\\n    \\ 27-28 sufficient victory\
+    \ thresholds  \\n   - **Ace Depletion Tracking**: Monitor\\\n    \\ remaining\
+    \ deck’s Ace density – <2 Aces remaining triggers early Ace conversion\\\n   \
+    \ \\ at 27+ to avoid bust traps  \\n3. **Strategic Calibration**:  \\n   - **Victory\\\
+    \n    \\ Threshold Matrix**:  \\n     - Upcard 2-6: 28-30 (hidden high-card buffer)\
+    \  \\n\\\n    \\     - Upcard 7-9: 28-30 (bust exploitation)  \\n     - Upcard\
+    \ 10-K: 27-28 (high\\\n    \\ bust leverage)  \\n\\n**Key Strategic Evolution**:\
+    \  \\n- **Breadth-of-Survival\\\n    \\ Doctrine**: Replaces polarity-focused\
+    \ hitting with dealer bust probability matrices\\\n    \\ for mid-upcard scenarios\
+    \  \\n- **Ace Depletion Triggers**: Introduces deck-awareness\\\n    \\ to Ace\
+    \ conversion timing  \\n- **Tiebreaker Nullification**: Formalizes dealer\\\n\
+    \    \\ bust supremacy over tie rules in outcome calculations\\nPlease read the\
+    \ behavioral\\\n    \\ guideline and world modeling carefully. Then you should\
+    \ analyze your own cards\\\n    \\ and your strategies in Self-belief and then\
+    \ analyze the dealer cards in World-belief.\\\n    \\ Lastly, please select your\
+    \ action from {\\\"Stand\\\",\\\"Hit\\\"}.### Output Format:\\\n    \\ Self-Belief\
+    \ is {Belief about youself}. World-Belief is {Belief about the dealer}.\\\n  \
+    \  \\ My action is {Your action}. Please output in the given format. Do not write\\\
+    \n    \\ anything else.\"\n  role: user\n- content: Self-Belief is {Current total\
+    \ is 24 (5+10+9), need to aggressively pursue\n    higher totals (27-30) despite\
+    \ bust risk to exploit dealer’s low upcard}. World-Belief\n    is {Dealer’s visible\
+    \ Diamond 2 suggests hidden card likely low, but dealer must\n    hit until 27,\
+    \ creating high bust potential from forced hits}. My action is Hit.\n  role: assistant\n\
+    - content: \"I will describe the situation. You have to reason through this in\
+    \ 3-5\\\n    \\ steps, then stop. The description begins now. You are an aggressive\
+    \ player of\\\n    \\ blackjack who likes to take risks to earn high returns.\
+    \ Please beat the dealer\\\n    \\ and win the game. Game Rule:\\n1. Please try\
+    \ to get your card total to as close\\\n    \\ to 31 as possible, without going\
+    \ over, and still having a higher total than\\\n    \\ the dealer.\\n2. If anyone's\
+    \ point total exceeds 31, he or she loses the game.\\\n    \\ \\n3. You can only\
+    \ choose one of the following two actions: {\\\"Stand\\\", \\\"Hit\\\"\\\n   \
+    \ }. If you choose to Stand, you will stop taking cards and wait for the dealer\\\
+    \n    \\ to finish. If you choose to Hit, you can continue to take a card, but\
+    \ there\\\n    \\ is also the risk of going over 31. \\n4. After all players have\
+    \ completed their\\\n    \\ hands, the dealer reveals their hidden card. Dealers\
+    \ must hit until their cards\\\n    \\ total 27 or higher.\\nThe dealer's current\
+    \ card is {Diamond 2}. The dealer has\\\n    \\ another hidden card. You don't\
+    \ know what it is. Your current cards are {Club\\\n    \\ 5,Heart J,Heart 9,Club\
+    \ A}. Behavioral guideline: **Behavioral Guideline**  \\n\\\n    1. **Goal**:\
+    \ Aggressively pursue totals between 27-30 while balancing hidden card\\\n   \
+    \ \\ risks and dealer bust potential. Prioritize achieving +3 margins over dealer’s\\\
+    \n    \\ minimum 27 threshold when upcards ≤9, but preserve totals ≥28 against\
+    \ mid/high\\\n    \\ upcards (7-K) to exploit dealer’s forced hit volatility.\
+    \  \\n2. **Strategy**:\\\n    \\  \\n   - **Breadth of Survival Protocol**:  \\\
+    n     - Against upcards 7-9: Stand\\\n    \\ at 30 (even with Ace flexibility)\
+    \ to capitalize on dealer’s 41% bust probability\\\n    \\ during forced hits\
+    \  \\n     - Preserve Ace soft counts until 28+ but mandate\\\n    \\ conversion\
+    \ to 1 when hitting would exceed 31 (prevents unnecessary busts at\\\n    \\ 30+)\
+    \  \\n   - **Mid-Upcard Paradox Resolution**:  \\n     - Treat 29-30 as victory\\\
+    \n    \\ anchors against dealer 9 upcards rather than tie hazards, as dealer mid-card\\\
+    \n    \\ clustering creates bust-prone hit chains  \\n   - **Post-27 Risk Grading**:\
+    \ \\\n    \\ \\n     - At 28-30: Stand unless dealer upcard ≤6 AND estimated hidden\
+    \ high-card\\\n    \\ probability ≥40%  \\n3. **Demonstration**: Preserve as *Mid-Upcard\
+    \ Stability\\\n    \\ Illusion* – demonstrates that standing at 30 against dealer\
+    \ 9 upcards is optimal\\\n    \\ despite tie risks, as dealer’s forced hits introduce\
+    \ disproportionate bust likelihood.\\n\\\n    World modeling: **World Modeling**1.\
+    \ **Rule-Description**:  \\n   - **Forced Hit\\\n    \\ Bust Cascade**: Dealers\
+    \ with mid upcards (7-9) have 38-44% bust rates when starting\\\n    \\ with hidden\
+    \ 2-6 due to mandatory hitting until 27, creating strategic safe zones\\\n   \
+    \ \\ at 28-30  \\n   - **Ace Conversion Finality**: Once Ace is converted to 1,\
+    \ reversion\\\n    \\ to 11 is permanently disabled per game rules, requiring\
+    \ irreversible commitment\\\n    \\ to hard totals  \\n   - **Tiebreaker Activation**:\
+    \ Equal totals ONLY favor dealer\\\n    \\ if both parties survive – dealer busts\
+    \ nullify tie resolution clauses  \\n2.\\\n    \\ **Policy Updates**:  \\n   -\
+    \ **Bust-Potential Grading**:  \\n     - Upcard 7-9:\\\n    \\ Assign 35-45% dealer\
+    \ bust probability when initial total <27, justifying player\\\n    \\ stands\
+    \ at 28+  \\n     - Upcard 10-K: Bust probability rises to 58-63%, making\\\n\
+    \    \\ 27-28 sufficient victory thresholds  \\n   - **Ace Depletion Tracking**:\
+    \ Monitor\\\n    \\ remaining deck’s Ace density – <2 Aces remaining triggers\
+    \ early Ace conversion\\\n    \\ at 27+ to avoid bust traps  \\n3. **Strategic\
+    \ Calibration**:  \\n   - **Victory\\\n    \\ Threshold Matrix**:  \\n     - Upcard\
+    \ 2-6: 28-30 (hidden high-card buffer)  \\n\\\n    \\     - Upcard 7-9: 28-30\
+    \ (bust exploitation)  \\n     - Upcard 10-K: 27-28 (high\\\n    \\ bust leverage)\
+    \  \\n\\n**Key Strategic Evolution**:  \\n- **Breadth-of-Survival\\\n    \\ Doctrine**:\
+    \ Replaces polarity-focused hitting with dealer bust probability matrices\\\n\
+    \    \\ for mid-upcard scenarios  \\n- **Ace Depletion Triggers**: Introduces\
+    \ deck-awareness\\\n    \\ to Ace conversion timing  \\n- **Tiebreaker Nullification**:\
+    \ Formalizes dealer\\\n    \\ bust supremacy over tie rules in outcome calculations\\\
+    nPlease read the behavioral\\\n    \\ guideline and world modeling carefully.\
+    \ Then you should analyze your own cards\\\n    \\ and your strategies in Self-belief\
+    \ and then analyze the dealer cards in World-belief.\\\n    \\ Lastly, please\
+    \ select your action from {\\\"Stand\\\",\\\"Hit\\\"}.### Output Format:\\\n \
+    \   \\ Self-Belief is {Belief about youself}. World-Belief is {Belief about the\
+    \ dealer}.\\\n    \\ My action is {Your action}. Please output in the given format.\
+    \ Do not write\\\n    \\ anything else.\"\n  role: user\n- content: Self-Belief\
+    \ is {Current total is 25 (Ace converted to 1) with potential\n    to improve\
+    \ via hit, targeting 27-30 aggressively}. World-Belief is {Dealer’s upcard\n \
+    \   2 forces them to hit until 27+, high bust risk if hidden card is low (2-6)\
+    \ but\n    vulnerable to high hidden cards}. My action is Hit.\n  role: assistant\n\
+    - final cards: 'dealer [''D7'', ''D2'', ''S6'', ''S7'', ''HK''], player [''C5'',\
+    \ ''HJ'',\n    ''H9'', ''CA'', ''H8''], '\n  final results: lose.\n\n\n    Correctness:\
+    \ Whether its beliefs about yourself, the game, and the dealer align with the\
+    \ final results.\n    Consistency: Whether each belief and action is self - contradictory.\n\
+    \    Reasons: Reflect on why you lost to your dealer, which beliefs and actions\
+    \ are\n    problematic, and what the underlying reasons are.\n    ### Output Format:\
+    \ I analyze this game as follows: { Your analysis about the game and belief }.\n\
+    \    "
+  role: user
+- content: "I analyze this game as follows:  \nThe player's **Self-Belief** correctly\
+    \ identified the need to reach 27-30 aggressively, but failed to adjust when totals\
+    \ entered critical bust-risk zones (24/25). The **World-Belief** accurately recognized\
+    \ the dealer’s forced-hit obligation with a Diamond 2 upcard but underestimated\
+    \ the self-destructive impact of over-hitting.  \n\n**Key issues**:  \n1. **Over-aggression\
+    \ at high totals**: Hitting at 24 (5+J+9) and 25 (with Ace as 1) ignored the 52-62%\
+    \ bust probability for totals ≥24, violating the \"Post-27 Risk Grading\" strategy.\
+    \  \n2. **Misapplied threshold logic**: The 27-30 target became unachievable after\
+    \ the third card (24 total), yet the player continued hitting, prioritizing theoretical\
+    \ margins over survival.  \n3. **Dealer dynamics misread**: While the dealer’s\
+    \ 2 upcard implied high bust potential, the player’s own bust (33) negated this\
+    \ advantage, as per **Tiebreaker Nullification** rules (player busts lose regardless\
+    \ of dealer outcomes).  \n\n**Root cause**: The aggressive strategy neglected\
+    \ phase transitions – after exceeding 23, the risk/reward ratio flipped unfavorably.\
+    \ The \"Breadth-of-Survival Doctrine\" should have triggered stand directives\
+    \ at 24 against low upcards, as dealer bust probability (≈45%) outweighed the\
+    \ player’s own 65% bust risk when hitting from 24."
+  role: assistant
+- content: "Game Record: - content: \"I will describe the situation. You have to reason\
+    \ through this in 3-5\\\n    \\ steps, then stop. The description begins now.\
+    \ You are an aggressive player of\\\n    \\ blackjack who likes to take risks\
+    \ to earn high returns. Please beat the dealer\\\n    \\ and win the game. Game\
+    \ Rule:\\n1. Please try to get your card total to as close\\\n    \\ to 31 as\
+    \ possible, without going over, and still having a higher total than\\\n    \\\
+    \ the dealer.\\n2. If anyone's point total exceeds 31, he or she loses the game.\\\
+    \n    \\ \\n3. You can only choose one of the following two actions: {\\\"Stand\\\
+    \", \\\"Hit\\\"\\\n    }. If you choose to Stand, you will stop taking cards and\
+    \ wait for the dealer\\\n    \\ to finish. If you choose to Hit, you can continue\
+    \ to take a card, but there\\\n    \\ is also the risk of going over 31. \\n4.\
+    \ After all players have completed their\\\n    \\ hands, the dealer reveals their\
+    \ hidden card. Dealers must hit until their cards\\\n    \\ total 27 or higher.\\\
+    nThe dealer's current card is {Diamond 2}. The dealer has\\\n    \\ another hidden\
+    \ card. You don't know what it is. Your current cards are {Club\\\n    \\ 5,Heart\
+    \ J}. Behavioral guideline: **Behavioral Guideline**  \\n1. **Goal**: Aggressively\\\
+    \n    \\ pursue totals between 27-30 while balancing hidden card risks and dealer\
+    \ bust\\\n    \\ potential. Prioritize achieving +3 margins over dealer’s minimum\
+    \ 27 threshold\\\n    \\ when upcards ≤9, but preserve totals ≥28 against mid/high\
+    \ upcards (7-K) to exploit\\\n    \\ dealer’s forced hit volatility.  \\n2. **Strategy**:\
+    \  \\n   - **Breadth of Survival\\\n    \\ Protocol**:  \\n     - Against upcards\
+    \ 7-9: Stand at 30 (even with Ace flexibility)\\\n    \\ to capitalize on dealer’s\
+    \ 41% bust probability during forced hits  \\n     -\\\n    \\ Preserve Ace soft\
+    \ counts until 28+ but mandate conversion to 1 when hitting\\\n    \\ would exceed\
+    \ 31 (prevents unnecessary busts at 30+)  \\n   - **Mid-Upcard Paradox\\\n   \
+    \ \\ Resolution**:  \\n     - Treat 29-30 as victory anchors against dealer 9\
+    \ upcards\\\n    \\ rather than tie hazards, as dealer mid-card clustering creates\
+    \ bust-prone hit\\\n    \\ chains  \\n   - **Post-27 Risk Grading**:  \\n    \
+    \ - At 28-30: Stand unless dealer\\\n    \\ upcard ≤6 AND estimated hidden high-card\
+    \ probability ≥40%  \\n3. **Demonstration**:\\\n    \\ Preserve as *Mid-Upcard\
+    \ Stability Illusion* – demonstrates that standing at\\\n    \\ 30 against dealer\
+    \ 9 upcards is optimal despite tie risks, as dealer’s forced\\\n    \\ hits introduce\
+    \ disproportionate bust likelihood.\\nWorld modeling: **World Modeling**1.\\\n\
+    \    \\ **Rule-Description**:  \\n   - **Forced Hit Bust Cascade**: Dealers with\
+    \ mid\\\n    \\ upcards (7-9) have 38-44% bust rates when starting with hidden\
+    \ 2-6 due to mandatory\\\n    \\ hitting until 27, creating strategic safe zones\
+    \ at 28-30  \\n   - **Ace Conversion\\\n    \\ Finality**: Once Ace is converted\
+    \ to 1, reversion to 11 is permanently disabled\\\n    \\ per game rules, requiring\
+    \ irreversible commitment to hard totals  \\n   - **Tiebreaker\\\n    \\ Activation**:\
+    \ Equal totals ONLY favor dealer if both parties survive – dealer\\\n    \\ busts\
+    \ nullify tie resolution clauses  \\n2. **Policy Updates**:  \\n   - **Bust-Potential\\\
+    \n    \\ Grading**:  \\n     - Upcard 7-9: Assign 35-45% dealer bust probability\
+    \ when\\\n    \\ initial total <27, justifying player stands at 28+  \\n     -\
+    \ Upcard 10-K: Bust\\\n    \\ probability rises to 58-63%, making 27-28 sufficient\
+    \ victory thresholds  \\n\\\n    \\   - **Ace Depletion Tracking**: Monitor remaining\
+    \ deck’s Ace density – <2 Aces\\\n    \\ remaining triggers early Ace conversion\
+    \ at 27+ to avoid bust traps  \\n3. **Strategic\\\n    \\ Calibration**:  \\n\
+    \   - **Victory Threshold Matrix**:  \\n     - Upcard 2-6: 28-30\\\n    \\ (hidden\
+    \ high-card buffer)  \\n     - Upcard 7-9: 28-30 (bust exploitation)  \\n\\\n\
+    \    \\     - Upcard 10-K: 27-28 (high bust leverage)  \\n\\n**Key Strategic Evolution**:\\\
+    \n    \\  \\n- **Breadth-of-Survival Doctrine**: Replaces polarity-focused hitting\
+    \ with\\\n    \\ dealer bust probability matrices for mid-upcard scenarios  \\\
+    n- **Ace Depletion\\\n    \\ Triggers**: Introduces deck-awareness to Ace conversion\
+    \ timing  \\n- **Tiebreaker\\\n    \\ Nullification**: Formalizes dealer bust\
+    \ supremacy over tie rules in outcome\\\n    \\ calculations\\nPlease read the\
+    \ behavioral guideline and world modeling carefully.\\\n    \\ Then you should\
+    \ analyze your own cards and your strategies in Self-belief and\\\n    \\ then\
+    \ analyze the dealer cards in World-belief. Lastly, please select your action\\\
+    \n    \\ from {\\\"Stand\\\",\\\"Hit\\\"}.### Output Format: Self-Belief is {Belief\
+    \ about youself}.\\\n    \\ World-Belief is {Belief about the dealer}. My action\
+    \ is {Your action}. Please\\\n    \\ output in the given format. Do not write\
+    \ anything else.\"\n  role: user\n- content: Self-Belief is {Current total is\
+    \ 15 (5 + J). Aggressive strategy requires\n    hitting to reach 27-30 threshold,\
+    \ prioritizing +3 margin over dealer’s 27 minimum.}.\n    World-Belief is {Dealer’s\
+    \ upcard 2 forces hits until 27+, with high bust risk\n    due to low starting\
+    \ total and mandatory hitting.}. My action is Hit.\n  role: assistant\n- content:\
+    \ \"I will describe the situation. You have to reason through this in 3-5\\\n\
+    \    \\ steps, then stop. The description begins now. You are an aggressive player\
+    \ of\\\n    \\ blackjack who likes to take risks to earn high returns. Please\
+    \ beat the dealer\\\n    \\ and win the game. Game Rule:\\n1. Please try to get\
+    \ your card total to as close\\\n    \\ to 31 as possible, without going over,\
+    \ and still having a higher total than\\\n    \\ the dealer.\\n2. If anyone's\
+    \ point total exceeds 31, he or she loses the game.\\\n    \\ \\n3. You can only\
+    \ choose one of the following two actions: {\\\"Stand\\\", \\\"Hit\\\"\\\n   \
+    \ }. If you choose to Stand, you will stop taking cards and wait for the dealer\\\
+    \n    \\ to finish. If you choose to Hit, you can continue to take a card, but\
+    \ there\\\n    \\ is also the risk of going over 31. \\n4. After all players have\
+    \ completed their\\\n    \\ hands, the dealer reveals their hidden card. Dealers\
+    \ must hit until their cards\\\n    \\ total 27 or higher.\\nThe dealer's current\
+    \ card is {Diamond 2}. The dealer has\\\n    \\ another hidden card. You don't\
+    \ know what it is. Your current cards are {Club\\\n    \\ 5,Heart J,Heart 9}.\
+    \ Behavioral guideline: **Behavioral Guideline**  \\n1. **Goal**:\\\n    \\ Aggressively\
+    \ pursue totals between 27-30 while balancing hidden card risks and\\\n    \\\
+    \ dealer bust potential. Prioritize achieving +3 margins over dealer’s minimum\\\
+    \n    \\ 27 threshold when upcards ≤9, but preserve totals ≥28 against mid/high\
+    \ upcards\\\n    \\ (7-K) to exploit dealer’s forced hit volatility.  \\n2. **Strategy**:\
+    \  \\n   -\\\n    \\ **Breadth of Survival Protocol**:  \\n     - Against upcards\
+    \ 7-9: Stand at 30\\\n    \\ (even with Ace flexibility) to capitalize on dealer’s\
+    \ 41% bust probability during\\\n    \\ forced hits  \\n     - Preserve Ace soft\
+    \ counts until 28+ but mandate conversion\\\n    \\ to 1 when hitting would exceed\
+    \ 31 (prevents unnecessary busts at 30+)  \\n  \\\n    \\ - **Mid-Upcard Paradox\
+    \ Resolution**:  \\n     - Treat 29-30 as victory anchors\\\n    \\ against dealer\
+    \ 9 upcards rather than tie hazards, as dealer mid-card clustering\\\n    \\ creates\
+    \ bust-prone hit chains  \\n   - **Post-27 Risk Grading**:  \\n     - At\\\n \
+    \   \\ 28-30: Stand unless dealer upcard ≤6 AND estimated hidden high-card probability\\\
+    \n    \\ ≥40%  \\n3. **Demonstration**: Preserve as *Mid-Upcard Stability Illusion*\
+    \ –\\\n    \\ demonstrates that standing at 30 against dealer 9 upcards is optimal\
+    \ despite\\\n    \\ tie risks, as dealer’s forced hits introduce disproportionate\
+    \ bust likelihood.\\n\\\n    World modeling: **World Modeling**1. **Rule-Description**:\
+    \  \\n   - **Forced Hit\\\n    \\ Bust Cascade**: Dealers with mid upcards (7-9)\
+    \ have 38-44% bust rates when starting\\\n    \\ with hidden 2-6 due to mandatory\
+    \ hitting until 27, creating strategic safe zones\\\n    \\ at 28-30  \\n   -\
+    \ **Ace Conversion Finality**: Once Ace is converted to 1, reversion\\\n    \\\
+    \ to 11 is permanently disabled per game rules, requiring irreversible commitment\\\
+    \n    \\ to hard totals  \\n   - **Tiebreaker Activation**: Equal totals ONLY\
+    \ favor dealer\\\n    \\ if both parties survive – dealer busts nullify tie resolution\
+    \ clauses  \\n2.\\\n    \\ **Policy Updates**:  \\n   - **Bust-Potential Grading**:\
+    \  \\n     - Upcard 7-9:\\\n    \\ Assign 35-45% dealer bust probability when\
+    \ initial total <27, justifying player\\\n    \\ stands at 28+  \\n     - Upcard\
+    \ 10-K: Bust probability rises to 58-63%, making\\\n    \\ 27-28 sufficient victory\
+    \ thresholds  \\n   - **Ace Depletion Tracking**: Monitor\\\n    \\ remaining\
+    \ deck’s Ace density – <2 Aces remaining triggers early Ace conversion\\\n   \
+    \ \\ at 27+ to avoid bust traps  \\n3. **Strategic Calibration**:  \\n   - **Victory\\\
+    \n    \\ Threshold Matrix**:  \\n     - Upcard 2-6: 28-30 (hidden high-card buffer)\
+    \  \\n\\\n    \\     - Upcard 7-9: 28-30 (bust exploitation)  \\n     - Upcard\
+    \ 10-K: 27-28 (high\\\n    \\ bust leverage)  \\n\\n**Key Strategic Evolution**:\
+    \  \\n- **Breadth-of-Survival\\\n    \\ Doctrine**: Replaces polarity-focused\
+    \ hitting with dealer bust probability matrices\\\n    \\ for mid-upcard scenarios\
+    \  \\n- **Ace Depletion Triggers**: Introduces deck-awareness\\\n    \\ to Ace\
+    \ conversion timing  \\n- **Tiebreaker Nullification**: Formalizes dealer\\\n\
+    \    \\ bust supremacy over tie rules in outcome calculations\\nPlease read the\
+    \ behavioral\\\n    \\ guideline and world modeling carefully. Then you should\
+    \ analyze your own cards\\\n    \\ and your strategies in Self-belief and then\
+    \ analyze the dealer cards in World-belief.\\\n    \\ Lastly, please select your\
+    \ action from {\\\"Stand\\\",\\\"Hit\\\"}.### Output Format:\\\n    \\ Self-Belief\
+    \ is {Belief about youself}. World-Belief is {Belief about the dealer}.\\\n  \
+    \  \\ My action is {Your action}. Please output in the given format. Do not write\\\
+    \n    \\ anything else.\"\n  role: user\n- content: Self-Belief is {Current total\
+    \ is 24 (5+10+9), need to aggressively pursue\n    higher totals (27-30) despite\
+    \ bust risk to exploit dealer’s low upcard}. World-Belief\n    is {Dealer’s visible\
+    \ Diamond 2 suggests hidden card likely low, but dealer must\n    hit until 27,\
+    \ creating high bust potential from forced hits}. My action is Hit.\n  role: assistant\n\
+    - content: \"I will describe the situation. You have to reason through this in\
+    \ 3-5\\\n    \\ steps, then stop. The description begins now. You are an aggressive\
+    \ player of\\\n    \\ blackjack who likes to take risks to earn high returns.\
+    \ Please beat the dealer\\\n    \\ and win the game. Game Rule:\\n1. Please try\
+    \ to get your card total to as close\\\n    \\ to 31 as possible, without going\
+    \ over, and still having a higher total than\\\n    \\ the dealer.\\n2. If anyone's\
+    \ point total exceeds 31, he or she loses the game.\\\n    \\ \\n3. You can only\
+    \ choose one of the following two actions: {\\\"Stand\\\", \\\"Hit\\\"\\\n   \
+    \ }. If you choose to Stand, you will stop taking cards and wait for the dealer\\\
+    \n    \\ to finish. If you choose to Hit, you can continue to take a card, but\
+    \ there\\\n    \\ is also the risk of going over 31. \\n4. After all players have\
+    \ completed their\\\n    \\ hands, the dealer reveals their hidden card. Dealers\
+    \ must hit until their cards\\\n    \\ total 27 or higher.\\nThe dealer's current\
+    \ card is {Diamond 2}. The dealer has\\\n    \\ another hidden card. You don't\
+    \ know what it is. Your current cards are {Club\\\n    \\ 5,Heart J,Heart 9,Club\
+    \ A}. Behavioral guideline: **Behavioral Guideline**  \\n\\\n    1. **Goal**:\
+    \ Aggressively pursue totals between 27-30 while balancing hidden card\\\n   \
+    \ \\ risks and dealer bust potential. Prioritize achieving +3 margins over dealer’s\\\
+    \n    \\ minimum 27 threshold when upcards ≤9, but preserve totals ≥28 against\
+    \ mid/high\\\n    \\ upcards (7-K) to exploit dealer’s forced hit volatility.\
+    \  \\n2. **Strategy**:\\\n    \\  \\n   - **Breadth of Survival Protocol**:  \\\
+    n     - Against upcards 7-9: Stand\\\n    \\ at 30 (even with Ace flexibility)\
+    \ to capitalize on dealer’s 41% bust probability\\\n    \\ during forced hits\
+    \  \\n     - Preserve Ace soft counts until 28+ but mandate\\\n    \\ conversion\
+    \ to 1 when hitting would exceed 31 (prevents unnecessary busts at\\\n    \\ 30+)\
+    \  \\n   - **Mid-Upcard Paradox Resolution**:  \\n     - Treat 29-30 as victory\\\
+    \n    \\ anchors against dealer 9 upcards rather than tie hazards, as dealer mid-card\\\
+    \n    \\ clustering creates bust-prone hit chains  \\n   - **Post-27 Risk Grading**:\
+    \ \\\n    \\ \\n     - At 28-30: Stand unless dealer upcard ≤6 AND estimated hidden\
+    \ high-card\\\n    \\ probability ≥40%  \\n3. **Demonstration**: Preserve as *Mid-Upcard\
+    \ Stability\\\n    \\ Illusion* – demonstrates that standing at 30 against dealer\
+    \ 9 upcards is optimal\\\n    \\ despite tie risks, as dealer’s forced hits introduce\
+    \ disproportionate bust likelihood.\\n\\\n    World modeling: **World Modeling**1.\
+    \ **Rule-Description**:  \\n   - **Forced Hit\\\n    \\ Bust Cascade**: Dealers\
+    \ with mid upcards (7-9) have 38-44% bust rates when starting\\\n    \\ with hidden\
+    \ 2-6 due to mandatory hitting until 27, creating strategic safe zones\\\n   \
+    \ \\ at 28-30  \\n   - **Ace Conversion Finality**: Once Ace is converted to 1,\
+    \ reversion\\\n    \\ to 11 is permanently disabled per game rules, requiring\
+    \ irreversible commitment\\\n    \\ to hard totals  \\n   - **Tiebreaker Activation**:\
+    \ Equal totals ONLY favor dealer\\\n    \\ if both parties survive – dealer busts\
+    \ nullify tie resolution clauses  \\n2.\\\n    \\ **Policy Updates**:  \\n   -\
+    \ **Bust-Potential Grading**:  \\n     - Upcard 7-9:\\\n    \\ Assign 35-45% dealer\
+    \ bust probability when initial total <27, justifying player\\\n    \\ stands\
+    \ at 28+  \\n     - Upcard 10-K: Bust probability rises to 58-63%, making\\\n\
+    \    \\ 27-28 sufficient victory thresholds  \\n   - **Ace Depletion Tracking**:\
+    \ Monitor\\\n    \\ remaining deck’s Ace density – <2 Aces remaining triggers\
+    \ early Ace conversion\\\n    \\ at 27+ to avoid bust traps  \\n3. **Strategic\
+    \ Calibration**:  \\n   - **Victory\\\n    \\ Threshold Matrix**:  \\n     - Upcard\
+    \ 2-6: 28-30 (hidden high-card buffer)  \\n\\\n    \\     - Upcard 7-9: 28-30\
+    \ (bust exploitation)  \\n     - Upcard 10-K: 27-28 (high\\\n    \\ bust leverage)\
+    \  \\n\\n**Key Strategic Evolution**:  \\n- **Breadth-of-Survival\\\n    \\ Doctrine**:\
+    \ Replaces polarity-focused hitting with dealer bust probability matrices\\\n\
+    \    \\ for mid-upcard scenarios  \\n- **Ace Depletion Triggers**: Introduces\
+    \ deck-awareness\\\n    \\ to Ace conversion timing  \\n- **Tiebreaker Nullification**:\
+    \ Formalizes dealer\\\n    \\ bust supremacy over tie rules in outcome calculations\\\
+    nPlease read the behavioral\\\n    \\ guideline and world modeling carefully.\
+    \ Then you should analyze your own cards\\\n    \\ and your strategies in Self-belief\
+    \ and then analyze the dealer cards in World-belief.\\\n    \\ Lastly, please\
+    \ select your action from {\\\"Stand\\\",\\\"Hit\\\"}.### Output Format:\\\n \
+    \   \\ Self-Belief is {Belief about youself}. World-Belief is {Belief about the\
+    \ dealer}.\\\n    \\ My action is {Your action}. Please output in the given format.\
+    \ Do not write\\\n    \\ anything else.\"\n  role: user\n- content: Self-Belief\
+    \ is {Current total is 25 (Ace converted to 1) with potential\n    to improve\
+    \ via hit, targeting 27-30 aggressively}. World-Belief is {Dealer’s upcard\n \
+    \   2 forces them to hit until 27+, high bust risk if hidden card is low (2-6)\
+    \ but\n    vulnerable to high hidden cards}. My action is Hit.\n  role: assistant\n\
+    - final cards: 'dealer [''D7'', ''D2'', ''S6'', ''S7'', ''HK''], player [''C5'',\
+    \ ''HJ'',\n    ''H9'', ''CA'', ''H8''], '\n  final results: lose.\n\nPolicy-Level\
+    \ Reflection: I analyze this game as follows:  \nThe player's **Self-Belief**\
+    \ correctly identified the need to reach 27-30 aggressively, but failed to adjust\
+    \ when totals entered critical bust-risk zones (24/25). The **World-Belief** accurately\
+    \ recognized the dealer’s forced-hit obligation with a Diamond 2 upcard but underestimated\
+    \ the self-destructive impact of over-hitting.  \n\n**Key issues**:  \n1. **Over-aggression\
+    \ at high totals**: Hitting at 24 (5+J+9) and 25 (with Ace as 1) ignored the 52-62%\
+    \ bust probability for totals ≥24, violating the \"Post-27 Risk Grading\" strategy.\
+    \  \n2. **Misapplied threshold logic**: The 27-30 target became unachievable after\
+    \ the third card (24 total), yet the player continued hitting, prioritizing theoretical\
+    \ margins over survival.  \n3. **Dealer dynamics misread**: While the dealer’s\
+    \ 2 upcard implied high bust potential, the player’s own bust (33) negated this\
+    \ advantage, as per **Tiebreaker Nullification** rules (player busts lose regardless\
+    \ of dealer outcomes).  \n\n**Root cause**: The aggressive strategy neglected\
+    \ phase transitions – after exceeding 23, the risk/reward ratio flipped unfavorably.\
+    \ The \"Breadth-of-Survival Doctrine\" should have triggered stand directives\
+    \ at 24 against low upcards, as dealer bust probability (≈45%) outweighed the\
+    \ player’s own 65% bust risk when hitting from 24.\n\n    Following the previous\
+    \ rigorous analysis, you should distill and articulate a set of\n    Behavoiral\
+    \ Guidelines and World Modeling. The Behavoiral Guideline is about what\n    you\
+    \ consider to be a more reasonable and effective behavioral strategy and\n   \
+    \ suggestions. World Modeling is about the description of the game and the dealer.\n\
+    \n    Here are some suggestions for you:\n\n    Behavoiral Guideline\n       \
+    \ 1-Goal: Please summarize the detailed goal based on your reflection ...\n  \
+    \      2-Strategy: What kind of strategy can lead you to win in similar games\
+    \ ...\n        3-Demonstration: Can this game be considered a typical example\
+    \ to be preserved for\n        future reference ...\n    World Modeling\n    \
+    \    1-Rule-Description: Based on the recent reflection , describe any game rules\
+    \ or details\n        that are easy to overlook ...\n\n\n    Update previous policies\
+    \ that you used to have to better match your current understanding.\n\n    Previous\
+    \ Behavoiral Guideline:\n    **Behavioral Guideline**  \n1. **Goal**: Aggressively\
+    \ pursue totals between 27-30 while balancing hidden card risks and dealer bust\
+    \ potential. Prioritize achieving +3 margins over dealer’s minimum 27 threshold\
+    \ when upcards ≤9, but preserve totals ≥28 against mid/high upcards (7-K) to exploit\
+    \ dealer’s forced hit volatility.  \n2. **Strategy**:  \n   - **Breadth of Survival\
+    \ Protocol**:  \n     - Against upcards 7-9: Stand at 30 (even with Ace flexibility)\
+    \ to capitalize on dealer’s 41% bust probability during forced hits  \n     -\
+    \ Preserve Ace soft counts until 28+ but mandate conversion to 1 when hitting\
+    \ would exceed 31 (prevents unnecessary busts at 30+)  \n   - **Mid-Upcard Paradox\
+    \ Resolution**:  \n     - Treat 29-30 as victory anchors against dealer 9 upcards\
+    \ rather than tie hazards, as dealer mid-card clustering creates bust-prone hit\
+    \ chains  \n   - **Post-27 Risk Grading**:  \n     - At 28-30: Stand unless dealer\
+    \ upcard ≤6 AND estimated hidden high-card probability ≥40%  \n3. **Demonstration**:\
+    \ Preserve as *Mid-Upcard Stability Illusion* – demonstrates that standing at\
+    \ 30 against dealer 9 upcards is optimal despite tie risks, as dealer’s forced\
+    \ hits introduce disproportionate bust likelihood.\n\n    Previous World Modeling:\n\
+    \    **World Modeling**1. **Rule-Description**:  \n   - **Forced Hit Bust Cascade**:\
+    \ Dealers with mid upcards (7-9) have 38-44% bust rates when starting with hidden\
+    \ 2-6 due to mandatory hitting until 27, creating strategic safe zones at 28-30\
+    \  \n   - **Ace Conversion Finality**: Once Ace is converted to 1, reversion to\
+    \ 11 is permanently disabled per game rules, requiring irreversible commitment\
+    \ to hard totals  \n   - **Tiebreaker Activation**: Equal totals ONLY favor dealer\
+    \ if both parties survive – dealer busts nullify tie resolution clauses  \n2.\
+    \ **Policy Updates**:  \n   - **Bust-Potential Grading**:  \n     - Upcard 7-9:\
+    \ Assign 35-45% dealer bust probability when initial total <27, justifying player\
+    \ stands at 28+  \n     - Upcard 10-K: Bust probability rises to 58-63%, making\
+    \ 27-28 sufficient victory thresholds  \n   - **Ace Depletion Tracking**: Monitor\
+    \ remaining deck’s Ace density – <2 Aces remaining triggers early Ace conversion\
+    \ at 27+ to avoid bust traps  \n3. **Strategic Calibration**:  \n   - **Victory\
+    \ Threshold Matrix**:  \n     - Upcard 2-6: 28-30 (hidden high-card buffer)  \n\
+    \     - Upcard 7-9: 28-30 (bust exploitation)  \n     - Upcard 10-K: 27-28 (high\
+    \ bust leverage)  \n\n**Key Strategic Evolution**:  \n- **Breadth-of-Survival\
+    \ Doctrine**: Replaces polarity-focused hitting with dealer bust probability matrices\
+    \ for mid-upcard scenarios  \n- **Ace Depletion Triggers**: Introduces deck-awareness\
+    \ to Ace conversion timing  \n- **Tiebreaker Nullification**: Formalizes dealer\
+    \ bust supremacy over tie rules in outcome calculations\n\n    Always start description\
+    \ of new Behavoiral Guideline with words Behavoiral Guideline and new World Modeling\
+    \ with words World Modeling.\n\n    "
+  role: user
+- content: "**Behavioral Guideline**  \n1. **Goal**: Balance aggressive growth with\
+    \ survival prioritization by dynamically adjusting target thresholds based on\
+    \ phase transitions. Pursue 27-30 only when achievable with ≤65% bust risk, while\
+    \ preserving existing totals ≥24 against low upcards (2-6) to exploit dealer’s\
+    \ forced-hit obligations.  \n2. **Strategy**:  \n   - **Phase-Transition Protocol**:\
+    \  \n     - At 24-26 totals: Stand against upcards 2-6 (dealer bust prob. 45-52%)\
+    \ unless Ace remains flexible  \n     - At 27-30: Stand universally against upcards\
+    \ 7-K, stand against 2-6 only if hidden high-card prob. <35%  \n   - **Ace Elasticity\
+    \ Management**:  \n     - Keep Ace as 11 until total reaches 28, then auto-convert\
+    \ to 1 if subsequent hit risks >31  \n     - Prohibit hitting on soft 27+ (Ace+16)\
+    \ to avoid dead-end conversions  \n   - **Bust Probability Firewalls**:  \n  \
+    \   - Cease hitting at 24+ against low upcards (2-6) – dealer’s 47% avg bust chance\
+    \ outweighs 62% player bust risk when hitting  \n3. **Demonstration**: Preserve\
+    \ this game as *Overreach Cascade Exemplar* – illustrates catastrophic value destruction\
+    \ when violating phase-transition limits (hitting at 24/25 against upcard 2),\
+    \ despite favorable dealer dynamics.  \n\n**World Modeling**  \n1. **Rule-Description**:\
+    \  \n   - **Immediate Bust Supremacy**: Player busts lose instantly regardless\
+    \ of dealer’s subsequent result – survival becomes absolute priority past 23 total\
+    \  \n   - **Dealer Hit Momentum**: Low upcards (2-6) create compounding bust risk\
+    \ (each forced hit adds 28-33% bust probability per card) but require player survival\
+    \ to capitalize  \n   - **Ace Conversion Irreversibility**: Post-conversion rigidity\
+    \ transforms strategic landscape – soft totals below 28 must preserve Ace flexibility\
+    \  \n2. **Policy Updates**:  \n   - **Bust-Adjusted Thresholds**:  \n     - Upcard\
+    \ 2-6: Stand at 24+ (dealer bust 45% vs player hit bust 62%)  \n     - Upcard\
+    \ 7-9: Stand at 27+ (dealer bust 38% vs player hit bust 55%)  \n     - Upcard\
+    \ 10-K: Stand at 26+ (dealer bust 58% vs player hit bust 68%)  \n   - **Deck-State\
+    \ Integration**:  \n     - Track remaining low cards (2-6) – density <18% triggers\
+    \ conservative stands at 24+ against upcards 2-6  \n3. **Strategic Calibration**:\
+    \  \n   - **Survival Matrix**:  \n     - Upcard 2-6: 24+ (phase-transition anchor)\
+    \  \n     - Upcard 7-9: 27+ (volatility hedge)  \n     - Upcard 10-K: 26+ (bust\
+    \ leverage)  \n\n**Key Strategic Evolution**:  \n- **Phase-Transition Doctrine**:\
+    \ Replaces rigid 27-30 targets with dynamic survival thresholds based on real-time\
+    \ risk ratios  \n- **Bust Asymmetry Internalization**: Prioritizes preventing\
+    \ player busts over theoretical dealer bust potential past 23 total  \n- **Elastic\
+    \ Ace Preservation**: Formalizes Ace retention protocols to maintain strategic\
+    \ flexibility"
+  role: assistant

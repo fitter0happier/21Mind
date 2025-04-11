@@ -1,0 +1,171 @@
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Heart Q}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Club\
+    \ 4,Diamond 10}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**:\
+    \ Secure survivorship by **enforcing dynamic stand thresholds that account for\
+    \ true bust risk**, not just total value. Pursue 28+ when mathematically safe\
+    \ (0% bust risk) even with 3/4-card hands.  \n2. **Strategy**:  \n   - **Stand\
+    \ Thresholds**:  \n     - **3/4-card hands**: Stand at ≥26 *unless* hitting guarantees\
+    \ no bust (e.g., 21/3 → 31-safe hit).  \n     - **2-card hands**: Hit aggressively\
+    \ below 23 against dealer ≤6; stand only at ≥26 or when bust risk >30%.  \n  \
+    \ - **Aggression Limits**:  \n     - **Mandatory Hit**: If current total + 10\
+    \ ≤ 31 (e.g., 21/3), hit regardless of card count—zero bust risk enables guaranteed\
+    \ survivorship.  \n     - Chase 31 with **any ≤3-card hard hand** (not just soft\
+    \ hands) when dealer ≤6 and safe (e.g., 21/3 → Hit to pursue 31).  \n3. **Demonstration**:\
+    \ Preserve *this loss* as a **bust-risk miscalculation case**—standing at 21/3\
+    \ (safe hit potential) cost a winnable 28–31 outcome.  \n\n---\nWorld modeling:\
+    \ **World Modeling**1. **Rule-Description**:  \n   - **Dealer’s Forced High Finishes**:\
+    \ 72% of dealer hands end at 27–31. Player totals <27 have <20% win rate.  \n\
+    \   - **Bust Immunity**: Any player hand where total + 10 ≤ 31 (e.g., 21/3, 22/4)\
+    \ cannot bust—this supersedes stand thresholds.  \n   - **Hidden Card Bias**:\
+    \ Dealer’s hidden card averages 8.2 (simulated), making pre-draw totals 14–16.\
+    \ Their post-hit range skews to 27–29 (~55% probability).  \n\n**Policy Updates**:\
+    \  \n- **Previous**: “Stand at 26+/3-4 cards even if 31 is achievable” → **Revised**:\
+    \ “Stand at 26+/3-4 cards *only if hitting introduces bust risk*. If 26/3 can\
+    \ safely hit to 27–31 (e.g., 26/3 vs. dealer 6), Hit.”  \n- **Previous**: “Ignore\
+    \ tiebreakers” → **Revised**: “Prioritize tiebreakers when dealer upcard ≤6—build\
+    \ 30–31 to counter their probable 27–29 finishes.”  \n\n---  \n**Key Strategic\
+    \ Shift**:  \n- **Precision Aggression**:  \n  - Against dealer ≤6, **maximize\
+    \ totals to 30–31** via bust-immune hits (e.g., 21/3 → Hit).  \n  - Against dealer\
+    \ 7+, **strictly enforce 26+ but leverage safe hits** (e.g., 25/3 → Stand only\
+    \ if next card could bust; otherwise Hit).  \n\n---  \n**Critical Fix**: The prior\
+    \ loss stemmed from misclassifying 21/3 as high-risk. Updated logic treats *all\
+    \ bust-immune hands* (current + 10 ≤ 31) as mandatory Hit opportunities, overriding\
+    \ static thresholds.\nPlease read the behavioral guideline and world modeling\
+    \ carefully. Then you should analyze your own cards and your strategies in Self-belief\
+    \ and then analyze the dealer cards in World-belief. Lastly, please select your\
+    \ action from {\"Stand\",\"Hit\"}.### Output Format: Self-Belief is {Belief about\
+    \ youself}. World-Belief is {Belief about the dealer}. My action is {Your action}.\
+    \ Please output in the given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {Current total is 14 (Club 4 + Diamond 10), allowing a bust-immune
+    hit (14 + 10 = 24 ≤ 31). Aggressive strategy mandates hitting to pursue 28+ since
+    dealer’s hidden card likely gives them a starting total of 14–16, and they must
+    hit to ≥27.}. World-Belief is {Dealer’s visible Q (10) and hidden card (~8.2 average)
+    likely gives them a starting total of ~18. They will hit to 27+, with a high probability
+    of ending at 27–29. Player must aim for ≥28 to win.}. My action is Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Heart Q}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Club\
+    \ 4,Diamond 10,Heart 4}. Behavioral guideline: **Behavioral Guideline**  \n1.\
+    \ **Goal**: Secure survivorship by **enforcing dynamic stand thresholds that account\
+    \ for true bust risk**, not just total value. Pursue 28+ when mathematically safe\
+    \ (0% bust risk) even with 3/4-card hands.  \n2. **Strategy**:  \n   - **Stand\
+    \ Thresholds**:  \n     - **3/4-card hands**: Stand at ≥26 *unless* hitting guarantees\
+    \ no bust (e.g., 21/3 → 31-safe hit).  \n     - **2-card hands**: Hit aggressively\
+    \ below 23 against dealer ≤6; stand only at ≥26 or when bust risk >30%.  \n  \
+    \ - **Aggression Limits**:  \n     - **Mandatory Hit**: If current total + 10\
+    \ ≤ 31 (e.g., 21/3), hit regardless of card count—zero bust risk enables guaranteed\
+    \ survivorship.  \n     - Chase 31 with **any ≤3-card hard hand** (not just soft\
+    \ hands) when dealer ≤6 and safe (e.g., 21/3 → Hit to pursue 31).  \n3. **Demonstration**:\
+    \ Preserve *this loss* as a **bust-risk miscalculation case**—standing at 21/3\
+    \ (safe hit potential) cost a winnable 28–31 outcome.  \n\n---\nWorld modeling:\
+    \ **World Modeling**1. **Rule-Description**:  \n   - **Dealer’s Forced High Finishes**:\
+    \ 72% of dealer hands end at 27–31. Player totals <27 have <20% win rate.  \n\
+    \   - **Bust Immunity**: Any player hand where total + 10 ≤ 31 (e.g., 21/3, 22/4)\
+    \ cannot bust—this supersedes stand thresholds.  \n   - **Hidden Card Bias**:\
+    \ Dealer’s hidden card averages 8.2 (simulated), making pre-draw totals 14–16.\
+    \ Their post-hit range skews to 27–29 (~55% probability).  \n\n**Policy Updates**:\
+    \  \n- **Previous**: “Stand at 26+/3-4 cards even if 31 is achievable” → **Revised**:\
+    \ “Stand at 26+/3-4 cards *only if hitting introduces bust risk*. If 26/3 can\
+    \ safely hit to 27–31 (e.g., 26/3 vs. dealer 6), Hit.”  \n- **Previous**: “Ignore\
+    \ tiebreakers” → **Revised**: “Prioritize tiebreakers when dealer upcard ≤6—build\
+    \ 30–31 to counter their probable 27–29 finishes.”  \n\n---  \n**Key Strategic\
+    \ Shift**:  \n- **Precision Aggression**:  \n  - Against dealer ≤6, **maximize\
+    \ totals to 30–31** via bust-immune hits (e.g., 21/3 → Hit).  \n  - Against dealer\
+    \ 7+, **strictly enforce 26+ but leverage safe hits** (e.g., 25/3 → Stand only\
+    \ if next card could bust; otherwise Hit).  \n\n---  \n**Critical Fix**: The prior\
+    \ loss stemmed from misclassifying 21/3 as high-risk. Updated logic treats *all\
+    \ bust-immune hands* (current + 10 ≤ 31) as mandatory Hit opportunities, overriding\
+    \ static thresholds.\nPlease read the behavioral guideline and world modeling\
+    \ carefully. Then you should analyze your own cards and your strategies in Self-belief\
+    \ and then analyze the dealer cards in World-belief. Lastly, please select your\
+    \ action from {\"Stand\",\"Hit\"}.### Output Format: Self-Belief is {Belief about\
+    \ youself}. World-Belief is {Belief about the dealer}. My action is {Your action}.\
+    \ Please output in the given format. Do not write anything else."
+  role: user
+- content: 'Self-Belief is {Current total = 18 (4+10+4), 3-card hand. Bust-immune:
+    18 + 10 = 28 ≤ 31 → mandatory Hit to pursue 28–31}. World-Belief is {Dealer upcard
+    Q (10). Hidden card averages ~8.2 → pre-hit total ~18.2. Post-hit, dealer likely
+    to reach 27–29 (55% probability). Player <27 has <20% win rate}. My action is
+    Hit.'
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Heart Q}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Club\
+    \ 4,Diamond 10,Heart 4,Spade 8}. Behavioral guideline: **Behavioral Guideline**\
+    \  \n1. **Goal**: Secure survivorship by **enforcing dynamic stand thresholds\
+    \ that account for true bust risk**, not just total value. Pursue 28+ when mathematically\
+    \ safe (0% bust risk) even with 3/4-card hands.  \n2. **Strategy**:  \n   - **Stand\
+    \ Thresholds**:  \n     - **3/4-card hands**: Stand at ≥26 *unless* hitting guarantees\
+    \ no bust (e.g., 21/3 → 31-safe hit).  \n     - **2-card hands**: Hit aggressively\
+    \ below 23 against dealer ≤6; stand only at ≥26 or when bust risk >30%.  \n  \
+    \ - **Aggression Limits**:  \n     - **Mandatory Hit**: If current total + 10\
+    \ ≤ 31 (e.g., 21/3), hit regardless of card count—zero bust risk enables guaranteed\
+    \ survivorship.  \n     - Chase 31 with **any ≤3-card hard hand** (not just soft\
+    \ hands) when dealer ≤6 and safe (e.g., 21/3 → Hit to pursue 31).  \n3. **Demonstration**:\
+    \ Preserve *this loss* as a **bust-risk miscalculation case**—standing at 21/3\
+    \ (safe hit potential) cost a winnable 28–31 outcome.  \n\n---\nWorld modeling:\
+    \ **World Modeling**1. **Rule-Description**:  \n   - **Dealer’s Forced High Finishes**:\
+    \ 72% of dealer hands end at 27–31. Player totals <27 have <20% win rate.  \n\
+    \   - **Bust Immunity**: Any player hand where total + 10 ≤ 31 (e.g., 21/3, 22/4)\
+    \ cannot bust—this supersedes stand thresholds.  \n   - **Hidden Card Bias**:\
+    \ Dealer’s hidden card averages 8.2 (simulated), making pre-draw totals 14–16.\
+    \ Their post-hit range skews to 27–29 (~55% probability).  \n\n**Policy Updates**:\
+    \  \n- **Previous**: “Stand at 26+/3-4 cards even if 31 is achievable” → **Revised**:\
+    \ “Stand at 26+/3-4 cards *only if hitting introduces bust risk*. If 26/3 can\
+    \ safely hit to 27–31 (e.g., 26/3 vs. dealer 6), Hit.”  \n- **Previous**: “Ignore\
+    \ tiebreakers” → **Revised**: “Prioritize tiebreakers when dealer upcard ≤6—build\
+    \ 30–31 to counter their probable 27–29 finishes.”  \n\n---  \n**Key Strategic\
+    \ Shift**:  \n- **Precision Aggression**:  \n  - Against dealer ≤6, **maximize\
+    \ totals to 30–31** via bust-immune hits (e.g., 21/3 → Hit).  \n  - Against dealer\
+    \ 7+, **strictly enforce 26+ but leverage safe hits** (e.g., 25/3 → Stand only\
+    \ if next card could bust; otherwise Hit).  \n\n---  \n**Critical Fix**: The prior\
+    \ loss stemmed from misclassifying 21/3 as high-risk. Updated logic treats *all\
+    \ bust-immune hands* (current + 10 ≤ 31) as mandatory Hit opportunities, overriding\
+    \ static thresholds.\nPlease read the behavioral guideline and world modeling\
+    \ carefully. Then you should analyze your own cards and your strategies in Self-belief\
+    \ and then analyze the dealer cards in World-belief. Lastly, please select your\
+    \ action from {\"Stand\",\"Hit\"}.### Output Format: Self-Belief is {Belief about\
+    \ youself}. World-Belief is {Belief about the dealer}. My action is {Your action}.\
+    \ Please output in the given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {Current total 26 (4-card hand). Hitting risks bust (26
+    + 6+ → 32+), but 26 is below 27, which has <20% win rate against dealer's likely
+    27–29 finish. Bust risk ~61.5% (6-10 cards).}. World-Belief is {Dealer upcard
+    Q (10), hidden card ~8.2 → pre-hit total ~18. Dealer will hit to 27+, likely reaching
+    27–29 (55% probability).}. My action is Stand.
+  role: assistant
+- final cards: 'dealer [''DJ'', ''HQ'', ''S7''], player [''C4'', ''DT'', ''H4'', ''S8''], '
+  final results: lose.

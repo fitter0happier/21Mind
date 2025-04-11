@@ -1,0 +1,80 @@
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of losing the game over 3 points. \n4. After all players have\
+    \ completed their hands, the dealer reveals their hidden card. Dealers must hit\
+    \ until their cards total 27 or higher.\nThe dealer's current card is {Heart A}.\
+    \ The dealer has another hidden card. You don't know what it is. Your current\
+    \ cards are {Heart K,Club 5}. Please read the behavoiral guideline and world modeling\
+    \ carefully. Then you should analyze your own cards and your strategies in Self-belief\
+    \ and then analyze the dealer cards in World-belief. Lastly, please select your\
+    \ action from {\"Stand\",\"Hit\"}.### Output Format: Self-Belief is {Belief about\
+    \ youself}. World-Belief is {Belief about the dealer}. My action is {Your action}.\
+    \ Please output in the given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {My current total is 15, which is too low to beat the dealer's
+    potential 27-31. Hitting is safe and might improve my hand to 16-26, but still
+    likely below the dealer's minimum}. World-Belief is {Dealer's hidden card could
+    range from 2-10, leading to initial totals of 13-21. They must hit until reaching
+    27+, risking busting, especially if their initial total is low}. My action is
+    Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of losing the game over 3 points. \n4. After all players have\
+    \ completed their hands, the dealer reveals their hidden card. Dealers must hit\
+    \ until their cards total 27 or higher.\nThe dealer's current card is {Heart A}.\
+    \ The dealer has another hidden card. You don't know what it is. Your current\
+    \ cards are {Heart K,Club 5,Diamond 8}. Please read the behavoiral guideline and\
+    \ world modeling carefully. Then you should analyze your own cards and your strategies\
+    \ in Self-belief and then analyze the dealer cards in World-belief. Lastly, please\
+    \ select your action from {\"Stand\",\"Hit\"}.### Output Format: Self-Belief is\
+    \ {Belief about youself}. World-Belief is {Belief about the dealer}. My action\
+    \ is {Your action}. Please output in the given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {My total is 23, needing 8 or lower to avoid busting and
+    reach up to 31}. World-Belief is {Dealer's current total is 1 + hidden card; they
+    must hit until ≥27, risking busting but likely reaching 27-31}. My action is Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of losing the game over 3 points. \n4. After all players have\
+    \ completed their hands, the dealer reveals their hidden card. Dealers must hit\
+    \ until their cards total 27 or higher.\nThe dealer's current card is {Heart A}.\
+    \ The dealer has another hidden card. You don't know what it is. Your current\
+    \ cards are {Heart K,Club 5,Diamond 8,Diamond 6}. Please read the behavoiral guideline\
+    \ and world modeling carefully. Then you should analyze your own cards and your\
+    \ strategies in Self-belief and then analyze the dealer cards in World-belief.\
+    \ Lastly, please select your action from {\"Stand\",\"Hit\"}.### Output Format:\
+    \ Self-Belief is {Belief about youself}. World-Belief is {Belief about the dealer}.\
+    \ My action is {Your action}. Please output in the given format. Do not write\
+    \ anything else."
+  role: user
+- content: Self-Belief is {My current total is 29. Hitting risks immediate bust (82.6%
+    chance with 3+ value cards), but Standing offers a strong position.}. World-Belief
+    is {Dealer’s Ace and hidden card could total 17-21 (if Ace is 11). They must hit
+    until 27+, risking bust or reaching 27-31. Hidden card ≥7 increases their chance
+    to beat 29.}. My action is {Stand}.
+  role: assistant
+- final cards: 'dealer [''SJ'', ''HA'', ''DK''], player [''HK'', ''C5'', ''D8'', ''D6''], '
+  final results: lose.

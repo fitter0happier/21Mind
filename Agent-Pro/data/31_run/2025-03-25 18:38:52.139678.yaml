@@ -1,0 +1,83 @@
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of losing the game over 3 points. \n4. After all players have\
+    \ completed their hands, the dealer reveals their hidden card. Dealers must hit\
+    \ until their cards total 27 or higher.\nThe dealer's current card is {Club 5}.\
+    \ The dealer has another hidden card. You don't know what it is. Your current\
+    \ cards are {Spade 3,Club 3}. Please read the behavoiral guideline and world modeling\
+    \ carefully. Then you should analyze your own cards and your strategies in Self-belief\
+    \ and then analyze the dealer cards in World-belief. Lastly, please select your\
+    \ action from {\"Stand\",\"Hit\"}.### Output Format: Self-Belief is {Belief about\
+    \ youself}. World-Belief is {Belief about the dealer}. My action is {Your action}.\
+    \ Please output in the given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {My total is 6, which is very low. Hitting once can only
+    add 2-10, making my total 8-16. Even if I hit, I still need the dealer to bust
+    to win.}. World-Belief is {Dealer's visible card is 5, and their hidden card is
+    unknown (2-10). Their current total is 7-15. They must hit until reaching 27+,
+    risking busting.}. My action is {Hit}.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of losing the game over 3 points. \n4. After all players have\
+    \ completed their hands, the dealer reveals their hidden card. Dealers must hit\
+    \ until their cards total 27 or higher.\nThe dealer's current card is {Club 5}.\
+    \ The dealer has another hidden card. You don't know what it is. Your current\
+    \ cards are {Spade 3,Club 3,Heart 9}. Please read the behavoiral guideline and\
+    \ world modeling carefully. Then you should analyze your own cards and your strategies\
+    \ in Self-belief and then analyze the dealer cards in World-belief. Lastly, please\
+    \ select your action from {\"Stand\",\"Hit\"}.### Output Format: Self-Belief is\
+    \ {Belief about youself}. World-Belief is {Belief about the dealer}. My action\
+    \ is {Your action}. Please output in the given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {My current total is 15, which is far below the target of
+    31. To win, I must increase my total while avoiding busting. Given my aggressive
+    style, taking risks to reach a higher total is necessary}. World-Belief is {Dealer's
+    visible card is 5, and their hidden card could range from 1-10. The dealer must
+    hit until reaching 27+, making their likely total 27-31. If I stand at 15, I will
+    lose as the dealer's total will surpass mine}. My action is Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of losing the game over 3 points. \n4. After all players have\
+    \ completed their hands, the dealer reveals their hidden card. Dealers must hit\
+    \ until their cards total 27 or higher.\nThe dealer's current card is {Club 5}.\
+    \ The dealer has another hidden card. You don't know what it is. Your current\
+    \ cards are {Spade 3,Club 3,Heart 9,Heart Q}. Please read the behavoiral guideline\
+    \ and world modeling carefully. Then you should analyze your own cards and your\
+    \ strategies in Self-belief and then analyze the dealer cards in World-belief.\
+    \ Lastly, please select your action from {\"Stand\",\"Hit\"}.### Output Format:\
+    \ Self-Belief is {Belief about youself}. World-Belief is {Belief about the dealer}.\
+    \ My action is {Your action}. Please output in the given format. Do not write\
+    \ anything else."
+  role: user
+- content: Self-Belief is {My current total is 25. Hitting risks busting with a high
+    probability, but could reach up to 31. Standing relies on the dealer busting due
+    to their aggressive target of 27}. World-Belief is {Dealer's visible 5 and hidden
+    card must reach ≥27, requiring multiple hits and increasing bust risk. Their hidden
+    card likely forces risky draws}. My action is {Stand}.
+  role: assistant
+- final cards: 'dealer [''DT'', ''C5'', ''DJ'', ''HT''], player [''S3'', ''C3'', ''H9'',
+    ''HQ''], '
+  final results: win.

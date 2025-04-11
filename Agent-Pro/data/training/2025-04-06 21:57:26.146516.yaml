@@ -1,0 +1,120 @@
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Spade K}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Spade\
+    \ J,Club Q}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**: Prioritize\
+    \ phase-specific survival thresholds while strategically pursuing 28-31 totals\
+    \ against dealer 9/J/Q/K/A. Balance aggression with hard stops to prevent self-inflicted\
+    \ busts.  \n2. **Strategy**:  \n   - **Phase-Locked Limits**:  \n     - Early\
+    \ phase (≤2 cards): Hit until 27 *unless* dealer shows ≤8. Suspend \"projected\
+    \ total\" logic - treat 27 as mandatory early stopping point.  \n     - Mid-phase\
+    \ (3 cards): Hard stand at 26+ (override 15% bust risk rule). Only hit at ≤25\
+    \ *if* remaining 7+/A ≤18% (revised formula: (high-risk cards remaining ÷ deck\
+    \ size) × 1.8).  \n     - Late phase (≥4 cards): Absolute stand at 25+ (27 threshold\
+    \ caused overextension). Ace conversion permitted *only* to prevent busts, not\
+    \ enable hits.  \n   - **Ace Protocol**: Retain Aces as 11 until total reaches\
+    \ 29. Convert only if subsequent hit would otherwise bust.  \n   - **Dealer Pressure\
+    \ Response**: If dealer visible ≥9, accept 27 as viable total rather than mandatory\
+    \ 28+ target when in late phase.  \n3. **Demonstration**: Preserve this game as\
+    \ cautionary example - 4-card 26 with Ace should trigger stand per new late-phase\
+    \ limits, not conversion-enabled hit.\nWorld modeling: **World Modeling**1. **Rule-Description**:\
+    \  \n   - **Dealer Resilience**: Visible 10/J with 70% hidden 7-9 creates 73%\
+    \ probability of dealer reaching 27-30 through 2-4 small hits (≤6 value). Player\
+    \ totals above 25 become critical survival points.  \n   - **Bust Illusion**:\
+    \ Dealer sequences creating 27-30 totals often involve temporary totals of 18-24,\
+    \ misleading players into overestimating bust likelihood.  \n2. **Policy Updates**:\
+    \  \n   - **Hidden Card Model**: When dealer shows 10/J, assign 75% probability\
+    \ to hidden 6-9 (not 7-9) to account for enhanced low-card clustering.  \n   -\
+    \ **Phase Interaction**: Late-phase stands now factor cards already drawn - 4+\
+    \ player cards reduce dealer's available low cards by 22% per hit.  \n3. **Critical\
+    \ Recognition**: 58% of player busts against visible 10/J occur in attempts to\
+    \ reach ≥28 - new strategy caps targets at phase-appropriate levels regardless\
+    \ of dealer potential.  \n\n**Key Strategic Shifts**:  \n- **Survival Primacy**:\
+    \ Phase thresholds override all target alignment logic  \n- **Ace Conservation**:\
+    \ Eliminate proactive Ace conversion - only use as bust prevention tool  \n- **Risk\
+    \ Compression**: Mid-phase bust tolerance reduced from 15% to 9% through revised\
+    \ multiplier (×1.8 vs ×2.3)  \n\n**Validation Fix**: Prevents late-phase overextension\
+    \ by locking stands at 25+ with ≥4 cards, while more accurately modeling dealer's\
+    \ hidden card range and low-card clustering tendencies.\nPlease read the behavioral\
+    \ guideline and world modeling carefully. Then you should analyze your own cards\
+    \ and your strategies in Self-belief and then analyze the dealer cards in World-belief.\
+    \ Lastly, please select your action from {\"Stand\",\"Hit\"}.### Output Format:\
+    \ Self-Belief is {Belief about youself}. World-Belief is {Belief about the dealer}.\
+    \ My action is {Your action}. Please output in the given format. Do not write\
+    \ anything else."
+  role: user
+- content: Self-Belief is {Early phase (2 cards), current total 20, must hit until
+    27 per phase-locked limits despite dealer's visible 10}. World-Belief is {Dealer's
+    75% probability hidden card 6-9 (total 16-19), requiring aggressive 27+ threshold
+    to counter their 73% resilience to reach 27-30}. My action is Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Spade K}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Spade\
+    \ J,Club Q,Heart 6}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**:\
+    \ Prioritize phase-specific survival thresholds while strategically pursuing 28-31\
+    \ totals against dealer 9/J/Q/K/A. Balance aggression with hard stops to prevent\
+    \ self-inflicted busts.  \n2. **Strategy**:  \n   - **Phase-Locked Limits**: \
+    \ \n     - Early phase (≤2 cards): Hit until 27 *unless* dealer shows ≤8. Suspend\
+    \ \"projected total\" logic - treat 27 as mandatory early stopping point.  \n\
+    \     - Mid-phase (3 cards): Hard stand at 26+ (override 15% bust risk rule).\
+    \ Only hit at ≤25 *if* remaining 7+/A ≤18% (revised formula: (high-risk cards\
+    \ remaining ÷ deck size) × 1.8).  \n     - Late phase (≥4 cards): Absolute stand\
+    \ at 25+ (27 threshold caused overextension). Ace conversion permitted *only*\
+    \ to prevent busts, not enable hits.  \n   - **Ace Protocol**: Retain Aces as\
+    \ 11 until total reaches 29. Convert only if subsequent hit would otherwise bust.\
+    \  \n   - **Dealer Pressure Response**: If dealer visible ≥9, accept 27 as viable\
+    \ total rather than mandatory 28+ target when in late phase.  \n3. **Demonstration**:\
+    \ Preserve this game as cautionary example - 4-card 26 with Ace should trigger\
+    \ stand per new late-phase limits, not conversion-enabled hit.\nWorld modeling:\
+    \ **World Modeling**1. **Rule-Description**:  \n   - **Dealer Resilience**: Visible\
+    \ 10/J with 70% hidden 7-9 creates 73% probability of dealer reaching 27-30 through\
+    \ 2-4 small hits (≤6 value). Player totals above 25 become critical survival points.\
+    \  \n   - **Bust Illusion**: Dealer sequences creating 27-30 totals often involve\
+    \ temporary totals of 18-24, misleading players into overestimating bust likelihood.\
+    \  \n2. **Policy Updates**:  \n   - **Hidden Card Model**: When dealer shows 10/J,\
+    \ assign 75% probability to hidden 6-9 (not 7-9) to account for enhanced low-card\
+    \ clustering.  \n   - **Phase Interaction**: Late-phase stands now factor cards\
+    \ already drawn - 4+ player cards reduce dealer's available low cards by 22% per\
+    \ hit.  \n3. **Critical Recognition**: 58% of player busts against visible 10/J\
+    \ occur in attempts to reach ≥28 - new strategy caps targets at phase-appropriate\
+    \ levels regardless of dealer potential.  \n\n**Key Strategic Shifts**:  \n- **Survival\
+    \ Primacy**: Phase thresholds override all target alignment logic  \n- **Ace Conservation**:\
+    \ Eliminate proactive Ace conversion - only use as bust prevention tool  \n- **Risk\
+    \ Compression**: Mid-phase bust tolerance reduced from 15% to 9% through revised\
+    \ multiplier (×1.8 vs ×2.3)  \n\n**Validation Fix**: Prevents late-phase overextension\
+    \ by locking stands at 25+ with ≥4 cards, while more accurately modeling dealer's\
+    \ hidden card range and low-card clustering tendencies.\nPlease read the behavioral\
+    \ guideline and world modeling carefully. Then you should analyze your own cards\
+    \ and your strategies in Self-belief and then analyze the dealer cards in World-belief.\
+    \ Lastly, please select your action from {\"Stand\",\"Hit\"}.### Output Format:\
+    \ Self-Belief is {Belief about youself}. World-Belief is {Belief about the dealer}.\
+    \ My action is {Your action}. Please output in the given format. Do not write\
+    \ anything else."
+  role: user
+- content: Self-Belief is {3-card total of 26 (J+Q+6), mid-phase threshold requiring
+    hard stand at 26+ per phase-locked limits}. World-Belief is {dealer's K (10) +
+    75% probability hidden 6-9 creates 16-19 base total, requiring multiple hits to
+    reach 27+ with elevated bust risk}. My action is Stand.
+  role: assistant
+- final cards: 'dealer [''CT'', ''SK'', ''D3'', ''HJ''], player [''SJ'', ''CQ'', ''H6''], '
+  final results: win.

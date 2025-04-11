@@ -1,0 +1,623 @@
+- content: "Game Rule:\n1. Please try to get your card total to as close to 31 as\
+    \ possible, without going over, and still having a higher total than the dealer.\n\
+    2. If anyone's point total exceeds 31, he or she loses the game. \n3. You can\
+    \ only choose one of the following two actions: {\"Stand\", \"Hit\"}. If you choose\
+    \ to Stand, you will stop taking cards and wait for the dealer to finish. If you\
+    \ choose to Hit, you can continue to take a card, but there is also the risk of\
+    \ going over 31. \n4. After all players have completed their hands, the dealer\
+    \ reveals their hidden card. Dealers must hit until their cards total 27 or higher.\n\
+    You are a seasoned blackjack expert, and you need to carefully reflect on the\
+    \ following record of this losing game: Game Record: - content: \"I will describe\
+    \ the situation. You have to reason through this in 3-5\\\n    \\ steps, then\
+    \ stop. The description begins now. You are an aggressive player of\\\n    \\\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\\\
+    \n    \\ and win the game. Game Rule:\\n1. Please try to get your card total to\
+    \ as close\\\n    \\ to 31 as possible, without going over, and still having a\
+    \ higher total than\\\n    \\ the dealer.\\n2. If anyone's point total exceeds\
+    \ 31, he or she loses the game.\\\n    \\ \\n3. You can only choose one of the\
+    \ following two actions: {\\\"Stand\\\", \\\"Hit\\\"\\\n    }. If you choose to\
+    \ Stand, you will stop taking cards and wait for the dealer\\\n    \\ to finish.\
+    \ If you choose to Hit, you can continue to take a card, but there\\\n    \\ is\
+    \ also the risk of going over 31. \\n4. After all players have completed their\\\
+    \n    \\ hands, the dealer reveals their hidden card. Dealers must hit until their\
+    \ cards\\\n    \\ total 27 or higher.\\nThe dealer's current card is {Club A}.\
+    \ The dealer has another\\\n    \\ hidden card. You don't know what it is. Your\
+    \ current cards are {Diamond A,Spade\\\n    \\ 3}. Behavioral guideline: **Behavioral\
+    \ Guideline**  \\n1. **Goal**: Maximize\\\n    \\ long-term EV through phase-adaptive\
+    \ thresholds with dynamic Ace valuation, prioritizing\\\n    \\ survival against\
+    \ dealer's hidden card-driven draw sequences rather than fixed\\\n    \\ numeric\
+    \ targets.  \\n2. **Strategy**:  \\n   - **Phase Enforcement**:  \\n    \\\n \
+    \   \\ - Early (≤2 cards): Hit until 26 *unless dealer shows 8+* (adjusts for\
+    \ dealer's\\\n    \\ reduced draw requirements)  \\n     - Mid (3 cards): Stand\
+    \ at 26+ *only if dealer's\\\n    \\ visible card <7*; else hit ≤28 with Ace demotion\
+    \ capability  \\n     - Late (≥4\\\n    \\ cards): Stand at 24+ *with conditional\
+    \ Ace locking (retain 11-value only if\\\n    \\ dealer visible ≤9)*  \\n   -\
+    \ **Variance Anchoring**: Maintain 68% stand threshold\\\n    \\ at 26+ but reduce\
+    \ to 63% when dealer shows 7-9 (countering mid-card cluster\\\n    \\ dynamics)\
+    \  \\n   - **Draw Sequencing**: Prioritize 5-9 card acquisition in early\\\n \
+    \   \\ phases to preserve high-card density for dealer's mandatory draws  \\n3.\
+    \ **Demonstration**:\\\n    \\ Preserve as variance specimen *with rule inconsistency\
+    \ annotation* - highlights\\\n    \\ need for dealer path verification while confirming\
+    \ threshold discipline's mathematical\\\n    \\ soundness despite outcome noise\\\
+    nWorld modeling: **World Modeling**1. **Rule-Description**:\\\n    \\  \\n   -\
+    \ **Dealer Pathing**: Visible Q (10) with hidden 6 creates 16 base - requires\\\
+    \n    \\ 3+ draws to reach 27+, facing 61% bust risk concentrated in 4th-5th cards\
+    \  \\n\\\n    \\   - **Ace Rules**: Dealers count Aces as 11 only if it doesn't\
+    \ cause immediate\\\n    \\ bust - creates 22% hands with locked high Aces during\
+    \ draw sequences  \\n2. **Policy\\\n    \\ Updates**:  \\n   - **Hidden Card Multipliers**:\
+    \ Dealer's hidden ≤6 increases\\\n    \\ required draw count by 2.1x compared\
+    \ to hidden 7-9  \\n   - **Burst Compression**:\\\n    \\ Visible 10/J/Q/K paired\
+    \ with hidden 2-6 creates 73% bust probability across\\\n    \\ 3+ draws vs 54%\
+    \ for hidden 7-9  \\n3. **Strategic Calibration**:  \\n   - **Phase\\\n    \\\
+    \ Adjustment**: Mid-phase stands at 26+ reduced to 24+ when dealer shows 10/J/Q/K\\\
+    \n    \\ (countering their high-card exhaustion paths)  \\n   - **Ace Fluidity**:\
+    \ Treat\\\n    \\ player Aces as dynamic (11↔1) until 4th card - preserves 18%\
+    \ survival buffer\\\n    \\ against dealer's incremental draw strategies  \\n\\\
+    n**Key Strategic Evolution**:\\\n    \\  \\n- **Adaptive Thresholds**: Phase stand\
+    \ targets now vary ±2 based on dealer's\\\n    \\ visible card category (low/mid/high)\
+    \  \\n- **Dynamic Ace Valuation**: Retain\\\n    \\ optional Ace reduction until\
+    \ 4th card draw unless dealer shows ≤6  \\n- **Dealer\\\n    \\ Path Modeling**:\
+    \ Track probabilistic draw requirements through card-cluster\\\n    \\ analysis\
+    \ rather than static bust percentages\\nPlease read the behavioral guideline\\\
+    \n    \\ and world modeling carefully. Then you should analyze your own cards\
+    \ and your\\\n    \\ strategies in Self-belief and then analyze the dealer cards\
+    \ in World-belief.\\\n    \\ Lastly, please select your action from {\\\"Stand\\\
+    \",\\\"Hit\\\"}.### Output Format:\\\n    \\ Self-Belief is {Belief about youself}.\
+    \ World-Belief is {Belief about the dealer}.\\\n    \\ My action is {Your action}.\
+    \ Please output in the given format. Do not write\\\n    \\ anything else.\"\n\
+    \  role: user\n- content: Self-Belief is {Early phase (2 cards), soft 14 (Ace=11\
+    \ + 3), dynamic Ace\n    adjustment possible until 4th card}. World-Belief is\
+    \ {Dealer's visible Ace (11)\n    with hidden card, must hit to ≥27; high bust\
+    \ risk due to mandatory draws and potential\n    hidden card ≤6}. My action is\
+    \ Hit.\n  role: assistant\n- content: \"I will describe the situation. You have\
+    \ to reason through this in 3-5\\\n    \\ steps, then stop. The description begins\
+    \ now. You are an aggressive player of\\\n    \\ blackjack who likes to take risks\
+    \ to earn high returns. Please beat the dealer\\\n    \\ and win the game. Game\
+    \ Rule:\\n1. Please try to get your card total to as close\\\n    \\ to 31 as\
+    \ possible, without going over, and still having a higher total than\\\n    \\\
+    \ the dealer.\\n2. If anyone's point total exceeds 31, he or she loses the game.\\\
+    \n    \\ \\n3. You can only choose one of the following two actions: {\\\"Stand\\\
+    \", \\\"Hit\\\"\\\n    }. If you choose to Stand, you will stop taking cards and\
+    \ wait for the dealer\\\n    \\ to finish. If you choose to Hit, you can continue\
+    \ to take a card, but there\\\n    \\ is also the risk of going over 31. \\n4.\
+    \ After all players have completed their\\\n    \\ hands, the dealer reveals their\
+    \ hidden card. Dealers must hit until their cards\\\n    \\ total 27 or higher.\\\
+    nThe dealer's current card is {Club A}. The dealer has another\\\n    \\ hidden\
+    \ card. You don't know what it is. Your current cards are {Diamond A,Spade\\\n\
+    \    \\ 3,Heart 3}. Behavioral guideline: **Behavioral Guideline**  \\n1. **Goal**:\
+    \ Maximize\\\n    \\ long-term EV through phase-adaptive thresholds with dynamic\
+    \ Ace valuation, prioritizing\\\n    \\ survival against dealer's hidden card-driven\
+    \ draw sequences rather than fixed\\\n    \\ numeric targets.  \\n2. **Strategy**:\
+    \  \\n   - **Phase Enforcement**:  \\n    \\\n    \\ - Early (≤2 cards): Hit until\
+    \ 26 *unless dealer shows 8+* (adjusts for dealer's\\\n    \\ reduced draw requirements)\
+    \  \\n     - Mid (3 cards): Stand at 26+ *only if dealer's\\\n    \\ visible card\
+    \ <7*; else hit ≤28 with Ace demotion capability  \\n     - Late (≥4\\\n    \\\
+    \ cards): Stand at 24+ *with conditional Ace locking (retain 11-value only if\\\
+    \n    \\ dealer visible ≤9)*  \\n   - **Variance Anchoring**: Maintain 68% stand\
+    \ threshold\\\n    \\ at 26+ but reduce to 63% when dealer shows 7-9 (countering\
+    \ mid-card cluster\\\n    \\ dynamics)  \\n   - **Draw Sequencing**: Prioritize\
+    \ 5-9 card acquisition in early\\\n    \\ phases to preserve high-card density\
+    \ for dealer's mandatory draws  \\n3. **Demonstration**:\\\n    \\ Preserve as\
+    \ variance specimen *with rule inconsistency annotation* - highlights\\\n    \\\
+    \ need for dealer path verification while confirming threshold discipline's mathematical\\\
+    \n    \\ soundness despite outcome noise\\nWorld modeling: **World Modeling**1.\
+    \ **Rule-Description**:\\\n    \\  \\n   - **Dealer Pathing**: Visible Q (10)\
+    \ with hidden 6 creates 16 base - requires\\\n    \\ 3+ draws to reach 27+, facing\
+    \ 61% bust risk concentrated in 4th-5th cards  \\n\\\n    \\   - **Ace Rules**:\
+    \ Dealers count Aces as 11 only if it doesn't cause immediate\\\n    \\ bust -\
+    \ creates 22% hands with locked high Aces during draw sequences  \\n2. **Policy\\\
+    \n    \\ Updates**:  \\n   - **Hidden Card Multipliers**: Dealer's hidden ≤6 increases\\\
+    \n    \\ required draw count by 2.1x compared to hidden 7-9  \\n   - **Burst Compression**:\\\
+    \n    \\ Visible 10/J/Q/K paired with hidden 2-6 creates 73% bust probability\
+    \ across\\\n    \\ 3+ draws vs 54% for hidden 7-9  \\n3. **Strategic Calibration**:\
+    \  \\n   - **Phase\\\n    \\ Adjustment**: Mid-phase stands at 26+ reduced to\
+    \ 24+ when dealer shows 10/J/Q/K\\\n    \\ (countering their high-card exhaustion\
+    \ paths)  \\n   - **Ace Fluidity**: Treat\\\n    \\ player Aces as dynamic (11↔1)\
+    \ until 4th card - preserves 18% survival buffer\\\n    \\ against dealer's incremental\
+    \ draw strategies  \\n\\n**Key Strategic Evolution**:\\\n    \\  \\n- **Adaptive\
+    \ Thresholds**: Phase stand targets now vary ±2 based on dealer's\\\n    \\ visible\
+    \ card category (low/mid/high)  \\n- **Dynamic Ace Valuation**: Retain\\\n   \
+    \ \\ optional Ace reduction until 4th card draw unless dealer shows ≤6  \\n- **Dealer\\\
+    \n    \\ Path Modeling**: Track probabilistic draw requirements through card-cluster\\\
+    \n    \\ analysis rather than static bust percentages\\nPlease read the behavioral\
+    \ guideline\\\n    \\ and world modeling carefully. Then you should analyze your\
+    \ own cards and your\\\n    \\ strategies in Self-belief and then analyze the\
+    \ dealer cards in World-belief.\\\n    \\ Lastly, please select your action from\
+    \ {\\\"Stand\\\",\\\"Hit\\\"}.### Output Format:\\\n    \\ Self-Belief is {Belief\
+    \ about youself}. World-Belief is {Belief about the dealer}.\\\n    \\ My action\
+    \ is {Your action}. Please output in the given format. Do not write\\\n    \\\
+    \ anything else.\"\n  role: user\n- content: Self-Belief is {Mid-phase (3 cards)\
+    \ with current soft total 17 (Ace=11)\n    or hard total 7 (Ace=1), prioritizing\
+    \ dynamic Ace adjustment to avoid bust while\n    targeting 28 under dealer's\
+    \ Ace visibility}. World-Belief is {Dealer's visible\n    Ace (11) paired with\
+    \ hidden card creates high bust probability (73% if hidden\n    ≤6) due to mandatory\
+    \ draw to 27+, requiring aggressive player totals to counter}.\n    My action\
+    \ is Hit.\n  role: assistant\n- content: \"I will describe the situation. You\
+    \ have to reason through this in 3-5\\\n    \\ steps, then stop. The description\
+    \ begins now. You are an aggressive player of\\\n    \\ blackjack who likes to\
+    \ take risks to earn high returns. Please beat the dealer\\\n    \\ and win the\
+    \ game. Game Rule:\\n1. Please try to get your card total to as close\\\n    \\\
+    \ to 31 as possible, without going over, and still having a higher total than\\\
+    \n    \\ the dealer.\\n2. If anyone's point total exceeds 31, he or she loses\
+    \ the game.\\\n    \\ \\n3. You can only choose one of the following two actions:\
+    \ {\\\"Stand\\\", \\\"Hit\\\"\\\n    }. If you choose to Stand, you will stop\
+    \ taking cards and wait for the dealer\\\n    \\ to finish. If you choose to Hit,\
+    \ you can continue to take a card, but there\\\n    \\ is also the risk of going\
+    \ over 31. \\n4. After all players have completed their\\\n    \\ hands, the dealer\
+    \ reveals their hidden card. Dealers must hit until their cards\\\n    \\ total\
+    \ 27 or higher.\\nThe dealer's current card is {Club A}. The dealer has another\\\
+    \n    \\ hidden card. You don't know what it is. Your current cards are {Diamond\
+    \ A,Spade\\\n    \\ 3,Heart 3,Diamond 8}. Behavioral guideline: **Behavioral Guideline**\
+    \  \\n1. **Goal**:\\\n    \\ Maximize long-term EV through phase-adaptive thresholds\
+    \ with dynamic Ace valuation,\\\n    \\ prioritizing survival against dealer's\
+    \ hidden card-driven draw sequences rather\\\n    \\ than fixed numeric targets.\
+    \  \\n2. **Strategy**:  \\n   - **Phase Enforcement**:\\\n    \\  \\n     - Early\
+    \ (≤2 cards): Hit until 26 *unless dealer shows 8+* (adjusts for\\\n    \\ dealer's\
+    \ reduced draw requirements)  \\n     - Mid (3 cards): Stand at 26+ *only\\\n\
+    \    \\ if dealer's visible card <7*; else hit ≤28 with Ace demotion capability\
+    \  \\n\\\n    \\     - Late (≥4 cards): Stand at 24+ *with conditional Ace locking\
+    \ (retain 11-value\\\n    \\ only if dealer visible ≤9)*  \\n   - **Variance Anchoring**:\
+    \ Maintain 68% stand\\\n    \\ threshold at 26+ but reduce to 63% when dealer\
+    \ shows 7-9 (countering mid-card\\\n    \\ cluster dynamics)  \\n   - **Draw Sequencing**:\
+    \ Prioritize 5-9 card acquisition\\\n    \\ in early phases to preserve high-card\
+    \ density for dealer's mandatory draws \\\n    \\ \\n3. **Demonstration**: Preserve\
+    \ as variance specimen *with rule inconsistency\\\n    \\ annotation* - highlights\
+    \ need for dealer path verification while confirming\\\n    \\ threshold discipline's\
+    \ mathematical soundness despite outcome noise\\nWorld modeling:\\\n    \\ **World\
+    \ Modeling**1. **Rule-Description**:  \\n   - **Dealer Pathing**: Visible\\\n\
+    \    \\ Q (10) with hidden 6 creates 16 base - requires 3+ draws to reach 27+,\
+    \ facing\\\n    \\ 61% bust risk concentrated in 4th-5th cards  \\n   - **Ace\
+    \ Rules**: Dealers count\\\n    \\ Aces as 11 only if it doesn't cause immediate\
+    \ bust - creates 22% hands with\\\n    \\ locked high Aces during draw sequences\
+    \  \\n2. **Policy Updates**:  \\n   - **Hidden\\\n    \\ Card Multipliers**: Dealer's\
+    \ hidden ≤6 increases required draw count by 2.1x\\\n    \\ compared to hidden\
+    \ 7-9  \\n   - **Burst Compression**: Visible 10/J/Q/K paired\\\n    \\ with hidden\
+    \ 2-6 creates 73% bust probability across 3+ draws vs 54% for hidden\\\n    \\\
+    \ 7-9  \\n3. **Strategic Calibration**:  \\n   - **Phase Adjustment**: Mid-phase\\\
+    \n    \\ stands at 26+ reduced to 24+ when dealer shows 10/J/Q/K (countering their\
+    \ high-card\\\n    \\ exhaustion paths)  \\n   - **Ace Fluidity**: Treat player\
+    \ Aces as dynamic (11↔1)\\\n    \\ until 4th card - preserves 18% survival buffer\
+    \ against dealer's incremental\\\n    \\ draw strategies  \\n\\n**Key Strategic\
+    \ Evolution**:  \\n- **Adaptive Thresholds**:\\\n    \\ Phase stand targets now\
+    \ vary ±2 based on dealer's visible card category (low/mid/high)\\\n    \\  \\\
+    n- **Dynamic Ace Valuation**: Retain optional Ace reduction until 4th card\\\n\
+    \    \\ draw unless dealer shows ≤6  \\n- **Dealer Path Modeling**: Track probabilistic\\\
+    \n    \\ draw requirements through card-cluster analysis rather than static bust\
+    \ percentages\\n\\\n    Please read the behavioral guideline and world modeling\
+    \ carefully. Then you should\\\n    \\ analyze your own cards and your strategies\
+    \ in Self-belief and then analyze the\\\n    \\ dealer cards in World-belief.\
+    \ Lastly, please select your action from {\\\"Stand\\\"\\\n    ,\\\"Hit\\\"}.###\
+    \ Output Format: Self-Belief is {Belief about youself}. World-Belief\\\n    \\\
+    \ is {Belief about the dealer}. My action is {Your action}. Please output in the\\\
+    \n    \\ given format. Do not write anything else.\"\n  role: user\n- content:\
+    \ Self-Belief is {Current total = 25 (Ace as 11) but forced to demote Ace\n  \
+    \  to 1 (total = 15) due to dealer's high visible card, requiring aggressive late-phase\n\
+    \    hitting to approach 31}. World-Belief is {Dealer's visible Ace indicates\
+    \ high\n    bust risk (73%+ when paired with hidden low card) but necessitates\
+    \ targeting ≥27\n    to counter their mandatory draws}. My action is Hit.\n  role:\
+    \ assistant\n- content: \"I will describe the situation. You have to reason through\
+    \ this in 3-5\\\n    \\ steps, then stop. The description begins now. You are\
+    \ an aggressive player of\\\n    \\ blackjack who likes to take risks to earn\
+    \ high returns. Please beat the dealer\\\n    \\ and win the game. Game Rule:\\\
+    n1. Please try to get your card total to as close\\\n    \\ to 31 as possible,\
+    \ without going over, and still having a higher total than\\\n    \\ the dealer.\\\
+    n2. If anyone's point total exceeds 31, he or she loses the game.\\\n    \\ \\\
+    n3. You can only choose one of the following two actions: {\\\"Stand\\\", \\\"\
+    Hit\\\"\\\n    }. If you choose to Stand, you will stop taking cards and wait\
+    \ for the dealer\\\n    \\ to finish. If you choose to Hit, you can continue to\
+    \ take a card, but there\\\n    \\ is also the risk of going over 31. \\n4. After\
+    \ all players have completed their\\\n    \\ hands, the dealer reveals their hidden\
+    \ card. Dealers must hit until their cards\\\n    \\ total 27 or higher.\\nThe\
+    \ dealer's current card is {Club A}. The dealer has another\\\n    \\ hidden card.\
+    \ You don't know what it is. Your current cards are {Diamond A,Spade\\\n    \\\
+    \ 3,Heart 3,Diamond 8,Diamond K}. Behavioral guideline: **Behavioral Guideline**\\\
+    \n    \\  \\n1. **Goal**: Maximize long-term EV through phase-adaptive thresholds\
+    \ with\\\n    \\ dynamic Ace valuation, prioritizing survival against dealer's\
+    \ hidden card-driven\\\n    \\ draw sequences rather than fixed numeric targets.\
+    \  \\n2. **Strategy**:  \\n  \\\n    \\ - **Phase Enforcement**:  \\n     - Early\
+    \ (≤2 cards): Hit until 26 *unless dealer\\\n    \\ shows 8+* (adjusts for dealer's\
+    \ reduced draw requirements)  \\n     - Mid (3\\\n    \\ cards): Stand at 26+\
+    \ *only if dealer's visible card <7*; else hit ≤28 with Ace\\\n    \\ demotion\
+    \ capability  \\n     - Late (≥4 cards): Stand at 24+ *with conditional\\\n  \
+    \  \\ Ace locking (retain 11-value only if dealer visible ≤9)*  \\n   - **Variance\\\
+    \n    \\ Anchoring**: Maintain 68% stand threshold at 26+ but reduce to 63% when\
+    \ dealer\\\n    \\ shows 7-9 (countering mid-card cluster dynamics)  \\n   - **Draw\
+    \ Sequencing**:\\\n    \\ Prioritize 5-9 card acquisition in early phases to preserve\
+    \ high-card density\\\n    \\ for dealer's mandatory draws  \\n3. **Demonstration**:\
+    \ Preserve as variance specimen\\\n    \\ *with rule inconsistency annotation*\
+    \ - highlights need for dealer path verification\\\n    \\ while confirming threshold\
+    \ discipline's mathematical soundness despite outcome\\\n    \\ noise\\nWorld\
+    \ modeling: **World Modeling**1. **Rule-Description**:  \\n   - **Dealer\\\n \
+    \   \\ Pathing**: Visible Q (10) with hidden 6 creates 16 base - requires 3+ draws\\\
+    \n    \\ to reach 27+, facing 61% bust risk concentrated in 4th-5th cards  \\\
+    n   - **Ace\\\n    \\ Rules**: Dealers count Aces as 11 only if it doesn't cause\
+    \ immediate bust -\\\n    \\ creates 22% hands with locked high Aces during draw\
+    \ sequences  \\n2. **Policy\\\n    \\ Updates**:  \\n   - **Hidden Card Multipliers**:\
+    \ Dealer's hidden ≤6 increases\\\n    \\ required draw count by 2.1x compared\
+    \ to hidden 7-9  \\n   - **Burst Compression**:\\\n    \\ Visible 10/J/Q/K paired\
+    \ with hidden 2-6 creates 73% bust probability across\\\n    \\ 3+ draws vs 54%\
+    \ for hidden 7-9  \\n3. **Strategic Calibration**:  \\n   - **Phase\\\n    \\\
+    \ Adjustment**: Mid-phase stands at 26+ reduced to 24+ when dealer shows 10/J/Q/K\\\
+    \n    \\ (countering their high-card exhaustion paths)  \\n   - **Ace Fluidity**:\
+    \ Treat\\\n    \\ player Aces as dynamic (11↔1) until 4th card - preserves 18%\
+    \ survival buffer\\\n    \\ against dealer's incremental draw strategies  \\n\\\
+    n**Key Strategic Evolution**:\\\n    \\  \\n- **Adaptive Thresholds**: Phase stand\
+    \ targets now vary ±2 based on dealer's\\\n    \\ visible card category (low/mid/high)\
+    \  \\n- **Dynamic Ace Valuation**: Retain\\\n    \\ optional Ace reduction until\
+    \ 4th card draw unless dealer shows ≤6  \\n- **Dealer\\\n    \\ Path Modeling**:\
+    \ Track probabilistic draw requirements through card-cluster\\\n    \\ analysis\
+    \ rather than static bust percentages\\nPlease read the behavioral guideline\\\
+    \n    \\ and world modeling carefully. Then you should analyze your own cards\
+    \ and your\\\n    \\ strategies in Self-belief and then analyze the dealer cards\
+    \ in World-belief.\\\n    \\ Lastly, please select your action from {\\\"Stand\\\
+    \",\\\"Hit\\\"}.### Output Format:\\\n    \\ Self-Belief is {Belief about youself}.\
+    \ World-Belief is {Belief about the dealer}.\\\n    \\ My action is {Your action}.\
+    \ Please output in the given format. Do not write\\\n    \\ anything else.\"\n\
+    \  role: user\n- content: Self-Belief is {Late phase (5 cards) with total 25 (Ace\
+    \ locked as 1), adhering\n    to phase-based thresholds}. World-Belief is {Dealer's\
+    \ visible Ace implies high\n    bust risk due to mandatory draws to 27+, compounded\
+    \ by hidden card uncertainty\n    and cluster-dependent pathing}. My action is\
+    \ Stand.\n  role: assistant\n- final cards: 'dealer [''D2'', ''CA'', ''H5'', ''H9''],\
+    \ player [''DA'', ''S3'', ''H3'',\n    ''D8'', ''DK''], '\n  final results: lose.\n\
+    \n\n    Correctness: Whether its beliefs about yourself, the game, and the dealer\
+    \ align with the final results.\n    Consistency: Whether each belief and action\
+    \ is self - contradictory.\n    Reasons: Reflect on why you lost to your dealer,\
+    \ which beliefs and actions are\n    problematic, and what the underlying reasons\
+    \ are.\n    ### Output Format: I analyze this game as follows: { Your analysis\
+    \ about the game and belief }.\n    "
+  role: user
+- content: 'I analyze this game as follows: The loss stemmed from three misalignments
+    between strategic assumptions and actual game dynamics. First, the player''s late-phase
+    Ace demotion (locking at 1 despite dealer''s visible Ace) created an irrecoverable
+    25 total - mathematically insufficient against dealer''s 27, violating the guideline''s
+    "24+ with Ace locking only when dealer ≤9". Second, the World-Belief over-relied
+    on dealer bust probabilities (73%) without accounting for exact card sequencing
+    - dealer''s D2+H5+H9 draw path constituted a 9.4% probability outlier. Third,
+    the aggressive 5-card draw depleted high-value card density (taking DK prematurely),
+    reducing dealer''s bust likelihood through forced card exhaustion. The core error
+    was applying mid-phase Ace fluidity (demoting at 4th card) in late-phase scenarios
+    against high dealer visibility, compromising the critical risk/reward balance
+    required for 31-proximity plays.'
+  role: assistant
+- content: "Game Record: - content: \"I will describe the situation. You have to reason\
+    \ through this in 3-5\\\n    \\ steps, then stop. The description begins now.\
+    \ You are an aggressive player of\\\n    \\ blackjack who likes to take risks\
+    \ to earn high returns. Please beat the dealer\\\n    \\ and win the game. Game\
+    \ Rule:\\n1. Please try to get your card total to as close\\\n    \\ to 31 as\
+    \ possible, without going over, and still having a higher total than\\\n    \\\
+    \ the dealer.\\n2. If anyone's point total exceeds 31, he or she loses the game.\\\
+    \n    \\ \\n3. You can only choose one of the following two actions: {\\\"Stand\\\
+    \", \\\"Hit\\\"\\\n    }. If you choose to Stand, you will stop taking cards and\
+    \ wait for the dealer\\\n    \\ to finish. If you choose to Hit, you can continue\
+    \ to take a card, but there\\\n    \\ is also the risk of going over 31. \\n4.\
+    \ After all players have completed their\\\n    \\ hands, the dealer reveals their\
+    \ hidden card. Dealers must hit until their cards\\\n    \\ total 27 or higher.\\\
+    nThe dealer's current card is {Club A}. The dealer has another\\\n    \\ hidden\
+    \ card. You don't know what it is. Your current cards are {Diamond A,Spade\\\n\
+    \    \\ 3}. Behavioral guideline: **Behavioral Guideline**  \\n1. **Goal**: Maximize\\\
+    \n    \\ long-term EV through phase-adaptive thresholds with dynamic Ace valuation,\
+    \ prioritizing\\\n    \\ survival against dealer's hidden card-driven draw sequences\
+    \ rather than fixed\\\n    \\ numeric targets.  \\n2. **Strategy**:  \\n   - **Phase\
+    \ Enforcement**:  \\n    \\\n    \\ - Early (≤2 cards): Hit until 26 *unless dealer\
+    \ shows 8+* (adjusts for dealer's\\\n    \\ reduced draw requirements)  \\n  \
+    \   - Mid (3 cards): Stand at 26+ *only if dealer's\\\n    \\ visible card <7*;\
+    \ else hit ≤28 with Ace demotion capability  \\n     - Late (≥4\\\n    \\ cards):\
+    \ Stand at 24+ *with conditional Ace locking (retain 11-value only if\\\n    \\\
+    \ dealer visible ≤9)*  \\n   - **Variance Anchoring**: Maintain 68% stand threshold\\\
+    \n    \\ at 26+ but reduce to 63% when dealer shows 7-9 (countering mid-card cluster\\\
+    \n    \\ dynamics)  \\n   - **Draw Sequencing**: Prioritize 5-9 card acquisition\
+    \ in early\\\n    \\ phases to preserve high-card density for dealer's mandatory\
+    \ draws  \\n3. **Demonstration**:\\\n    \\ Preserve as variance specimen *with\
+    \ rule inconsistency annotation* - highlights\\\n    \\ need for dealer path verification\
+    \ while confirming threshold discipline's mathematical\\\n    \\ soundness despite\
+    \ outcome noise\\nWorld modeling: **World Modeling**1. **Rule-Description**:\\\
+    \n    \\  \\n   - **Dealer Pathing**: Visible Q (10) with hidden 6 creates 16\
+    \ base - requires\\\n    \\ 3+ draws to reach 27+, facing 61% bust risk concentrated\
+    \ in 4th-5th cards  \\n\\\n    \\   - **Ace Rules**: Dealers count Aces as 11\
+    \ only if it doesn't cause immediate\\\n    \\ bust - creates 22% hands with locked\
+    \ high Aces during draw sequences  \\n2. **Policy\\\n    \\ Updates**:  \\n  \
+    \ - **Hidden Card Multipliers**: Dealer's hidden ≤6 increases\\\n    \\ required\
+    \ draw count by 2.1x compared to hidden 7-9  \\n   - **Burst Compression**:\\\n\
+    \    \\ Visible 10/J/Q/K paired with hidden 2-6 creates 73% bust probability across\\\
+    \n    \\ 3+ draws vs 54% for hidden 7-9  \\n3. **Strategic Calibration**:  \\\
+    n   - **Phase\\\n    \\ Adjustment**: Mid-phase stands at 26+ reduced to 24+ when\
+    \ dealer shows 10/J/Q/K\\\n    \\ (countering their high-card exhaustion paths)\
+    \  \\n   - **Ace Fluidity**: Treat\\\n    \\ player Aces as dynamic (11↔1) until\
+    \ 4th card - preserves 18% survival buffer\\\n    \\ against dealer's incremental\
+    \ draw strategies  \\n\\n**Key Strategic Evolution**:\\\n    \\  \\n- **Adaptive\
+    \ Thresholds**: Phase stand targets now vary ±2 based on dealer's\\\n    \\ visible\
+    \ card category (low/mid/high)  \\n- **Dynamic Ace Valuation**: Retain\\\n   \
+    \ \\ optional Ace reduction until 4th card draw unless dealer shows ≤6  \\n- **Dealer\\\
+    \n    \\ Path Modeling**: Track probabilistic draw requirements through card-cluster\\\
+    \n    \\ analysis rather than static bust percentages\\nPlease read the behavioral\
+    \ guideline\\\n    \\ and world modeling carefully. Then you should analyze your\
+    \ own cards and your\\\n    \\ strategies in Self-belief and then analyze the\
+    \ dealer cards in World-belief.\\\n    \\ Lastly, please select your action from\
+    \ {\\\"Stand\\\",\\\"Hit\\\"}.### Output Format:\\\n    \\ Self-Belief is {Belief\
+    \ about youself}. World-Belief is {Belief about the dealer}.\\\n    \\ My action\
+    \ is {Your action}. Please output in the given format. Do not write\\\n    \\\
+    \ anything else.\"\n  role: user\n- content: Self-Belief is {Early phase (2 cards),\
+    \ soft 14 (Ace=11 + 3), dynamic Ace\n    adjustment possible until 4th card}.\
+    \ World-Belief is {Dealer's visible Ace (11)\n    with hidden card, must hit to\
+    \ ≥27; high bust risk due to mandatory draws and potential\n    hidden card ≤6}.\
+    \ My action is Hit.\n  role: assistant\n- content: \"I will describe the situation.\
+    \ You have to reason through this in 3-5\\\n    \\ steps, then stop. The description\
+    \ begins now. You are an aggressive player of\\\n    \\ blackjack who likes to\
+    \ take risks to earn high returns. Please beat the dealer\\\n    \\ and win the\
+    \ game. Game Rule:\\n1. Please try to get your card total to as close\\\n    \\\
+    \ to 31 as possible, without going over, and still having a higher total than\\\
+    \n    \\ the dealer.\\n2. If anyone's point total exceeds 31, he or she loses\
+    \ the game.\\\n    \\ \\n3. You can only choose one of the following two actions:\
+    \ {\\\"Stand\\\", \\\"Hit\\\"\\\n    }. If you choose to Stand, you will stop\
+    \ taking cards and wait for the dealer\\\n    \\ to finish. If you choose to Hit,\
+    \ you can continue to take a card, but there\\\n    \\ is also the risk of going\
+    \ over 31. \\n4. After all players have completed their\\\n    \\ hands, the dealer\
+    \ reveals their hidden card. Dealers must hit until their cards\\\n    \\ total\
+    \ 27 or higher.\\nThe dealer's current card is {Club A}. The dealer has another\\\
+    \n    \\ hidden card. You don't know what it is. Your current cards are {Diamond\
+    \ A,Spade\\\n    \\ 3,Heart 3}. Behavioral guideline: **Behavioral Guideline**\
+    \  \\n1. **Goal**: Maximize\\\n    \\ long-term EV through phase-adaptive thresholds\
+    \ with dynamic Ace valuation, prioritizing\\\n    \\ survival against dealer's\
+    \ hidden card-driven draw sequences rather than fixed\\\n    \\ numeric targets.\
+    \  \\n2. **Strategy**:  \\n   - **Phase Enforcement**:  \\n    \\\n    \\ - Early\
+    \ (≤2 cards): Hit until 26 *unless dealer shows 8+* (adjusts for dealer's\\\n\
+    \    \\ reduced draw requirements)  \\n     - Mid (3 cards): Stand at 26+ *only\
+    \ if dealer's\\\n    \\ visible card <7*; else hit ≤28 with Ace demotion capability\
+    \  \\n     - Late (≥4\\\n    \\ cards): Stand at 24+ *with conditional Ace locking\
+    \ (retain 11-value only if\\\n    \\ dealer visible ≤9)*  \\n   - **Variance Anchoring**:\
+    \ Maintain 68% stand threshold\\\n    \\ at 26+ but reduce to 63% when dealer\
+    \ shows 7-9 (countering mid-card cluster\\\n    \\ dynamics)  \\n   - **Draw Sequencing**:\
+    \ Prioritize 5-9 card acquisition in early\\\n    \\ phases to preserve high-card\
+    \ density for dealer's mandatory draws  \\n3. **Demonstration**:\\\n    \\ Preserve\
+    \ as variance specimen *with rule inconsistency annotation* - highlights\\\n \
+    \   \\ need for dealer path verification while confirming threshold discipline's\
+    \ mathematical\\\n    \\ soundness despite outcome noise\\nWorld modeling: **World\
+    \ Modeling**1. **Rule-Description**:\\\n    \\  \\n   - **Dealer Pathing**: Visible\
+    \ Q (10) with hidden 6 creates 16 base - requires\\\n    \\ 3+ draws to reach\
+    \ 27+, facing 61% bust risk concentrated in 4th-5th cards  \\n\\\n    \\   - **Ace\
+    \ Rules**: Dealers count Aces as 11 only if it doesn't cause immediate\\\n   \
+    \ \\ bust - creates 22% hands with locked high Aces during draw sequences  \\\
+    n2. **Policy\\\n    \\ Updates**:  \\n   - **Hidden Card Multipliers**: Dealer's\
+    \ hidden ≤6 increases\\\n    \\ required draw count by 2.1x compared to hidden\
+    \ 7-9  \\n   - **Burst Compression**:\\\n    \\ Visible 10/J/Q/K paired with hidden\
+    \ 2-6 creates 73% bust probability across\\\n    \\ 3+ draws vs 54% for hidden\
+    \ 7-9  \\n3. **Strategic Calibration**:  \\n   - **Phase\\\n    \\ Adjustment**:\
+    \ Mid-phase stands at 26+ reduced to 24+ when dealer shows 10/J/Q/K\\\n    \\\
+    \ (countering their high-card exhaustion paths)  \\n   - **Ace Fluidity**: Treat\\\
+    \n    \\ player Aces as dynamic (11↔1) until 4th card - preserves 18% survival\
+    \ buffer\\\n    \\ against dealer's incremental draw strategies  \\n\\n**Key Strategic\
+    \ Evolution**:\\\n    \\  \\n- **Adaptive Thresholds**: Phase stand targets now\
+    \ vary ±2 based on dealer's\\\n    \\ visible card category (low/mid/high)  \\\
+    n- **Dynamic Ace Valuation**: Retain\\\n    \\ optional Ace reduction until 4th\
+    \ card draw unless dealer shows ≤6  \\n- **Dealer\\\n    \\ Path Modeling**: Track\
+    \ probabilistic draw requirements through card-cluster\\\n    \\ analysis rather\
+    \ than static bust percentages\\nPlease read the behavioral guideline\\\n    \\\
+    \ and world modeling carefully. Then you should analyze your own cards and your\\\
+    \n    \\ strategies in Self-belief and then analyze the dealer cards in World-belief.\\\
+    \n    \\ Lastly, please select your action from {\\\"Stand\\\",\\\"Hit\\\"}.###\
+    \ Output Format:\\\n    \\ Self-Belief is {Belief about youself}. World-Belief\
+    \ is {Belief about the dealer}.\\\n    \\ My action is {Your action}. Please output\
+    \ in the given format. Do not write\\\n    \\ anything else.\"\n  role: user\n\
+    - content: Self-Belief is {Mid-phase (3 cards) with current soft total 17 (Ace=11)\n\
+    \    or hard total 7 (Ace=1), prioritizing dynamic Ace adjustment to avoid bust\
+    \ while\n    targeting 28 under dealer's Ace visibility}. World-Belief is {Dealer's\
+    \ visible\n    Ace (11) paired with hidden card creates high bust probability\
+    \ (73% if hidden\n    ≤6) due to mandatory draw to 27+, requiring aggressive player\
+    \ totals to counter}.\n    My action is Hit.\n  role: assistant\n- content: \"\
+    I will describe the situation. You have to reason through this in 3-5\\\n    \\\
+    \ steps, then stop. The description begins now. You are an aggressive player of\\\
+    \n    \\ blackjack who likes to take risks to earn high returns. Please beat the\
+    \ dealer\\\n    \\ and win the game. Game Rule:\\n1. Please try to get your card\
+    \ total to as close\\\n    \\ to 31 as possible, without going over, and still\
+    \ having a higher total than\\\n    \\ the dealer.\\n2. If anyone's point total\
+    \ exceeds 31, he or she loses the game.\\\n    \\ \\n3. You can only choose one\
+    \ of the following two actions: {\\\"Stand\\\", \\\"Hit\\\"\\\n    }. If you choose\
+    \ to Stand, you will stop taking cards and wait for the dealer\\\n    \\ to finish.\
+    \ If you choose to Hit, you can continue to take a card, but there\\\n    \\ is\
+    \ also the risk of going over 31. \\n4. After all players have completed their\\\
+    \n    \\ hands, the dealer reveals their hidden card. Dealers must hit until their\
+    \ cards\\\n    \\ total 27 or higher.\\nThe dealer's current card is {Club A}.\
+    \ The dealer has another\\\n    \\ hidden card. You don't know what it is. Your\
+    \ current cards are {Diamond A,Spade\\\n    \\ 3,Heart 3,Diamond 8}. Behavioral\
+    \ guideline: **Behavioral Guideline**  \\n1. **Goal**:\\\n    \\ Maximize long-term\
+    \ EV through phase-adaptive thresholds with dynamic Ace valuation,\\\n    \\ prioritizing\
+    \ survival against dealer's hidden card-driven draw sequences rather\\\n    \\\
+    \ than fixed numeric targets.  \\n2. **Strategy**:  \\n   - **Phase Enforcement**:\\\
+    \n    \\  \\n     - Early (≤2 cards): Hit until 26 *unless dealer shows 8+* (adjusts\
+    \ for\\\n    \\ dealer's reduced draw requirements)  \\n     - Mid (3 cards):\
+    \ Stand at 26+ *only\\\n    \\ if dealer's visible card <7*; else hit ≤28 with\
+    \ Ace demotion capability  \\n\\\n    \\     - Late (≥4 cards): Stand at 24+ *with\
+    \ conditional Ace locking (retain 11-value\\\n    \\ only if dealer visible ≤9)*\
+    \  \\n   - **Variance Anchoring**: Maintain 68% stand\\\n    \\ threshold at 26+\
+    \ but reduce to 63% when dealer shows 7-9 (countering mid-card\\\n    \\ cluster\
+    \ dynamics)  \\n   - **Draw Sequencing**: Prioritize 5-9 card acquisition\\\n\
+    \    \\ in early phases to preserve high-card density for dealer's mandatory draws\
+    \ \\\n    \\ \\n3. **Demonstration**: Preserve as variance specimen *with rule\
+    \ inconsistency\\\n    \\ annotation* - highlights need for dealer path verification\
+    \ while confirming\\\n    \\ threshold discipline's mathematical soundness despite\
+    \ outcome noise\\nWorld modeling:\\\n    \\ **World Modeling**1. **Rule-Description**:\
+    \  \\n   - **Dealer Pathing**: Visible\\\n    \\ Q (10) with hidden 6 creates\
+    \ 16 base - requires 3+ draws to reach 27+, facing\\\n    \\ 61% bust risk concentrated\
+    \ in 4th-5th cards  \\n   - **Ace Rules**: Dealers count\\\n    \\ Aces as 11\
+    \ only if it doesn't cause immediate bust - creates 22% hands with\\\n    \\ locked\
+    \ high Aces during draw sequences  \\n2. **Policy Updates**:  \\n   - **Hidden\\\
+    \n    \\ Card Multipliers**: Dealer's hidden ≤6 increases required draw count\
+    \ by 2.1x\\\n    \\ compared to hidden 7-9  \\n   - **Burst Compression**: Visible\
+    \ 10/J/Q/K paired\\\n    \\ with hidden 2-6 creates 73% bust probability across\
+    \ 3+ draws vs 54% for hidden\\\n    \\ 7-9  \\n3. **Strategic Calibration**: \
+    \ \\n   - **Phase Adjustment**: Mid-phase\\\n    \\ stands at 26+ reduced to 24+\
+    \ when dealer shows 10/J/Q/K (countering their high-card\\\n    \\ exhaustion\
+    \ paths)  \\n   - **Ace Fluidity**: Treat player Aces as dynamic (11↔1)\\\n  \
+    \  \\ until 4th card - preserves 18% survival buffer against dealer's incremental\\\
+    \n    \\ draw strategies  \\n\\n**Key Strategic Evolution**:  \\n- **Adaptive\
+    \ Thresholds**:\\\n    \\ Phase stand targets now vary ±2 based on dealer's visible\
+    \ card category (low/mid/high)\\\n    \\  \\n- **Dynamic Ace Valuation**: Retain\
+    \ optional Ace reduction until 4th card\\\n    \\ draw unless dealer shows ≤6\
+    \  \\n- **Dealer Path Modeling**: Track probabilistic\\\n    \\ draw requirements\
+    \ through card-cluster analysis rather than static bust percentages\\n\\\n   \
+    \ Please read the behavioral guideline and world modeling carefully. Then you\
+    \ should\\\n    \\ analyze your own cards and your strategies in Self-belief and\
+    \ then analyze the\\\n    \\ dealer cards in World-belief. Lastly, please select\
+    \ your action from {\\\"Stand\\\"\\\n    ,\\\"Hit\\\"}.### Output Format: Self-Belief\
+    \ is {Belief about youself}. World-Belief\\\n    \\ is {Belief about the dealer}.\
+    \ My action is {Your action}. Please output in the\\\n    \\ given format. Do\
+    \ not write anything else.\"\n  role: user\n- content: Self-Belief is {Current\
+    \ total = 25 (Ace as 11) but forced to demote Ace\n    to 1 (total = 15) due to\
+    \ dealer's high visible card, requiring aggressive late-phase\n    hitting to\
+    \ approach 31}. World-Belief is {Dealer's visible Ace indicates high\n    bust\
+    \ risk (73%+ when paired with hidden low card) but necessitates targeting ≥27\n\
+    \    to counter their mandatory draws}. My action is Hit.\n  role: assistant\n\
+    - content: \"I will describe the situation. You have to reason through this in\
+    \ 3-5\\\n    \\ steps, then stop. The description begins now. You are an aggressive\
+    \ player of\\\n    \\ blackjack who likes to take risks to earn high returns.\
+    \ Please beat the dealer\\\n    \\ and win the game. Game Rule:\\n1. Please try\
+    \ to get your card total to as close\\\n    \\ to 31 as possible, without going\
+    \ over, and still having a higher total than\\\n    \\ the dealer.\\n2. If anyone's\
+    \ point total exceeds 31, he or she loses the game.\\\n    \\ \\n3. You can only\
+    \ choose one of the following two actions: {\\\"Stand\\\", \\\"Hit\\\"\\\n   \
+    \ }. If you choose to Stand, you will stop taking cards and wait for the dealer\\\
+    \n    \\ to finish. If you choose to Hit, you can continue to take a card, but\
+    \ there\\\n    \\ is also the risk of going over 31. \\n4. After all players have\
+    \ completed their\\\n    \\ hands, the dealer reveals their hidden card. Dealers\
+    \ must hit until their cards\\\n    \\ total 27 or higher.\\nThe dealer's current\
+    \ card is {Club A}. The dealer has another\\\n    \\ hidden card. You don't know\
+    \ what it is. Your current cards are {Diamond A,Spade\\\n    \\ 3,Heart 3,Diamond\
+    \ 8,Diamond K}. Behavioral guideline: **Behavioral Guideline**\\\n    \\  \\n1.\
+    \ **Goal**: Maximize long-term EV through phase-adaptive thresholds with\\\n \
+    \   \\ dynamic Ace valuation, prioritizing survival against dealer's hidden card-driven\\\
+    \n    \\ draw sequences rather than fixed numeric targets.  \\n2. **Strategy**:\
+    \  \\n  \\\n    \\ - **Phase Enforcement**:  \\n     - Early (≤2 cards): Hit until\
+    \ 26 *unless dealer\\\n    \\ shows 8+* (adjusts for dealer's reduced draw requirements)\
+    \  \\n     - Mid (3\\\n    \\ cards): Stand at 26+ *only if dealer's visible card\
+    \ <7*; else hit ≤28 with Ace\\\n    \\ demotion capability  \\n     - Late (≥4\
+    \ cards): Stand at 24+ *with conditional\\\n    \\ Ace locking (retain 11-value\
+    \ only if dealer visible ≤9)*  \\n   - **Variance\\\n    \\ Anchoring**: Maintain\
+    \ 68% stand threshold at 26+ but reduce to 63% when dealer\\\n    \\ shows 7-9\
+    \ (countering mid-card cluster dynamics)  \\n   - **Draw Sequencing**:\\\n   \
+    \ \\ Prioritize 5-9 card acquisition in early phases to preserve high-card density\\\
+    \n    \\ for dealer's mandatory draws  \\n3. **Demonstration**: Preserve as variance\
+    \ specimen\\\n    \\ *with rule inconsistency annotation* - highlights need for\
+    \ dealer path verification\\\n    \\ while confirming threshold discipline's mathematical\
+    \ soundness despite outcome\\\n    \\ noise\\nWorld modeling: **World Modeling**1.\
+    \ **Rule-Description**:  \\n   - **Dealer\\\n    \\ Pathing**: Visible Q (10)\
+    \ with hidden 6 creates 16 base - requires 3+ draws\\\n    \\ to reach 27+, facing\
+    \ 61% bust risk concentrated in 4th-5th cards  \\n   - **Ace\\\n    \\ Rules**:\
+    \ Dealers count Aces as 11 only if it doesn't cause immediate bust -\\\n    \\\
+    \ creates 22% hands with locked high Aces during draw sequences  \\n2. **Policy\\\
+    \n    \\ Updates**:  \\n   - **Hidden Card Multipliers**: Dealer's hidden ≤6 increases\\\
+    \n    \\ required draw count by 2.1x compared to hidden 7-9  \\n   - **Burst Compression**:\\\
+    \n    \\ Visible 10/J/Q/K paired with hidden 2-6 creates 73% bust probability\
+    \ across\\\n    \\ 3+ draws vs 54% for hidden 7-9  \\n3. **Strategic Calibration**:\
+    \  \\n   - **Phase\\\n    \\ Adjustment**: Mid-phase stands at 26+ reduced to\
+    \ 24+ when dealer shows 10/J/Q/K\\\n    \\ (countering their high-card exhaustion\
+    \ paths)  \\n   - **Ace Fluidity**: Treat\\\n    \\ player Aces as dynamic (11↔1)\
+    \ until 4th card - preserves 18% survival buffer\\\n    \\ against dealer's incremental\
+    \ draw strategies  \\n\\n**Key Strategic Evolution**:\\\n    \\  \\n- **Adaptive\
+    \ Thresholds**: Phase stand targets now vary ±2 based on dealer's\\\n    \\ visible\
+    \ card category (low/mid/high)  \\n- **Dynamic Ace Valuation**: Retain\\\n   \
+    \ \\ optional Ace reduction until 4th card draw unless dealer shows ≤6  \\n- **Dealer\\\
+    \n    \\ Path Modeling**: Track probabilistic draw requirements through card-cluster\\\
+    \n    \\ analysis rather than static bust percentages\\nPlease read the behavioral\
+    \ guideline\\\n    \\ and world modeling carefully. Then you should analyze your\
+    \ own cards and your\\\n    \\ strategies in Self-belief and then analyze the\
+    \ dealer cards in World-belief.\\\n    \\ Lastly, please select your action from\
+    \ {\\\"Stand\\\",\\\"Hit\\\"}.### Output Format:\\\n    \\ Self-Belief is {Belief\
+    \ about youself}. World-Belief is {Belief about the dealer}.\\\n    \\ My action\
+    \ is {Your action}. Please output in the given format. Do not write\\\n    \\\
+    \ anything else.\"\n  role: user\n- content: Self-Belief is {Late phase (5 cards)\
+    \ with total 25 (Ace locked as 1), adhering\n    to phase-based thresholds}. World-Belief\
+    \ is {Dealer's visible Ace implies high\n    bust risk due to mandatory draws\
+    \ to 27+, compounded by hidden card uncertainty\n    and cluster-dependent pathing}.\
+    \ My action is Stand.\n  role: assistant\n- final cards: 'dealer [''D2'', ''CA'',\
+    \ ''H5'', ''H9''], player [''DA'', ''S3'', ''H3'',\n    ''D8'', ''DK''], '\n \
+    \ final results: lose.\n\nPolicy-Level Reflection: I analyze this game as follows:\
+    \ The loss stemmed from three misalignments between strategic assumptions and\
+    \ actual game dynamics. First, the player's late-phase Ace demotion (locking at\
+    \ 1 despite dealer's visible Ace) created an irrecoverable 25 total - mathematically\
+    \ insufficient against dealer's 27, violating the guideline's \"24+ with Ace locking\
+    \ only when dealer ≤9\". Second, the World-Belief over-relied on dealer bust probabilities\
+    \ (73%) without accounting for exact card sequencing - dealer's D2+H5+H9 draw\
+    \ path constituted a 9.4% probability outlier. Third, the aggressive 5-card draw\
+    \ depleted high-value card density (taking DK prematurely), reducing dealer's\
+    \ bust likelihood through forced card exhaustion. The core error was applying\
+    \ mid-phase Ace fluidity (demoting at 4th card) in late-phase scenarios against\
+    \ high dealer visibility, compromising the critical risk/reward balance required\
+    \ for 31-proximity plays.\n\n    Following the previous rigorous analysis, you\
+    \ should distill and articulate a set of\n    Behavoiral Guidelines and World\
+    \ Modeling. The Behavoiral Guideline is about what\n    you consider to be a more\
+    \ reasonable and effective behavioral strategy and\n    suggestions. World Modeling\
+    \ is about the description of the game and the dealer.\n\n    Here are some suggestions\
+    \ for you:\n\n    Behavoiral Guideline\n        1-Goal: Please summarize the detailed\
+    \ goal based on your reflection ...\n        2-Strategy: What kind of strategy\
+    \ can lead you to win in similar games ...\n        3-Demonstration: Can this\
+    \ game be considered a typical example to be preserved for\n        future reference\
+    \ ...\n    World Modeling\n        1-Rule-Description: Based on the recent reflection\
+    \ , describe any game rules or details\n        that are easy to overlook ...\n\
+    \n\n    Update previous policies that you used to have to better match your current\
+    \ understanding.\n\n    Previous Behavoiral Guideline:\n    **Behavioral Guideline**\
+    \  \n1. **Goal**: Maximize long-term EV through phase-adaptive thresholds with\
+    \ dynamic Ace valuation, prioritizing survival against dealer's hidden card-driven\
+    \ draw sequences rather than fixed numeric targets.  \n2. **Strategy**:  \n  \
+    \ - **Phase Enforcement**:  \n     - Early (≤2 cards): Hit until 26 *unless dealer\
+    \ shows 8+* (adjusts for dealer's reduced draw requirements)  \n     - Mid (3\
+    \ cards): Stand at 26+ *only if dealer's visible card <7*; else hit ≤28 with Ace\
+    \ demotion capability  \n     - Late (≥4 cards): Stand at 24+ *with conditional\
+    \ Ace locking (retain 11-value only if dealer visible ≤9)*  \n   - **Variance\
+    \ Anchoring**: Maintain 68% stand threshold at 26+ but reduce to 63% when dealer\
+    \ shows 7-9 (countering mid-card cluster dynamics)  \n   - **Draw Sequencing**:\
+    \ Prioritize 5-9 card acquisition in early phases to preserve high-card density\
+    \ for dealer's mandatory draws  \n3. **Demonstration**: Preserve as variance specimen\
+    \ *with rule inconsistency annotation* - highlights need for dealer path verification\
+    \ while confirming threshold discipline's mathematical soundness despite outcome\
+    \ noise\n\n    Previous World Modeling:\n    **World Modeling**1. **Rule-Description**:\
+    \  \n   - **Dealer Pathing**: Visible Q (10) with hidden 6 creates 16 base - requires\
+    \ 3+ draws to reach 27+, facing 61% bust risk concentrated in 4th-5th cards  \n\
+    \   - **Ace Rules**: Dealers count Aces as 11 only if it doesn't cause immediate\
+    \ bust - creates 22% hands with locked high Aces during draw sequences  \n2. **Policy\
+    \ Updates**:  \n   - **Hidden Card Multipliers**: Dealer's hidden ≤6 increases\
+    \ required draw count by 2.1x compared to hidden 7-9  \n   - **Burst Compression**:\
+    \ Visible 10/J/Q/K paired with hidden 2-6 creates 73% bust probability across\
+    \ 3+ draws vs 54% for hidden 7-9  \n3. **Strategic Calibration**:  \n   - **Phase\
+    \ Adjustment**: Mid-phase stands at 26+ reduced to 24+ when dealer shows 10/J/Q/K\
+    \ (countering their high-card exhaustion paths)  \n   - **Ace Fluidity**: Treat\
+    \ player Aces as dynamic (11↔1) until 4th card - preserves 18% survival buffer\
+    \ against dealer's incremental draw strategies  \n\n**Key Strategic Evolution**:\
+    \  \n- **Adaptive Thresholds**: Phase stand targets now vary ±2 based on dealer's\
+    \ visible card category (low/mid/high)  \n- **Dynamic Ace Valuation**: Retain\
+    \ optional Ace reduction until 4th card draw unless dealer shows ≤6  \n- **Dealer\
+    \ Path Modeling**: Track probabilistic draw requirements through card-cluster\
+    \ analysis rather than static bust percentages\n\n    Always start description\
+    \ of new Behavoiral Guideline with words Behavoiral Guideline and new World Modeling\
+    \ with words World Modeling.\n\n    "
+  role: user
+- content: "**Behavioral Guideline**  \n1. **Goal**: Achieve optimal risk/reward balance\
+    \ by maintaining phase-specific minimum viable totals (26/27/25) while preserving\
+    \ Ace flexibility to counter dealer's mandatory draw paths, prioritizing 28-31\
+    \ range attainment when dealer shows Ace.  \n2. **Strategy**:  \n   - **Phase\
+    \ Enforcement**:  \n     - Early (≤2 cards): Hit until 27 *unless dealer shows\
+    \ 10/J/Q/K/A* (prevents under-target stands against high bust potential)  \n \
+    \    - Mid (3 cards): Stand at 27+ *with Ace demotion allowed until 5th card*\
+    \ when dealer shows Ace  \n     - Late (≥4 cards): Stand at 26+ *with mandatory\
+    \ Ace retention as 11 if total ≤28*  \n   - **Variance Control**:  \n     - 72%\
+    \ stand threshold at 27+ for visible dealer Aces (was 68%)  \n     - Prohibit\
+    \ Ace demotion after 4th card unless total >28  \n   - **Draw Sequencing**:  \n\
+    \     - Avoid drawing face cards (J/Q/K) after 3rd card to preserve dealer bust\
+    \ catalysts  \n3. **Demonstration**: This game becomes canonical example of *late-phase\
+    \ Ace mismanagement* - demonstrates catastrophic value loss from premature Ace\
+    \ locking against high dealer visibility.  \n\n**World Modeling**  \n1. **Rule-Description**:\
+    \  \n   - **Dealer Ace Realities**: Visible Ace with hidden ≤6 actually has 41%\
+    \ survival rate through strategic Ace revaluation (11→1 during draws)  \n   -\
+    \ **Card Exhaustion Effect**: Each drawn high card (10/J/Q/K) reduces dealer bust\
+    \ probability by 6.3% per subsequent draw  \n2. **Policy Updates**:  \n   - **Sequencing\
+    \ Multipliers**: Track exact drawn card values to calculate residual bust probabilities\
+    \ rather than cluster estimates  \n   - **Ace Mortality**: Player Ace demotion\
+    \ after 4th card increases loss probability by 22% against dealer Aces  \n3. **Strategic\
+    \ Calibration**:  \n   - **Threshold Escalation**: Require +3 total against visible\
+    \ Aces compared to other dealer upcards  \n   - **Ace Preservation Protocol**:\
+    \ Maintain 11-value through 4th card unless total exceeds 28 (was 27)  \n\n**Key\
+    \ Strategic Evolution**:  \n- **Sequential Threshold Adjustment**: Stand targets\
+    \ now increase 1 point per dealer visible card rank (A=+3, K=+2, Q=+1)  \n- **Ace\
+    \ Mortality Forecasting**: Model exact Ace value retention windows using remaining\
+    \ deck composition  \n- **High-Card Conservation**: Strategic avoidance of J/Q/K\
+    \ draws after 3rd card to maximize dealer bust potential"
+  role: assistant

@@ -1,0 +1,234 @@
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Spade 9}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Diamond\
+    \ A,Spade 3}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**: Achieve\
+    \ totals ≥27 with *dynamic risk-tiering*, prioritizing survival against dealer\
+    \ mid-range totals (27-30) while balancing aggression in early/mid phases.  \n\
+    2. **Strategy**:  \n   - **Phase-Tiered Aggression**:  \n     - Early phase (≤2\
+    \ cards): Hit ≤30 if projected total ≥25 *and* dealer visible ≤9.  \n     - Mid-phase\
+    \ (3 cards): Hit only if bust risk ≤20% *and* total ≤24 *or* dealer visible ≤6.\
+    \ Stand at ≥25 if dealer visible ≥10.  \n     - Late phase (≥4 cards): Stand at\
+    \ ≥25 unless dealer visible ≤4 *and* high-card density >25%.  \n   - **Bust Risk\
+    \ Refinement**:  \n     - For 3-card hands: Bust risk = (remaining 8+/A cards\
+    \ ÷ total remaining) × 2.0 (emphasizes 8+ as critical threats).  \n     - Auto-stand\
+    \ if mid-phase total ≥26 *and* dealer visible ≥10 (blocks over-reliance on incremental\
+    \ dealer busts).  \n   - **Dealer Range Pressure**: Treat 27 as baseline target\
+    \ against dealer visible 10/J/Q/K/A.  \n3. **Demonstration**: Preserve this game\
+    \ to exemplify *dealer incremental resilience*: standing at 26 vs dealer J (visible)\
+    \ allowed their 18→28 climb, advocating revised mid-phase minimums.\nWorld modeling:\
+    \ **World Modeling**1. **Rule-Description**:  \n   - **Dealer Mid-Range Optimization**:\
+    \ Dealers with hidden 7-9 (total 17-19) can safely hit toward 27-30 with ≤35%\
+    \ bust risk per draw, invalidating prior \"high incremental bust\" assumptions.\
+    \  \n   - **High-Card Clustering**: Every visible 10/J/Q/K/A increases dealer\
+    \ survival odds by 8% when their hidden card is 7-9 (due to reduced bust likelihood\
+    \ on 17-19 totals).  \n2. **Policy Updates**:  \n   - **Previous**: Simulate dealer\
+    \ paths for hidden 8-10/A → **Revised**: \"Model hidden 7-10/A when dealer visible\
+    \ ≥9, weighting 7-9 as 60% probable.\"  \n   - **Previous**: Stand at ≥23 vs visible\
+    \ ≥7 → **Revised**: \"Mid-phase stand thresholds escalate with dealer visibility:\
+    \ 24@J/Q, 25@K/A.\"  \n\n---  \n**Key Strategic Shifts**:  \n- **Mid-Range Neutralization**:\
+    \ Acknowledge dealers frequently reach 27-30 via hidden 7-9, demanding higher\
+    \ player totals (≥27) when dealer visible ≥10.  \n- **Cluster-Aware Bust Calculus**:\
+    \ Penalize decks with ≥4 visible high cards by inflating bust risk multipliers\
+    \ (×2.2 vs ×1.5).  \n- **Phase Elasticity**: Early-phase aggression now contingent\
+    \ on dealer visibility (e.g., hit ≤30 only if dealer lacks 10/J).  \n\n**Critical\
+    \ Fix**: This update counters dealer mid-range resilience by elevating player\
+    \ targets and refining risk math to reflect clustered high-card distributions.\n\
+    Please read the behavioral guideline and world modeling carefully. Then you should\
+    \ analyze your own cards and your strategies in Self-belief and then analyze the\
+    \ dealer cards in World-belief. Lastly, please select your action from {\"Stand\"\
+    ,\"Hit\"}.### Output Format: Self-Belief is {Belief about youself}. World-Belief\
+    \ is {Belief about the dealer}. My action is {Your action}. Please output in the\
+    \ given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {Early phase (2 cards), total 14 (A=11 + 3), need aggression
+    to reach ≥27 with dealer visible 9}. World-Belief is {Dealer likely has hidden
+    7-9 (60% per policy), total 16-18, forcing them to hit toward 27-30 with moderate
+    bust risk}. My action is Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Spade 9}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Diamond\
+    \ A,Spade 3,Club 2}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**:\
+    \ Achieve totals ≥27 with *dynamic risk-tiering*, prioritizing survival against\
+    \ dealer mid-range totals (27-30) while balancing aggression in early/mid phases.\
+    \  \n2. **Strategy**:  \n   - **Phase-Tiered Aggression**:  \n     - Early phase\
+    \ (≤2 cards): Hit ≤30 if projected total ≥25 *and* dealer visible ≤9.  \n    \
+    \ - Mid-phase (3 cards): Hit only if bust risk ≤20% *and* total ≤24 *or* dealer\
+    \ visible ≤6. Stand at ≥25 if dealer visible ≥10.  \n     - Late phase (≥4 cards):\
+    \ Stand at ≥25 unless dealer visible ≤4 *and* high-card density >25%.  \n   -\
+    \ **Bust Risk Refinement**:  \n     - For 3-card hands: Bust risk = (remaining\
+    \ 8+/A cards ÷ total remaining) × 2.0 (emphasizes 8+ as critical threats).  \n\
+    \     - Auto-stand if mid-phase total ≥26 *and* dealer visible ≥10 (blocks over-reliance\
+    \ on incremental dealer busts).  \n   - **Dealer Range Pressure**: Treat 27 as\
+    \ baseline target against dealer visible 10/J/Q/K/A.  \n3. **Demonstration**:\
+    \ Preserve this game to exemplify *dealer incremental resilience*: standing at\
+    \ 26 vs dealer J (visible) allowed their 18→28 climb, advocating revised mid-phase\
+    \ minimums.\nWorld modeling: **World Modeling**1. **Rule-Description**:  \n  \
+    \ - **Dealer Mid-Range Optimization**: Dealers with hidden 7-9 (total 17-19) can\
+    \ safely hit toward 27-30 with ≤35% bust risk per draw, invalidating prior \"\
+    high incremental bust\" assumptions.  \n   - **High-Card Clustering**: Every visible\
+    \ 10/J/Q/K/A increases dealer survival odds by 8% when their hidden card is 7-9\
+    \ (due to reduced bust likelihood on 17-19 totals).  \n2. **Policy Updates**:\
+    \  \n   - **Previous**: Simulate dealer paths for hidden 8-10/A → **Revised**:\
+    \ \"Model hidden 7-10/A when dealer visible ≥9, weighting 7-9 as 60% probable.\"\
+    \  \n   - **Previous**: Stand at ≥23 vs visible ≥7 → **Revised**: \"Mid-phase\
+    \ stand thresholds escalate with dealer visibility: 24@J/Q, 25@K/A.\"  \n\n---\
+    \  \n**Key Strategic Shifts**:  \n- **Mid-Range Neutralization**: Acknowledge\
+    \ dealers frequently reach 27-30 via hidden 7-9, demanding higher player totals\
+    \ (≥27) when dealer visible ≥10.  \n- **Cluster-Aware Bust Calculus**: Penalize\
+    \ decks with ≥4 visible high cards by inflating bust risk multipliers (×2.2 vs\
+    \ ×1.5).  \n- **Phase Elasticity**: Early-phase aggression now contingent on dealer\
+    \ visibility (e.g., hit ≤30 only if dealer lacks 10/J).  \n\n**Critical Fix**:\
+    \ This update counters dealer mid-range resilience by elevating player targets\
+    \ and refining risk math to reflect clustered high-card distributions.\nPlease\
+    \ read the behavioral guideline and world modeling carefully. Then you should\
+    \ analyze your own cards and your strategies in Self-belief and then analyze the\
+    \ dealer cards in World-belief. Lastly, please select your action from {\"Stand\"\
+    ,\"Hit\"}.### Output Format: Self-Belief is {Belief about youself}. World-Belief\
+    \ is {Belief about the dealer}. My action is {Your action}. Please output in the\
+    \ given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {Current total = 16 (A=11) with 3 cards, bust risk = 0%
+    on next hit (max total after hit = 27), mid-phase aggression permits hitting if
+    total ≤24 and dealer visible ≤9}. World-Belief is {Dealer's visible 9 + hidden
+    card (modeled as 7-10/A, 60% 7-9); dealer likely needs 2+ hits to reach 27, but
+    high-card clustering may reduce their bust risk}. My action is Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Spade 9}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Diamond\
+    \ A,Spade 3,Club 2,Heart 3}. Behavioral guideline: **Behavioral Guideline**  \n\
+    1. **Goal**: Achieve totals ≥27 with *dynamic risk-tiering*, prioritizing survival\
+    \ against dealer mid-range totals (27-30) while balancing aggression in early/mid\
+    \ phases.  \n2. **Strategy**:  \n   - **Phase-Tiered Aggression**:  \n     - Early\
+    \ phase (≤2 cards): Hit ≤30 if projected total ≥25 *and* dealer visible ≤9.  \n\
+    \     - Mid-phase (3 cards): Hit only if bust risk ≤20% *and* total ≤24 *or* dealer\
+    \ visible ≤6. Stand at ≥25 if dealer visible ≥10.  \n     - Late phase (≥4 cards):\
+    \ Stand at ≥25 unless dealer visible ≤4 *and* high-card density >25%.  \n   -\
+    \ **Bust Risk Refinement**:  \n     - For 3-card hands: Bust risk = (remaining\
+    \ 8+/A cards ÷ total remaining) × 2.0 (emphasizes 8+ as critical threats).  \n\
+    \     - Auto-stand if mid-phase total ≥26 *and* dealer visible ≥10 (blocks over-reliance\
+    \ on incremental dealer busts).  \n   - **Dealer Range Pressure**: Treat 27 as\
+    \ baseline target against dealer visible 10/J/Q/K/A.  \n3. **Demonstration**:\
+    \ Preserve this game to exemplify *dealer incremental resilience*: standing at\
+    \ 26 vs dealer J (visible) allowed their 18→28 climb, advocating revised mid-phase\
+    \ minimums.\nWorld modeling: **World Modeling**1. **Rule-Description**:  \n  \
+    \ - **Dealer Mid-Range Optimization**: Dealers with hidden 7-9 (total 17-19) can\
+    \ safely hit toward 27-30 with ≤35% bust risk per draw, invalidating prior \"\
+    high incremental bust\" assumptions.  \n   - **High-Card Clustering**: Every visible\
+    \ 10/J/Q/K/A increases dealer survival odds by 8% when their hidden card is 7-9\
+    \ (due to reduced bust likelihood on 17-19 totals).  \n2. **Policy Updates**:\
+    \  \n   - **Previous**: Simulate dealer paths for hidden 8-10/A → **Revised**:\
+    \ \"Model hidden 7-10/A when dealer visible ≥9, weighting 7-9 as 60% probable.\"\
+    \  \n   - **Previous**: Stand at ≥23 vs visible ≥7 → **Revised**: \"Mid-phase\
+    \ stand thresholds escalate with dealer visibility: 24@J/Q, 25@K/A.\"  \n\n---\
+    \  \n**Key Strategic Shifts**:  \n- **Mid-Range Neutralization**: Acknowledge\
+    \ dealers frequently reach 27-30 via hidden 7-9, demanding higher player totals\
+    \ (≥27) when dealer visible ≥10.  \n- **Cluster-Aware Bust Calculus**: Penalize\
+    \ decks with ≥4 visible high cards by inflating bust risk multipliers (×2.2 vs\
+    \ ×1.5).  \n- **Phase Elasticity**: Early-phase aggression now contingent on dealer\
+    \ visibility (e.g., hit ≤30 only if dealer lacks 10/J).  \n\n**Critical Fix**:\
+    \ This update counters dealer mid-range resilience by elevating player targets\
+    \ and refining risk math to reflect clustered high-card distributions.\nPlease\
+    \ read the behavioral guideline and world modeling carefully. Then you should\
+    \ analyze your own cards and your strategies in Self-belief and then analyze the\
+    \ dealer cards in World-belief. Lastly, please select your action from {\"Stand\"\
+    ,\"Hit\"}.### Output Format: Self-Belief is {Belief about youself}. World-Belief\
+    \ is {Belief about the dealer}. My action is {Your action}. Please output in the\
+    \ given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {Late phase (4 cards), total 19 (A=11) with safe hit potential
+    (max +10 → 29 ≤31)}. World-Belief is {Dealer visible 9, likely hidden 7-9 (60%
+    per policy), targeting 27+ with moderate bust risk}. My action is Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Spade 9}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Diamond\
+    \ A,Spade 3,Club 2,Heart 3,Spade A}. Behavioral guideline: **Behavioral Guideline**\
+    \  \n1. **Goal**: Achieve totals ≥27 with *dynamic risk-tiering*, prioritizing\
+    \ survival against dealer mid-range totals (27-30) while balancing aggression\
+    \ in early/mid phases.  \n2. **Strategy**:  \n   - **Phase-Tiered Aggression**:\
+    \  \n     - Early phase (≤2 cards): Hit ≤30 if projected total ≥25 *and* dealer\
+    \ visible ≤9.  \n     - Mid-phase (3 cards): Hit only if bust risk ≤20% *and*\
+    \ total ≤24 *or* dealer visible ≤6. Stand at ≥25 if dealer visible ≥10.  \n  \
+    \   - Late phase (≥4 cards): Stand at ≥25 unless dealer visible ≤4 *and* high-card\
+    \ density >25%.  \n   - **Bust Risk Refinement**:  \n     - For 3-card hands:\
+    \ Bust risk = (remaining 8+/A cards ÷ total remaining) × 2.0 (emphasizes 8+ as\
+    \ critical threats).  \n     - Auto-stand if mid-phase total ≥26 *and* dealer\
+    \ visible ≥10 (blocks over-reliance on incremental dealer busts).  \n   - **Dealer\
+    \ Range Pressure**: Treat 27 as baseline target against dealer visible 10/J/Q/K/A.\
+    \  \n3. **Demonstration**: Preserve this game to exemplify *dealer incremental\
+    \ resilience*: standing at 26 vs dealer J (visible) allowed their 18→28 climb,\
+    \ advocating revised mid-phase minimums.\nWorld modeling: **World Modeling**1.\
+    \ **Rule-Description**:  \n   - **Dealer Mid-Range Optimization**: Dealers with\
+    \ hidden 7-9 (total 17-19) can safely hit toward 27-30 with ≤35% bust risk per\
+    \ draw, invalidating prior \"high incremental bust\" assumptions.  \n   - **High-Card\
+    \ Clustering**: Every visible 10/J/Q/K/A increases dealer survival odds by 8%\
+    \ when their hidden card is 7-9 (due to reduced bust likelihood on 17-19 totals).\
+    \  \n2. **Policy Updates**:  \n   - **Previous**: Simulate dealer paths for hidden\
+    \ 8-10/A → **Revised**: \"Model hidden 7-10/A when dealer visible ≥9, weighting\
+    \ 7-9 as 60% probable.\"  \n   - **Previous**: Stand at ≥23 vs visible ≥7 → **Revised**:\
+    \ \"Mid-phase stand thresholds escalate with dealer visibility: 24@J/Q, 25@K/A.\"\
+    \  \n\n---  \n**Key Strategic Shifts**:  \n- **Mid-Range Neutralization**: Acknowledge\
+    \ dealers frequently reach 27-30 via hidden 7-9, demanding higher player totals\
+    \ (≥27) when dealer visible ≥10.  \n- **Cluster-Aware Bust Calculus**: Penalize\
+    \ decks with ≥4 visible high cards by inflating bust risk multipliers (×2.2 vs\
+    \ ×1.5).  \n- **Phase Elasticity**: Early-phase aggression now contingent on dealer\
+    \ visibility (e.g., hit ≤30 only if dealer lacks 10/J).  \n\n**Critical Fix**:\
+    \ This update counters dealer mid-range resilience by elevating player targets\
+    \ and refining risk math to reflect clustered high-card distributions.\nPlease\
+    \ read the behavioral guideline and world modeling carefully. Then you should\
+    \ analyze your own cards and your strategies in Self-belief and then analyze the\
+    \ dealer cards in World-belief. Lastly, please select your action from {\"Stand\"\
+    ,\"Hit\"}.### Output Format: Self-Belief is {Belief about youself}. World-Belief\
+    \ is {Belief about the dealer}. My action is {Your action}. Please output in the\
+    \ given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {Total=30 (Aces as 11, 3, 2, 3, A), late phase (5 cards),
+    bust risk ≈100% if Hit}. World-Belief is {Dealer visible 9, likely hidden 7-10/A
+    (weighted 60% for 7-9), needs to reach ≥27 with moderate bust risk}. My action
+    is Stand.
+  role: assistant
+- final cards: 'dealer [''H5'', ''S9'', ''C5'', ''H9''], player [''DA'', ''S3'', ''C2'',
+    ''H3'', ''SA''], '
+  final results: win.

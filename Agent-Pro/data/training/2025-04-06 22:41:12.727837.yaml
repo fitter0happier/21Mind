@@ -1,0 +1,116 @@
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Diamond 9}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Club\
+    \ A,Spade K}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**: Achieve\
+    \ 27-31 through dynamic risk balancing - prioritize reaching ≥27 while maintaining\
+    \ ≥40% safe value buffer (remaining cards ≤31-current_total). Suppress Overdraw\
+    \ Lock activation unless dealer's visible cards confirm ≥3 hits.  \n2. **Strategy**:\
+    \  \n   - **Phase Thresholds**:  \n     - Early (≤2 cards): Hit until 25 (+2 buffer)\
+    \ against non-Ace upcards; stop at 22 if dealer shows ≤5 (▼3 points)  \n     -\
+    \ Mid (3 cards): Stand at 24+ when card composition has ≤5 high-risk cards (9-K),\
+    \ else Hit until 26  \n     - Late (≥4 cards): Stand at 28+ with mandatory Safe\
+    \ Value Audit (SVA) checking remaining ≤8-value cards  \n   - **Ace Response**:\
+    \  \n     - Activate Ace Gravitation Index (+2 risk multiplier) only when dealer's\
+    \ upcard ≤6 AND player has ≥3 cards  \n     - Require 2:1 safe/danger card ratio\
+    \ for hitting above 24 in Mid-phase  \n3. **Demonstration**: Preserve as *Composition\
+    \ Override Paradox* - illustrates failed 23→33 bust due to undervalued card distribution\
+    \ (10+3+Q left only 8 safe draws vs 16 bust risks).\nWorld modeling: **World Modeling**1.\
+    \ **Rule-Description**:  \n   - **Upcard Tendencies**: Dealers with 4 upcard have\
+    \ 63% probability of hidden card 2-7 to build 6-11 base (▼Ace likelihood to 9%)\
+    \  \n   - **4-Card Reality**: Only 58% of dealer 4-card hands bust at 27+ threshold\
+    \ when starting total ≤15 (▼23% from prior models)  \n   - **Ace Elasticity Correction**:\
+    \ Hidden Aces occur in 11% of hands - 34% lower than previously assumed  \n2.\
+    \ **Policy Updates**:  \n   - **Safe Value Audit**: Mandatory at player totals\
+    \ ≥24 - calculates remaining ≤(31-current_total) cards vs deck composition  \n\
+    \   - **Conditional Overdraw Lock**: Only activate when dealer has 4+ cards AND\
+    \ visible cards contain ≤2 low-value (2-6) cards  \n3. **Strategic Calibration**:\
+    \  \n   - **Upcard-Driven Risk**: Reduce Ace Gravitation Index to +2 multiplier\
+    \ (▼50%) for dealer upcards 2-6  \n   - **Composition Thresholds**: Hit in Mid-phase\
+    \ (3 cards) only if (31 - current_total) ≥ remaining average card value ×1.3 \
+    \ \n\n**Key Strategic Evolution**:  \n- **Safe Value Buffer**: Replaces rigid\
+    \ phase thresholds with dynamic card distribution calculations  \n- **Upcard Probability\
+    \ Binding**: Dealer's visible card directly modifies Ace probability assumptions\
+    \  \n- **Bust Risk Triangulation**: Combine dealer hit requirements, card counts,\
+    \ AND value composition for Overdraw Lock\nPlease read the behavioral guideline\
+    \ and world modeling carefully. Then you should analyze your own cards and your\
+    \ strategies in Self-belief and then analyze the dealer cards in World-belief.\
+    \ Lastly, please select your action from {\"Stand\",\"Hit\"}.### Output Format:\
+    \ Self-Belief is {Belief about youself}. World-Belief is {Belief about the dealer}.\
+    \ My action is {Your action}. Please output in the given format. Do not write\
+    \ anything else."
+  role: user
+- content: Self-Belief is {Current total = 21 (A=11 + K=10), safe value buffer = 100%
+    (all remaining cards ≤10), can Hit without risk of busting to pursue ≥27}. World-Belief
+    is {Dealer upcard = 9, must hit to ≥27; hidden card likely mid-low (e.g., 2-8)
+    given dealer's 9 upcard, increasing bust risk during forced hits}. My action is
+    Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Diamond 9}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Club\
+    \ A,Spade K,Spade 5}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**:\
+    \ Achieve 27-31 through dynamic risk balancing - prioritize reaching ≥27 while\
+    \ maintaining ≥40% safe value buffer (remaining cards ≤31-current_total). Suppress\
+    \ Overdraw Lock activation unless dealer's visible cards confirm ≥3 hits.  \n\
+    2. **Strategy**:  \n   - **Phase Thresholds**:  \n     - Early (≤2 cards): Hit\
+    \ until 25 (+2 buffer) against non-Ace upcards; stop at 22 if dealer shows ≤5\
+    \ (▼3 points)  \n     - Mid (3 cards): Stand at 24+ when card composition has\
+    \ ≤5 high-risk cards (9-K), else Hit until 26  \n     - Late (≥4 cards): Stand\
+    \ at 28+ with mandatory Safe Value Audit (SVA) checking remaining ≤8-value cards\
+    \  \n   - **Ace Response**:  \n     - Activate Ace Gravitation Index (+2 risk\
+    \ multiplier) only when dealer's upcard ≤6 AND player has ≥3 cards  \n     - Require\
+    \ 2:1 safe/danger card ratio for hitting above 24 in Mid-phase  \n3. **Demonstration**:\
+    \ Preserve as *Composition Override Paradox* - illustrates failed 23→33 bust due\
+    \ to undervalued card distribution (10+3+Q left only 8 safe draws vs 16 bust risks).\n\
+    World modeling: **World Modeling**1. **Rule-Description**:  \n   - **Upcard Tendencies**:\
+    \ Dealers with 4 upcard have 63% probability of hidden card 2-7 to build 6-11\
+    \ base (▼Ace likelihood to 9%)  \n   - **4-Card Reality**: Only 58% of dealer\
+    \ 4-card hands bust at 27+ threshold when starting total ≤15 (▼23% from prior\
+    \ models)  \n   - **Ace Elasticity Correction**: Hidden Aces occur in 11% of hands\
+    \ - 34% lower than previously assumed  \n2. **Policy Updates**:  \n   - **Safe\
+    \ Value Audit**: Mandatory at player totals ≥24 - calculates remaining ≤(31-current_total)\
+    \ cards vs deck composition  \n   - **Conditional Overdraw Lock**: Only activate\
+    \ when dealer has 4+ cards AND visible cards contain ≤2 low-value (2-6) cards\
+    \  \n3. **Strategic Calibration**:  \n   - **Upcard-Driven Risk**: Reduce Ace\
+    \ Gravitation Index to +2 multiplier (▼50%) for dealer upcards 2-6  \n   - **Composition\
+    \ Thresholds**: Hit in Mid-phase (3 cards) only if (31 - current_total) ≥ remaining\
+    \ average card value ×1.3  \n\n**Key Strategic Evolution**:  \n- **Safe Value\
+    \ Buffer**: Replaces rigid phase thresholds with dynamic card distribution calculations\
+    \  \n- **Upcard Probability Binding**: Dealer's visible card directly modifies\
+    \ Ace probability assumptions  \n- **Bust Risk Triangulation**: Combine dealer\
+    \ hit requirements, card counts, AND value composition for Overdraw Lock\nPlease\
+    \ read the behavioral guideline and world modeling carefully. Then you should\
+    \ analyze your own cards and your strategies in Self-belief and then analyze the\
+    \ dealer cards in World-belief. Lastly, please select your action from {\"Stand\"\
+    ,\"Hit\"}.### Output Format: Self-Belief is {Belief about youself}. World-Belief\
+    \ is {Belief about the dealer}. My action is {Your action}. Please output in the\
+    \ given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {Total 26 (A=11, K=10, 5=5) in Mid-phase with 1 high-risk
+    card. Safe Value Audit shows safe buffer (18/47 ≈38.3%) <40%, violating buffer
+    requirement}. World-Belief is {Dealer's 9 upcard with hidden card likely non-Ace
+    (11% probability). Dealer must hit to ≥27, risking bust but may reach 27-31}.
+    My action is Stand.
+  role: assistant
+- final cards: 'dealer [''C4'', ''D9'', ''H8'', ''C8''], player [''CA'', ''SK'', ''S5''], '
+  final results: lose.

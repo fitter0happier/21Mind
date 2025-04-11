@@ -1,0 +1,116 @@
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Spade 10}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Club\
+    \ A,Heart K}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**: Achieve\
+    \ totals ≥28 through **phase-calibrated aggression**, prioritizing survival in\
+    \ late-game stages. Balance reaching 28–31 against strict bust risk caps (≤55%\
+    \ for ≤3 cards, ≤45% for ≥4 cards), even if standing guarantees loss.  \n2. **Strategy**:\
+    \  \n   - **Phase-Locked Aggression**:  \n     - **Early Game (≤3 cards)**: Tolerate\
+    \ ≤55% bust risk to reach 28+.  \n     - **Late Game (≥4 cards)**: Cap bust risk\
+    \ at 45%—**stand immediately if exceeded**, regardless of dealer’s threat.  \n\
+    \   - **Loss Acceptance Protocol**: If standing at sub-28 totals guarantees loss\
+    \ but hitting exceeds phase bust caps, **stand and concede**—prioritize long-term\
+    \ risk discipline over short-term variance.  \n   - **Threshold Adjustment**:\
+    \  \n     - Against dealer 10/J/Q/K: Hit 24–27 only if bust risk ≤ phase cap.\
+    \ At 28/2-3 cards, hit unless bust risk >60%.  \n3. **Demonstration**: Preserve\
+    \ this game as a **phase-compliance failure**—violating late-game 45% bust cap\
+    \ (54% risk) caused avoidable bust. Highlights non-negotiable phase limits.  \n\
+    \n---\nWorld modeling: **World Modeling**1. **Rule-Description**:  \n   - **Dealer’s\
+    \ High-Turnover Hands**:  \n     - Dealers with 10/J/Q/K upcards reach 30–31 in\
+    \ 21% of cases, but **27–29 totals occur 63% of the time**—sub-28 player totals\
+    \ still lose >60% even if dealer doesn’t hit 30+.  \n     - **Hidden Card Multi-Hit\
+    \ Potential**: Dealers averaging 2.3 additional cards after hitting 17–26 often\
+    \ achieve 27–29 (e.g., Q + 7 → 17 → hit to 27 via 10).  \n   - **Bust Probability\
+    \ Gradients**:  \n     - Late-game hands (≥4 cards) face steep bust risk spikes:\
+    \ needing ≤3 to survive at 28/4 cards = 38% bust risk, but 28/5 cards = 62% (needs\
+    \ ≤3).  \n2. **Policy Updates**:  \n   - **Previous**: “Hit 24–27 vs. dealer 10+\
+    \ unless bust risk >60%” → **Revised**: “Hit 24–27 only if bust risk ≤ phase cap\
+    \ (55%/45%).”  \n   - **Previous**: “Favor hitting at 28/2-3 cards” → **Revised**:\
+    \ “At 28/2-3 cards, hit only if bust risk ≤55% (early phase) or ≤45% (late phase).”\
+    \  \n\n---  \n**Key Strategic Shift**:  \n- **Phase Sovereignty**: Late-game survival\
+    \ supersedes aggression—strict 45% bust cap prevents self-inflicted losses even\
+    \ against dealer 30–31 threats.  \n- **Loss Minimization**: Accept guaranteed\
+    \ losses when hitting violates phase caps, preserving bankroll for higher-probability\
+    \ hands.  \n\n---  \n**Critical Fix**: The loss exposed **phase indiscipline**—updated\
+    \ guidelines decouple aggression from card count, enforcing hard risk ceilings\
+    \ to mitigate overreach.\nPlease read the behavioral guideline and world modeling\
+    \ carefully. Then you should analyze your own cards and your strategies in Self-belief\
+    \ and then analyze the dealer cards in World-belief. Lastly, please select your\
+    \ action from {\"Stand\",\"Hit\"}.### Output Format: Self-Belief is {Belief about\
+    \ youself}. World-Belief is {Belief about the dealer}. My action is {Your action}.\
+    \ Please output in the given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {Current total 21 (A=11 + K=10), 2 cards (early phase),
+    0% bust risk if hitting—needs 7+ to reach ≥28}. World-Belief is {Dealer has 10
+    + hidden card, must hit until ≥27; high probability of dealer reaching 27–29}.
+    My action is Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Spade 10}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Club\
+    \ A,Heart K,Club K}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**:\
+    \ Achieve totals ≥28 through **phase-calibrated aggression**, prioritizing survival\
+    \ in late-game stages. Balance reaching 28–31 against strict bust risk caps (≤55%\
+    \ for ≤3 cards, ≤45% for ≥4 cards), even if standing guarantees loss.  \n2. **Strategy**:\
+    \  \n   - **Phase-Locked Aggression**:  \n     - **Early Game (≤3 cards)**: Tolerate\
+    \ ≤55% bust risk to reach 28+.  \n     - **Late Game (≥4 cards)**: Cap bust risk\
+    \ at 45%—**stand immediately if exceeded**, regardless of dealer’s threat.  \n\
+    \   - **Loss Acceptance Protocol**: If standing at sub-28 totals guarantees loss\
+    \ but hitting exceeds phase bust caps, **stand and concede**—prioritize long-term\
+    \ risk discipline over short-term variance.  \n   - **Threshold Adjustment**:\
+    \  \n     - Against dealer 10/J/Q/K: Hit 24–27 only if bust risk ≤ phase cap.\
+    \ At 28/2-3 cards, hit unless bust risk >60%.  \n3. **Demonstration**: Preserve\
+    \ this game as a **phase-compliance failure**—violating late-game 45% bust cap\
+    \ (54% risk) caused avoidable bust. Highlights non-negotiable phase limits.  \n\
+    \n---\nWorld modeling: **World Modeling**1. **Rule-Description**:  \n   - **Dealer’s\
+    \ High-Turnover Hands**:  \n     - Dealers with 10/J/Q/K upcards reach 30–31 in\
+    \ 21% of cases, but **27–29 totals occur 63% of the time**—sub-28 player totals\
+    \ still lose >60% even if dealer doesn’t hit 30+.  \n     - **Hidden Card Multi-Hit\
+    \ Potential**: Dealers averaging 2.3 additional cards after hitting 17–26 often\
+    \ achieve 27–29 (e.g., Q + 7 → 17 → hit to 27 via 10).  \n   - **Bust Probability\
+    \ Gradients**:  \n     - Late-game hands (≥4 cards) face steep bust risk spikes:\
+    \ needing ≤3 to survive at 28/4 cards = 38% bust risk, but 28/5 cards = 62% (needs\
+    \ ≤3).  \n2. **Policy Updates**:  \n   - **Previous**: “Hit 24–27 vs. dealer 10+\
+    \ unless bust risk >60%” → **Revised**: “Hit 24–27 only if bust risk ≤ phase cap\
+    \ (55%/45%).”  \n   - **Previous**: “Favor hitting at 28/2-3 cards” → **Revised**:\
+    \ “At 28/2-3 cards, hit only if bust risk ≤55% (early phase) or ≤45% (late phase).”\
+    \  \n\n---  \n**Key Strategic Shift**:  \n- **Phase Sovereignty**: Late-game survival\
+    \ supersedes aggression—strict 45% bust cap prevents self-inflicted losses even\
+    \ against dealer 30–31 threats.  \n- **Loss Minimization**: Accept guaranteed\
+    \ losses when hitting violates phase caps, preserving bankroll for higher-probability\
+    \ hands.  \n\n---  \n**Critical Fix**: The loss exposed **phase indiscipline**—updated\
+    \ guidelines decouple aggression from card count, enforcing hard risk ceilings\
+    \ to mitigate overreach.\nPlease read the behavioral guideline and world modeling\
+    \ carefully. Then you should analyze your own cards and your strategies in Self-belief\
+    \ and then analyze the dealer cards in World-belief. Lastly, please select your\
+    \ action from {\"Stand\",\"Hit\"}.### Output Format: Self-Belief is {Belief about\
+    \ youself}. World-Belief is {Belief about the dealer}. My action is {Your action}.\
+    \ Please output in the given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {Current total = 31 (A=11, K=10, K=10), 3 cards, no bust
+    risk}. World-Belief is {Dealer’s visible 10 + hidden card must hit until ≥27;
+    possible dealer totals range 10–31, with high likelihood of 27–29}. My action
+    is Stand.
+  role: assistant
+- final cards: 'dealer [''S6'', ''ST'', ''SK'', ''H6''], player [''CA'', ''HK'', ''CK''], '
+  final results: win.

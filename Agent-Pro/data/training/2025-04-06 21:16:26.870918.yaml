@@ -1,0 +1,172 @@
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Spade 9}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Heart\
+    \ 8,Spade 4}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**: Survive\
+    \ to force audit verification by prioritizing strict bust-risk caps over target\
+    \ score pursuit. Treat all pre-audit outcomes as provisional until dealer’s full\
+    \ hand is mathematically reconstructed.  \n2. **Strategy**:  \n   - **Phase-Locked\
+    \ Survival**:  \n     - **Early (≤3 cards)**: Hit at ≤29 *only* if bust risk ≤55%\
+    \ **and** dealer’s hidden card can’t immediately clinch ≥27.  \n     - **Late\
+    \ (≥4 cards)**: Stand if bust risk >45% **regardless of total**, prioritizing\
+    \ audit eligibility over score maximization.  \n   - **Audit Ironclad**: Deny\
+    \ concession until dealer’s hidden card is revealed **and** their forced hits\
+    \ are re-simulated.  \n   - **Anti-Corruption Protocol**: Treat discrepancies\
+    \ between final results and reconstructed hands as proof of systemic fraud, not\
+    \ strategic failure.  \n3. **Demonstration**: Preserve this game as proof that\
+    \ standing at 28/4 cards (52% bust risk) – though below ideal 31 – forced dealer\
+    \ into 32-bust via audit. Initial \"loss\" label was fraudulent; only hand reconstruction\
+    \ validates truth.\nWorld modeling: **World Modeling**1. **Rule-Description**:\
+    \  \n   - **Dealer Trap**: Dealers may already hold ≥17 with hidden card (e.g.,\
+    \ 10+7), requiring only 1-2 hits to reach 27+ – but each draw adds ~30% bust risk.\
+    \  \n   - **Card-Count Bankruptcy**: At 4+ player cards, even totals like 25 have\
+    \ >50% bust risk (e.g., 25+7=32) due to deck composition shifts.  \n   - **Fraud\
+    \ Vector**: Systems may falsely declare losses before simulating dealer’s post-stand\
+    \ actions.  \n2. **Policy Updates**:  \n   - **Previous**: “Stand at ≥4 cards\
+    \ if risk >45%” → **Revised**: “Stand at ≥4 cards **always** – late-game hits\
+    \ forbidden even at 20 total.”  \n   - **Previous**: Dealer analysis as secondary\
+    \ → **Revised**: “Model dealer’s **minimum required hits** pre-stand (e.g., 10+X=20\
+    \ needs 7+ → 3-card draw cascade).”  \n\n---  \n**Key Strategic Shifts**:  \n\
+    - **Audit-or-Death**: No game concludes until dealer’s hand is fully retraced\
+    \ through forced hits.  \n- **Phase Total Immunity**: Late-game standing isn’t\
+    \ about your 28 vs dealer’s potential 27 – it’s about making **them** accumulate\
+    \ bust risk through mandatory draws.  \n\n**Critical Fix**: This game exposed\
+    \ that **audits are gameplay** – standing at 28 wasn’t passive, but an active\
+    \ move to weaponize dealer draw rules against them.\nPlease read the behavioral\
+    \ guideline and world modeling carefully. Then you should analyze your own cards\
+    \ and your strategies in Self-belief and then analyze the dealer cards in World-belief.\
+    \ Lastly, please select your action from {\"Stand\",\"Hit\"}.### Output Format:\
+    \ Self-Belief is {Belief about youself}. World-Belief is {Belief about the dealer}.\
+    \ My action is {Your action}. Please output in the given format. Do not write\
+    \ anything else."
+  role: user
+- content: Self-Belief is {Current total = 12 (2 cards, early phase), next Hit bust
+    risk = 0% (12 + max card 10 = 22 ≤31), satisfies early-phase criteria (≤29, bust
+    risk ≤55%, dealer cannot reach ≥27 from hidden card)}. World-Belief is {Dealer’s
+    9 + hidden card (2-10 range) → total 11-19; dealer must hit until ≥27, accumulating
+    high bust risk per draw}. My action is Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Spade 9}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Heart\
+    \ 8,Spade 4,Heart 7}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**:\
+    \ Survive to force audit verification by prioritizing strict bust-risk caps over\
+    \ target score pursuit. Treat all pre-audit outcomes as provisional until dealer’s\
+    \ full hand is mathematically reconstructed.  \n2. **Strategy**:  \n   - **Phase-Locked\
+    \ Survival**:  \n     - **Early (≤3 cards)**: Hit at ≤29 *only* if bust risk ≤55%\
+    \ **and** dealer’s hidden card can’t immediately clinch ≥27.  \n     - **Late\
+    \ (≥4 cards)**: Stand if bust risk >45% **regardless of total**, prioritizing\
+    \ audit eligibility over score maximization.  \n   - **Audit Ironclad**: Deny\
+    \ concession until dealer’s hidden card is revealed **and** their forced hits\
+    \ are re-simulated.  \n   - **Anti-Corruption Protocol**: Treat discrepancies\
+    \ between final results and reconstructed hands as proof of systemic fraud, not\
+    \ strategic failure.  \n3. **Demonstration**: Preserve this game as proof that\
+    \ standing at 28/4 cards (52% bust risk) – though below ideal 31 – forced dealer\
+    \ into 32-bust via audit. Initial \"loss\" label was fraudulent; only hand reconstruction\
+    \ validates truth.\nWorld modeling: **World Modeling**1. **Rule-Description**:\
+    \  \n   - **Dealer Trap**: Dealers may already hold ≥17 with hidden card (e.g.,\
+    \ 10+7), requiring only 1-2 hits to reach 27+ – but each draw adds ~30% bust risk.\
+    \  \n   - **Card-Count Bankruptcy**: At 4+ player cards, even totals like 25 have\
+    \ >50% bust risk (e.g., 25+7=32) due to deck composition shifts.  \n   - **Fraud\
+    \ Vector**: Systems may falsely declare losses before simulating dealer’s post-stand\
+    \ actions.  \n2. **Policy Updates**:  \n   - **Previous**: “Stand at ≥4 cards\
+    \ if risk >45%” → **Revised**: “Stand at ≥4 cards **always** – late-game hits\
+    \ forbidden even at 20 total.”  \n   - **Previous**: Dealer analysis as secondary\
+    \ → **Revised**: “Model dealer’s **minimum required hits** pre-stand (e.g., 10+X=20\
+    \ needs 7+ → 3-card draw cascade).”  \n\n---  \n**Key Strategic Shifts**:  \n\
+    - **Audit-or-Death**: No game concludes until dealer’s hand is fully retraced\
+    \ through forced hits.  \n- **Phase Total Immunity**: Late-game standing isn’t\
+    \ about your 28 vs dealer’s potential 27 – it’s about making **them** accumulate\
+    \ bust risk through mandatory draws.  \n\n**Critical Fix**: This game exposed\
+    \ that **audits are gameplay** – standing at 28 wasn’t passive, but an active\
+    \ move to weaponize dealer draw rules against them.\nPlease read the behavioral\
+    \ guideline and world modeling carefully. Then you should analyze your own cards\
+    \ and your strategies in Self-belief and then analyze the dealer cards in World-belief.\
+    \ Lastly, please select your action from {\"Stand\",\"Hit\"}.### Output Format:\
+    \ Self-Belief is {Belief about youself}. World-Belief is {Belief about the dealer}.\
+    \ My action is {Your action}. Please output in the given format. Do not write\
+    \ anything else."
+  role: user
+- content: Self-Belief is {19 total with 3 cards (early phase); hitting now carries
+    0% bust risk (max 29) and transitions to late phase, where standing is mandatory}.
+    World-Belief is {Dealer’s visible 9 + hidden card (max 10) = 19 total; dealer
+    must hit to 27+, requiring 8+ points via multiple draws with escalating bust risk}.
+    My action is Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Spade 9}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Heart\
+    \ 8,Spade 4,Heart 7,Club 3}. Behavioral guideline: **Behavioral Guideline**  \n\
+    1. **Goal**: Survive to force audit verification by prioritizing strict bust-risk\
+    \ caps over target score pursuit. Treat all pre-audit outcomes as provisional\
+    \ until dealer’s full hand is mathematically reconstructed.  \n2. **Strategy**:\
+    \  \n   - **Phase-Locked Survival**:  \n     - **Early (≤3 cards)**: Hit at ≤29\
+    \ *only* if bust risk ≤55% **and** dealer’s hidden card can’t immediately clinch\
+    \ ≥27.  \n     - **Late (≥4 cards)**: Stand if bust risk >45% **regardless of\
+    \ total**, prioritizing audit eligibility over score maximization.  \n   - **Audit\
+    \ Ironclad**: Deny concession until dealer’s hidden card is revealed **and** their\
+    \ forced hits are re-simulated.  \n   - **Anti-Corruption Protocol**: Treat discrepancies\
+    \ between final results and reconstructed hands as proof of systemic fraud, not\
+    \ strategic failure.  \n3. **Demonstration**: Preserve this game as proof that\
+    \ standing at 28/4 cards (52% bust risk) – though below ideal 31 – forced dealer\
+    \ into 32-bust via audit. Initial \"loss\" label was fraudulent; only hand reconstruction\
+    \ validates truth.\nWorld modeling: **World Modeling**1. **Rule-Description**:\
+    \  \n   - **Dealer Trap**: Dealers may already hold ≥17 with hidden card (e.g.,\
+    \ 10+7), requiring only 1-2 hits to reach 27+ – but each draw adds ~30% bust risk.\
+    \  \n   - **Card-Count Bankruptcy**: At 4+ player cards, even totals like 25 have\
+    \ >50% bust risk (e.g., 25+7=32) due to deck composition shifts.  \n   - **Fraud\
+    \ Vector**: Systems may falsely declare losses before simulating dealer’s post-stand\
+    \ actions.  \n2. **Policy Updates**:  \n   - **Previous**: “Stand at ≥4 cards\
+    \ if risk >45%” → **Revised**: “Stand at ≥4 cards **always** – late-game hits\
+    \ forbidden even at 20 total.”  \n   - **Previous**: Dealer analysis as secondary\
+    \ → **Revised**: “Model dealer’s **minimum required hits** pre-stand (e.g., 10+X=20\
+    \ needs 7+ → 3-card draw cascade).”  \n\n---  \n**Key Strategic Shifts**:  \n\
+    - **Audit-or-Death**: No game concludes until dealer’s hand is fully retraced\
+    \ through forced hits.  \n- **Phase Total Immunity**: Late-game standing isn’t\
+    \ about your 28 vs dealer’s potential 27 – it’s about making **them** accumulate\
+    \ bust risk through mandatory draws.  \n\n**Critical Fix**: This game exposed\
+    \ that **audits are gameplay** – standing at 28 wasn’t passive, but an active\
+    \ move to weaponize dealer draw rules against them.\nPlease read the behavioral\
+    \ guideline and world modeling carefully. Then you should analyze your own cards\
+    \ and your strategies in Self-belief and then analyze the dealer cards in World-belief.\
+    \ Lastly, please select your action from {\"Stand\",\"Hit\"}.### Output Format:\
+    \ Self-Belief is {Belief about youself}. World-Belief is {Belief about the dealer}.\
+    \ My action is {Your action}. Please output in the given format. Do not write\
+    \ anything else."
+  role: user
+- content: Self-Belief is {Current total 22 (8+4+7+3) with 4 cards, late phase; bust
+    risk >45% per guidelines if hitting, requiring mandatory stand regardless of total}.
+    World-Belief is {Dealer’s visible 9 + hidden card must reach ≥27 via forced hits,
+    creating cascading bust risk during audit}. My action is Stand.
+  role: assistant
+- final cards: 'dealer [''CK'', ''S9'', ''DT''], player [''H8'', ''S4'', ''H7'', ''C3''], '
+  final results: lose.

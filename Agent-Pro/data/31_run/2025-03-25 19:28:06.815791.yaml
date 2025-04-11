@@ -1,0 +1,79 @@
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of losing the game over 3 points. \n4. After all players have\
+    \ completed their hands, the dealer reveals their hidden card. Dealers must hit\
+    \ until their cards total 27 or higher.\nThe dealer's current card is {Diamond\
+    \ A}. The dealer has another hidden card. You don't know what it is. Your current\
+    \ cards are {Heart 10,Heart A}. Please read the behavoiral guideline and world\
+    \ modeling carefully. Then you should analyze your own cards and your strategies\
+    \ in Self-belief and then analyze the dealer cards in World-belief. Lastly, please\
+    \ select your action from {\"Stand\",\"Hit\"}.### Output Format: Self-Belief is\
+    \ {Belief about youself}. World-Belief is {Belief about the dealer}. My action\
+    \ is {Your action}. Please output in the given format. Do not write anything else."
+  role: user
+- content: Self-Belief is My current total is 21 (Heart 10 + Heart A as 11). Hitting
+    could reach up to 31 with a 10 or risk busting only if the next card is an Ace
+    (11). World-Belief is Dealer's visible Ace (11) and hidden card. Dealer must hit
+    until reaching 27+, risking busting or setting a high target. My action is Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of losing the game over 3 points. \n4. After all players have\
+    \ completed their hands, the dealer reveals their hidden card. Dealers must hit\
+    \ until their cards total 27 or higher.\nThe dealer's current card is {Diamond\
+    \ A}. The dealer has another hidden card. You don't know what it is. Your current\
+    \ cards are {Heart 10,Heart A,Spade A}. Please read the behavoiral guideline and\
+    \ world modeling carefully. Then you should analyze your own cards and your strategies\
+    \ in Self-belief and then analyze the dealer cards in World-belief. Lastly, please\
+    \ select your action from {\"Stand\",\"Hit\"}.### Output Format: Self-Belief is\
+    \ {Belief about youself}. World-Belief is {Belief about the dealer}. My action\
+    \ is {Your action}. Please output in the given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {Current total is 22 (Aces as 11 and 1). Hitting risks bust
+    but offers chance to reach 31}. World-Belief is {Dealer's total with visible Ace
+    (11) and hidden card likely requires hitting to 27+. Dealer may reach 27-31 or
+    bust}. My action is Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of losing the game over 3 points. \n4. After all players have\
+    \ completed their hands, the dealer reveals their hidden card. Dealers must hit\
+    \ until their cards total 27 or higher.\nThe dealer's current card is {Diamond\
+    \ A}. The dealer has another hidden card. You don't know what it is. Your current\
+    \ cards are {Heart 10,Heart A,Spade A,Spade 8}. Please read the behavoiral guideline\
+    \ and world modeling carefully. Then you should analyze your own cards and your\
+    \ strategies in Self-belief and then analyze the dealer cards in World-belief.\
+    \ Lastly, please select your action from {\"Stand\",\"Hit\"}.### Output Format:\
+    \ Self-Belief is {Belief about youself}. World-Belief is {Belief about the dealer}.\
+    \ My action is {Your action}. Please output in the given format. Do not write\
+    \ anything else."
+  role: user
+- content: Self-Belief is {My current total is 30 (Heart 10, Heart A=11, Spade A=1,
+    Spade 8), which is close to 31 and unlikely to improve without busting}. World-Belief
+    is {Dealer's visible Ace (11) and hidden card. If hidden card is 10, dealer could
+    reach 31 after hitting, otherwise, they likely end at 27-30 or bust}. My action
+    is Stand.
+  role: assistant
+- final cards: 'dealer [''DJ'', ''DA'', ''S7''], player [''HT'', ''HA'', ''SA'', ''S8''], '
+  final results: win.

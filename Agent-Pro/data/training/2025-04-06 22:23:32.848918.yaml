@@ -1,0 +1,112 @@
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Heart Q}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Spade\
+    \ J,Spade Q}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**: Achieve\
+    \ phase-optimized totals (26/27/25) while preserving error-checking protocols\
+    \ to counter system misattributions, prioritizing 30+ stands in late phases regardless\
+    \ of dealer visibility.  \n2. **Strategy**:  \n   - **Phase Enforcement**:  \n\
+    \     - Early (≤2 cards): Hit until 27 *unless dealer shows 10/J/Q/K/A*, but override\
+    \ to hit below 21 if system error patterns emerge  \n     - Mid (3 cards): Stand\
+    \ at 27+ *with mandatory cross-verification of dealer’s hidden card logic*  \n\
+    \     - Late (≥4 cards): Stand at 26+ *unless dealer visible card triggers +3\
+    \ threshold escalation (Q=+1)*  \n   - **Variance Control**:  \n     - 78% stand\
+    \ threshold at 28+ against Q/J/K upcards (was 72%)  \n     - Prohibit Ace demotion\
+    \ entirely in error-prone environments  \n   - **Draw Sequencing**:  \n     -\
+    \ Prioritize low cards (2-6) after 3rd draw to amplify dealer bust catalysts \
+    \ \n3. **Demonstration**: Canonical example of *system-error resilience* - maintaining\
+    \ valid stand decisions (30 total) despite mislabeled outcomes, proving strategy\
+    \ integrity over outcome reporting.\nWorld modeling: **World Modeling**1. **Rule-Description**:\
+    \  \n   - **Dealer Mandatory Draws**: Visible Q (10) forces dealer to hit until\
+    \ ≥27, creating 63% bust probability when hidden card ≤7  \n   - **Error Propagation\
+    \ Risk**: 8% chance of incorrect result labeling when dealer total exceeds 31,\
+    \ requiring manual verification  \n2. **Policy Updates**:  \n   - **System Cross-Check\
+    \ Protocol**: Recalculate dealer totals post-game using visible/hidden cards before\
+    \ accepting outcomes  \n   - **Bust Certainty Index**: Assign 100% win probability\
+    \ if dealer confirmed >31, overriding reported results  \n3. **Strategic Calibration**:\
+    \  \n   - **Error Buffer**: Maintain +2 margin above phase thresholds (e.g., stand\
+    \ at 28 instead of 26) in games with prior mislabeling  \n   - **Dealer Logic\
+    \ Mirroring**: Track exact dealer draw sequence against Rule 4 compliance  \n\n\
+    **Key Strategic Evolution**:  \n- **Error-Adaptive Thresholds**: Auto-increase\
+    \ stand targets by 1 point per observed system error  \n- **Total Validation Protocol**:\
+    \ Require mental calculation of both player/dealer totals before action finalization\
+    \  \n- **Phase-Locked Aggression**: Triple hit probability in early phases (≤2\
+    \ cards) when dealer shows Q/J/K, exploiting their 58% bust rate post-initial\
+    \ draw\nPlease read the behavioral guideline and world modeling carefully. Then\
+    \ you should analyze your own cards and your strategies in Self-belief and then\
+    \ analyze the dealer cards in World-belief. Lastly, please select your action\
+    \ from {\"Stand\",\"Hit\"}.### Output Format: Self-Belief is {Belief about youself}.\
+    \ World-Belief is {Belief about the dealer}. My action is {Your action}. Please\
+    \ output in the given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {Current total 20 (J+Q), early phase (2 cards), aggressive
+    strategy prioritizes hitting below 21 against dealer Q}. World-Belief is {Dealer
+    Q (10) with hidden card, must hit until ≥27 (63% bust chance if hidden ≤7), system
+    error risk 8%}. My action is Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Heart Q}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Spade\
+    \ J,Spade Q,Heart J}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**:\
+    \ Achieve phase-optimized totals (26/27/25) while preserving error-checking protocols\
+    \ to counter system misattributions, prioritizing 30+ stands in late phases regardless\
+    \ of dealer visibility.  \n2. **Strategy**:  \n   - **Phase Enforcement**:  \n\
+    \     - Early (≤2 cards): Hit until 27 *unless dealer shows 10/J/Q/K/A*, but override\
+    \ to hit below 21 if system error patterns emerge  \n     - Mid (3 cards): Stand\
+    \ at 27+ *with mandatory cross-verification of dealer’s hidden card logic*  \n\
+    \     - Late (≥4 cards): Stand at 26+ *unless dealer visible card triggers +3\
+    \ threshold escalation (Q=+1)*  \n   - **Variance Control**:  \n     - 78% stand\
+    \ threshold at 28+ against Q/J/K upcards (was 72%)  \n     - Prohibit Ace demotion\
+    \ entirely in error-prone environments  \n   - **Draw Sequencing**:  \n     -\
+    \ Prioritize low cards (2-6) after 3rd draw to amplify dealer bust catalysts \
+    \ \n3. **Demonstration**: Canonical example of *system-error resilience* - maintaining\
+    \ valid stand decisions (30 total) despite mislabeled outcomes, proving strategy\
+    \ integrity over outcome reporting.\nWorld modeling: **World Modeling**1. **Rule-Description**:\
+    \  \n   - **Dealer Mandatory Draws**: Visible Q (10) forces dealer to hit until\
+    \ ≥27, creating 63% bust probability when hidden card ≤7  \n   - **Error Propagation\
+    \ Risk**: 8% chance of incorrect result labeling when dealer total exceeds 31,\
+    \ requiring manual verification  \n2. **Policy Updates**:  \n   - **System Cross-Check\
+    \ Protocol**: Recalculate dealer totals post-game using visible/hidden cards before\
+    \ accepting outcomes  \n   - **Bust Certainty Index**: Assign 100% win probability\
+    \ if dealer confirmed >31, overriding reported results  \n3. **Strategic Calibration**:\
+    \  \n   - **Error Buffer**: Maintain +2 margin above phase thresholds (e.g., stand\
+    \ at 28 instead of 26) in games with prior mislabeling  \n   - **Dealer Logic\
+    \ Mirroring**: Track exact dealer draw sequence against Rule 4 compliance  \n\n\
+    **Key Strategic Evolution**:  \n- **Error-Adaptive Thresholds**: Auto-increase\
+    \ stand targets by 1 point per observed system error  \n- **Total Validation Protocol**:\
+    \ Require mental calculation of both player/dealer totals before action finalization\
+    \  \n- **Phase-Locked Aggression**: Triple hit probability in early phases (≤2\
+    \ cards) when dealer shows Q/J/K, exploiting their 58% bust rate post-initial\
+    \ draw\nPlease read the behavioral guideline and world modeling carefully. Then\
+    \ you should analyze your own cards and your strategies in Self-belief and then\
+    \ analyze the dealer cards in World-belief. Lastly, please select your action\
+    \ from {\"Stand\",\"Hit\"}.### Output Format: Self-Belief is {Belief about youself}.\
+    \ World-Belief is {Belief about the dealer}. My action is {Your action}. Please\
+    \ output in the given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {Total 30 (J+Q+J) in Mid phase (3 cards), meets stand threshold
+    (27+) with margin}. World-Belief is {Dealer's visible Q forces hitting until ≥27,
+    high bust risk due to hidden card dependency}. My action is Stand.
+  role: assistant
+- final cards: 'dealer [''H2'', ''HQ'', ''H5'', ''D5'', ''H3'', ''DA'', ''D9''], player
+    [''SJ'', ''SQ'', ''HJ''], '
+  final results: win.

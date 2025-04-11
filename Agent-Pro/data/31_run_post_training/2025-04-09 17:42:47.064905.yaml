@@ -1,0 +1,170 @@
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Club 9}. The dealer has another\
+    \ hidden card. You don't know what it is. Your current cards are {Diamond K,Club\
+    \ A}. Behavioral guideline: \n**Behavioral Guideline**  \n1. **Goal**: Maximize\
+    \ aggression within mathematically validated thresholds, prioritizing survival\
+    \ in 4-card hands while targeting 28-31 totals. Enforce unbreakable stand points\
+    \ to neutralize dealer compounding risks.  \n2. **Strategy**:  \n   - **Fractured\
+    \ Aggression Protocol**:  \n     - 3-card hands: Hit to 28+ against Q/K upcards\
+    \ (was 27+) to counter dealer’s 17-20 initial total threat  \n     - 4-card hands:\
+    \ **Mandatory stand at 29+** (no exceptions), with immediate termination of aggression\
+    \ upon reaching threshold  \n   - **Arithmetic Supremacy Clause**:  \n     - Triple-verify\
+    \ totals after every hit (upgraded from double-check) to eliminate 10% error risk\
+    \  \n     - Treat 30/31 as \"fortress totals\" – instant stand regardless of dealer\
+    \ upcard  \n   - **Dealer Ambush Override**:  \n     - Against Q/K upcards, assume\
+    \ dealer’s hidden card creates initial 17+ total until proven otherwise through\
+    \ hand progression  \n3. **Demonstration**: Preserve *4-Card Standoff* (this game)\
+    \ as canonical example: 29 total with 4 cards forced stand despite dealer’s K\
+    \ upcard, demonstrating protocol adherence overrides outcome ambiguity.\n\nWorld\
+    \ modeling: \n**World Modeling**1. **Rule-Description**:  \n   - **Dealer’s Compounding\
+    \ Horizon**: Dealers must hit until reaching 27+, creating 18-23% bust risk per\
+    \ additional card drawn beyond 3  \n   - **4-Card Fragility Window**: Player 4-card\
+    \ hands at 24-28 have 52-68% bust risk on next hit – prohibited against Q/K upcards\
+    \  \n   - **Hidden Card Quantum Lock**: K upcard dealers have 33% probability\
+    \ of hidden card being 2-7 (initial 12-17), requiring players to build ≥28 totals\
+    \  \n2. **Strategic Recognition**:  \n   - **Upcard Entanglement**:  \n     -\
+    \ K upcard creates dual reality: immediate dealer stand threat (initial 20) vs\
+    \ delayed compounding (initial 12-17)  \n     - Player must resolve uncertainty\
+    \ by reaching 28+ with ≤4 cards  \n   - **Threshold Elasticity 4.0**:  \n    \
+    \ - For every confirmed dealer initial total point below 18, reduce player stand\
+    \ threshold by 1.0 (not 0.75) to counter compounding acceleration  \n3. **Calibration\
+    \ Matrix**:  \n   - **K-Upcard Response**: 28+ (3 cards)/29+ (4 cards) with triple\
+    \ total verification  \n   - **Catastrophic Zones**:  \n     - 4-card 25-28 totals\
+    \ banned against K upcards (58-72% bust risk)  \n     - Dealer initial totals\
+    \ 18-20 require player minimum 29 to win \n\nPlease read the behavioral guideline\
+    \ and world modeling carefully. Then you should analyze your own cards and your\
+    \ strategies in Self-belief and then analyze the dealer cards in World-belief.\
+    \ Lastly, please select your action from {\"Stand\",\"Hit\"}.### Output Format:\
+    \ Self-Belief is {Belief about youself}. World-Belief is {Belief about the dealer}.\
+    \ My action is {Your action}. Please output in the given format. Do not write\
+    \ anything else."
+  role: user
+- content: Self-Belief is {Current total 21 (K+A as 11) with 2 cards, requiring aggressive
+    progression toward 28-31 threshold}. World-Belief is {Dealer's 9 upcard with hidden
+    card creates potential initial totals 10-20; dealer must hit to 27+, incurring
+    compounding bust risk}. My action is Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Club 9}. The dealer has another\
+    \ hidden card. You don't know what it is. Your current cards are {Diamond K,Club\
+    \ A,Spade 6}. Behavioral guideline: \n**Behavioral Guideline**  \n1. **Goal**:\
+    \ Maximize aggression within mathematically validated thresholds, prioritizing\
+    \ survival in 4-card hands while targeting 28-31 totals. Enforce unbreakable stand\
+    \ points to neutralize dealer compounding risks.  \n2. **Strategy**:  \n   - **Fractured\
+    \ Aggression Protocol**:  \n     - 3-card hands: Hit to 28+ against Q/K upcards\
+    \ (was 27+) to counter dealer’s 17-20 initial total threat  \n     - 4-card hands:\
+    \ **Mandatory stand at 29+** (no exceptions), with immediate termination of aggression\
+    \ upon reaching threshold  \n   - **Arithmetic Supremacy Clause**:  \n     - Triple-verify\
+    \ totals after every hit (upgraded from double-check) to eliminate 10% error risk\
+    \  \n     - Treat 30/31 as \"fortress totals\" – instant stand regardless of dealer\
+    \ upcard  \n   - **Dealer Ambush Override**:  \n     - Against Q/K upcards, assume\
+    \ dealer’s hidden card creates initial 17+ total until proven otherwise through\
+    \ hand progression  \n3. **Demonstration**: Preserve *4-Card Standoff* (this game)\
+    \ as canonical example: 29 total with 4 cards forced stand despite dealer’s K\
+    \ upcard, demonstrating protocol adherence overrides outcome ambiguity.\n\nWorld\
+    \ modeling: \n**World Modeling**1. **Rule-Description**:  \n   - **Dealer’s Compounding\
+    \ Horizon**: Dealers must hit until reaching 27+, creating 18-23% bust risk per\
+    \ additional card drawn beyond 3  \n   - **4-Card Fragility Window**: Player 4-card\
+    \ hands at 24-28 have 52-68% bust risk on next hit – prohibited against Q/K upcards\
+    \  \n   - **Hidden Card Quantum Lock**: K upcard dealers have 33% probability\
+    \ of hidden card being 2-7 (initial 12-17), requiring players to build ≥28 totals\
+    \  \n2. **Strategic Recognition**:  \n   - **Upcard Entanglement**:  \n     -\
+    \ K upcard creates dual reality: immediate dealer stand threat (initial 20) vs\
+    \ delayed compounding (initial 12-17)  \n     - Player must resolve uncertainty\
+    \ by reaching 28+ with ≤4 cards  \n   - **Threshold Elasticity 4.0**:  \n    \
+    \ - For every confirmed dealer initial total point below 18, reduce player stand\
+    \ threshold by 1.0 (not 0.75) to counter compounding acceleration  \n3. **Calibration\
+    \ Matrix**:  \n   - **K-Upcard Response**: 28+ (3 cards)/29+ (4 cards) with triple\
+    \ total verification  \n   - **Catastrophic Zones**:  \n     - 4-card 25-28 totals\
+    \ banned against K upcards (58-72% bust risk)  \n     - Dealer initial totals\
+    \ 18-20 require player minimum 29 to win \n\nPlease read the behavioral guideline\
+    \ and world modeling carefully. Then you should analyze your own cards and your\
+    \ strategies in Self-belief and then analyze the dealer cards in World-belief.\
+    \ Lastly, please select your action from {\"Stand\",\"Hit\"}.### Output Format:\
+    \ Self-Belief is {Belief about youself}. World-Belief is {Belief about the dealer}.\
+    \ My action is {Your action}. Please output in the given format. Do not write\
+    \ anything else."
+  role: user
+- content: Self-Belief is {Current total 27 with 3 cards (K=10, A=11, 6=6), needing
+    28+ to optimize aggression per Fractured Aggression Protocol for 3-card hands}.
+    World-Belief is {Dealer’s 9 upcard with hidden card creates initial 10-20 total;
+    dealer must hit until 27+, incurring compounding bust risk}. My action is {Hit}.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Club 9}. The dealer has another\
+    \ hidden card. You don't know what it is. Your current cards are {Diamond K,Club\
+    \ A,Spade 6,Diamond 6}. Behavioral guideline: \n**Behavioral Guideline**  \n1.\
+    \ **Goal**: Maximize aggression within mathematically validated thresholds, prioritizing\
+    \ survival in 4-card hands while targeting 28-31 totals. Enforce unbreakable stand\
+    \ points to neutralize dealer compounding risks.  \n2. **Strategy**:  \n   - **Fractured\
+    \ Aggression Protocol**:  \n     - 3-card hands: Hit to 28+ against Q/K upcards\
+    \ (was 27+) to counter dealer’s 17-20 initial total threat  \n     - 4-card hands:\
+    \ **Mandatory stand at 29+** (no exceptions), with immediate termination of aggression\
+    \ upon reaching threshold  \n   - **Arithmetic Supremacy Clause**:  \n     - Triple-verify\
+    \ totals after every hit (upgraded from double-check) to eliminate 10% error risk\
+    \  \n     - Treat 30/31 as \"fortress totals\" – instant stand regardless of dealer\
+    \ upcard  \n   - **Dealer Ambush Override**:  \n     - Against Q/K upcards, assume\
+    \ dealer’s hidden card creates initial 17+ total until proven otherwise through\
+    \ hand progression  \n3. **Demonstration**: Preserve *4-Card Standoff* (this game)\
+    \ as canonical example: 29 total with 4 cards forced stand despite dealer’s K\
+    \ upcard, demonstrating protocol adherence overrides outcome ambiguity.\n\nWorld\
+    \ modeling: \n**World Modeling**1. **Rule-Description**:  \n   - **Dealer’s Compounding\
+    \ Horizon**: Dealers must hit until reaching 27+, creating 18-23% bust risk per\
+    \ additional card drawn beyond 3  \n   - **4-Card Fragility Window**: Player 4-card\
+    \ hands at 24-28 have 52-68% bust risk on next hit – prohibited against Q/K upcards\
+    \  \n   - **Hidden Card Quantum Lock**: K upcard dealers have 33% probability\
+    \ of hidden card being 2-7 (initial 12-17), requiring players to build ≥28 totals\
+    \  \n2. **Strategic Recognition**:  \n   - **Upcard Entanglement**:  \n     -\
+    \ K upcard creates dual reality: immediate dealer stand threat (initial 20) vs\
+    \ delayed compounding (initial 12-17)  \n     - Player must resolve uncertainty\
+    \ by reaching 28+ with ≤4 cards  \n   - **Threshold Elasticity 4.0**:  \n    \
+    \ - For every confirmed dealer initial total point below 18, reduce player stand\
+    \ threshold by 1.0 (not 0.75) to counter compounding acceleration  \n3. **Calibration\
+    \ Matrix**:  \n   - **K-Upcard Response**: 28+ (3 cards)/29+ (4 cards) with triple\
+    \ total verification  \n   - **Catastrophic Zones**:  \n     - 4-card 25-28 totals\
+    \ banned against K upcards (58-72% bust risk)  \n     - Dealer initial totals\
+    \ 18-20 require player minimum 29 to win \n\nPlease read the behavioral guideline\
+    \ and world modeling carefully. Then you should analyze your own cards and your\
+    \ strategies in Self-belief and then analyze the dealer cards in World-belief.\
+    \ Lastly, please select your action from {\"Stand\",\"Hit\"}.### Output Format:\
+    \ Self-Belief is {Belief about youself}. World-Belief is {Belief about the dealer}.\
+    \ My action is {Your action}. Please output in the given format. Do not write\
+    \ anything else."
+  role: user
+- content: Self-Belief is {4-card total 23 (K=10, A=1, 6+6), below 29+ mandatory stand
+    threshold for 4-card hands}. World-Belief is {Dealer upcard 9 with hidden card,
+    must hit to 27+ with compounding bust risk}. My action is Hit.
+  role: assistant
+- final cards: 'dealer [''S7'', ''C9'', ''C7'', ''DA'', ''S5''], player [''DK'', ''CA'',
+    ''S6'', ''D6'', ''HQ''], '
+  final results: lose.

@@ -1,0 +1,110 @@
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Heart 6}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Diamond\
+    \ K,Club 6}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**: Secure\
+    \ survivorship by **strictly enforcing stand thresholds (≥26 for 3/4-card hands)**.\
+    \ Pursue 28+ *only when* doing so does not violate survivorship thresholds. Prioritize\
+    \ avoiding busts over chasing marginal gains.  \n2. **Strategy**:  \n   - **Stand\
+    \ Thresholds**:  \n     - **3/4-card hands**: **Stand immediately at ≥26** vs.\
+    \ dealer 7+ upcards. Do not hit even for 31 potential.  \n     - **2-card hands**:\
+    \ Stand at ≥23 *only* if bust risk >40% (e.g., 23 vs. dealer 10). Otherwise, prioritize\
+    \ reaching 26+ first.  \n   - **Aggression Limits**:  \n     - Hit below 26 only\
+    \ if: (1) 28+ is achievable with 1 draw (e.g., 20/3 can safely hit to 28–30),\
+    \ and (2) bust risk ≤25% (e.g., 25/3 cannot hit).  \n     - Chase 31 **exclusively\
+    \ with ≤3-card soft hands (A+X+Y)** when dealer ≤6.  \n3. **Demonstration**: Preserve\
+    \ this game as a **threshold adherence success case**—standing at 30/4 vs. dealer\
+    \ 10 avoided unnecessary bust and secured victory.  \n\n---\nWorld modeling: **World\
+    \ Modeling**1. **Rule-Description**:  \n   - **Dealer’s Forced Draws**: Dealers\
+    \ *must* hit until ≥27, giving them a **~68% chance to reach 27–31**. Player totals\
+    \ <26 lose >90% of the time.  \n   - **Hidden Card Dynamics**: Dealer’s hidden\
+    \ card is most likely 7–9 (35% probability), creating a baseline 17–19. With forced\
+    \ draws, this converts to 27–31 in 72% of cases.  \n   - **Outcome Validation**:\
+    \ Game records may mislabel wins/losses—cross-check dealer totals against player\
+    \ actions to avoid conflating strategy errors with data inaccuracies.  \n\n**Policy\
+    \ Updates**:  \n- **Previous**: “Stand at 26+/3-4 cards regardless of 28 target”\
+    \ → **Revised**: “Stand at 26+/3-4 cards *even if 31 is achievable* (e.g., 26/4\
+    \ vs. dealer 10: stand).”  \n- **Previous**: “Focus on absolute totals over tiebreakers”\
+    \ → **Revised**: “Ignore tiebreakers entirely; prioritize totals ≥27 to offset\
+    \ dealer’s forced high finishes.”  \n\n---  \n**Key Strategic Shift**:  \n- **Survivorship-First\
+    \ Aggression**:  \n  - Against dealer 7+, **26+ is non-negotiable**—no exceptions\
+    \ for 28+ pursuits.  \n  - Against dealer ≤6, **build 27+/2-card hands** to exploit\
+    \ dealer’s lower finishing range (27–29).\nPlease read the behavioral guideline\
+    \ and world modeling carefully. Then you should analyze your own cards and your\
+    \ strategies in Self-belief and then analyze the dealer cards in World-belief.\
+    \ Lastly, please select your action from {\"Stand\",\"Hit\"}.### Output Format:\
+    \ Self-Belief is {Belief about youself}. World-Belief is {Belief about the dealer}.\
+    \ My action is {Your action}. Please output in the given format. Do not write\
+    \ anything else."
+  role: user
+- content: Self-Belief is {2-card hand totaling 16 (Diamond K + Club 6), must prioritize
+    reaching ≥26 to compete against dealer’s likely 27+ finish. Bust risk on next
+    hit is 0% (max 16+10=26 ≤31)}. World-Belief is {Dealer’s visible Heart 6 + hidden
+    card (likely 7–9, total 13–15 pre-draw). Dealer must hit to ≥27, with ~68% chance
+    to reach 27–31}. My action is Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Heart 6}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Diamond\
+    \ K,Club 6,Club 5}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**:\
+    \ Secure survivorship by **strictly enforcing stand thresholds (≥26 for 3/4-card\
+    \ hands)**. Pursue 28+ *only when* doing so does not violate survivorship thresholds.\
+    \ Prioritize avoiding busts over chasing marginal gains.  \n2. **Strategy**: \
+    \ \n   - **Stand Thresholds**:  \n     - **3/4-card hands**: **Stand immediately\
+    \ at ≥26** vs. dealer 7+ upcards. Do not hit even for 31 potential.  \n     -\
+    \ **2-card hands**: Stand at ≥23 *only* if bust risk >40% (e.g., 23 vs. dealer\
+    \ 10). Otherwise, prioritize reaching 26+ first.  \n   - **Aggression Limits**:\
+    \  \n     - Hit below 26 only if: (1) 28+ is achievable with 1 draw (e.g., 20/3\
+    \ can safely hit to 28–30), and (2) bust risk ≤25% (e.g., 25/3 cannot hit).  \n\
+    \     - Chase 31 **exclusively with ≤3-card soft hands (A+X+Y)** when dealer ≤6.\
+    \  \n3. **Demonstration**: Preserve this game as a **threshold adherence success\
+    \ case**—standing at 30/4 vs. dealer 10 avoided unnecessary bust and secured victory.\
+    \  \n\n---\nWorld modeling: **World Modeling**1. **Rule-Description**:  \n   -\
+    \ **Dealer’s Forced Draws**: Dealers *must* hit until ≥27, giving them a **~68%\
+    \ chance to reach 27–31**. Player totals <26 lose >90% of the time.  \n   - **Hidden\
+    \ Card Dynamics**: Dealer’s hidden card is most likely 7–9 (35% probability),\
+    \ creating a baseline 17–19. With forced draws, this converts to 27–31 in 72%\
+    \ of cases.  \n   - **Outcome Validation**: Game records may mislabel wins/losses—cross-check\
+    \ dealer totals against player actions to avoid conflating strategy errors with\
+    \ data inaccuracies.  \n\n**Policy Updates**:  \n- **Previous**: “Stand at 26+/3-4\
+    \ cards regardless of 28 target” → **Revised**: “Stand at 26+/3-4 cards *even\
+    \ if 31 is achievable* (e.g., 26/4 vs. dealer 10: stand).”  \n- **Previous**:\
+    \ “Focus on absolute totals over tiebreakers” → **Revised**: “Ignore tiebreakers\
+    \ entirely; prioritize totals ≥27 to offset dealer’s forced high finishes.”  \n\
+    \n---  \n**Key Strategic Shift**:  \n- **Survivorship-First Aggression**:  \n\
+    \  - Against dealer 7+, **26+ is non-negotiable**—no exceptions for 28+ pursuits.\
+    \  \n  - Against dealer ≤6, **build 27+/2-card hands** to exploit dealer’s lower\
+    \ finishing range (27–29).\nPlease read the behavioral guideline and world modeling\
+    \ carefully. Then you should analyze your own cards and your strategies in Self-belief\
+    \ and then analyze the dealer cards in World-belief. Lastly, please select your\
+    \ action from {\"Stand\",\"Hit\"}.### Output Format: Self-Belief is {Belief about\
+    \ youself}. World-Belief is {Belief about the dealer}. My action is {Your action}.\
+    \ Please output in the given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {Current total 24 with 3 cards; must adhere to stand threshold
+    (≥26 for 3/4-card hands), but 24 is below threshold. Hitting would risk 55%+ bust
+    chance, violating aggression limits}. World-Belief is {Dealer’s 6 upcard and hidden
+    card likely totals 12–15, forcing dealer to hit until ≥27, risking bust}. My action
+    is Stand.
+  role: assistant
+- final cards: 'dealer [''DJ'', ''H6'', ''C8'', ''D7''], player [''DK'', ''C6'', ''C5''], '
+  final results: lose.

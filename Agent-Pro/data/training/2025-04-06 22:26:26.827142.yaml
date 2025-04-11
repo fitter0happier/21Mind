@@ -1,0 +1,180 @@
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Spade A}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Diamond\
+    \ 8,Club K}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**: Maximize\
+    \ card totals toward 31 while enforcing real-time error immunity – achieve ≥28\
+    \ in mid-phase (3 cards) and ≥30 in late phase, with mandatory post-game dealer\
+    \ total recalculation to override system mislabeling.  \n2. **Strategy**:  \n\
+    \   - **Phase Enforcement**:  \n     - Early (≤2 cards): Hit until 25 against\
+    \ Q/J/K upcards (*58% dealer bust exploit*), then target 27  \n     - Mid (3 cards):\
+    \ Stand at 28+ (*+1 error buffer*) unless dealer shows A, with parallel hidden-card\
+    \ probability calc  \n     - Late (≥4 cards): Stand at 27+ but auto-hit below\
+    \ 26 if dealer’s visible card is Q/J/K (*+3 escalation*)  \n   - **Variance Control**:\
+    \  \n     - 82% stand threshold at 28+ against Q upcards (prev 78%)  \n     -\
+    \ Ban hit actions above 29 regardless of phase (*overrides prior Ace demotion\
+    \ rules*)  \n   - **Draw Sequencing**:  \n     - Post-3rd card, prioritize 2-6\
+    \ draws only if dealer’s hidden card ≤8 (probabilistic targeting)  \n3. **Demonstration**:\
+    \ This game is the *definitive error-resilience case* – standing at 30 (Mid phase)\
+    \ was optimal despite system mislabeling, proving strict adherence to thresholds\
+    \ + manual verification defeats reporting flaws.\nWorld modeling: **World Modeling**1.\
+    \ **Rule-Description**:  \n   - **Dealer Overdraw Catalysts**: Visible Q (10)\
+    \ forces dealer to take ≥4 additional cards 41% of time, creating 71% bust risk\
+    \ when initial hidden card ≤9  \n   - **Multi-Card Bust Vulnerability**: Dealers\
+    \ drawing 5+ cards have 89% chance to exceed 31 (*unlike standard blackjack*)\
+    \  \n   - **Error Criticality**: 8% mislabeling risk concentrates when dealer\
+    \ totals 32-35 (*masked busts*)  \n2. **Policy Updates**:  \n   - **Post-Game\
+    \ Autoverify**: Mandatory dealer total reconstruction using all drawn cards before\
+    \ accepting loss outcomes  \n   - **Error-Triggered Buffers**: Increase stand\
+    \ thresholds by +3 (not +2) in sessions with prior mislabeling  \n   - **Dealer\
+    \ Draw Audit**: Log exact card sequence to detect Rule 4 violations (e.g., stopping\
+    \ below 27)  \n3. **Strategic Calibration**:  \n   - **Q-Upcard Protocol**: Treat\
+    \ dealer Q as +2 risk multiplier – stand 1 point lower (27→26) but hit 1 point\
+    \ higher (25→26)  \n   - **Overdraw Insurance**: If dealer takes ≥5 cards, assume\
+    \ 31+ total and claim auto-win regardless of system report  \n\n**Key Strategic\
+    \ Evolution**:  \n- **Post-Game Cross-Check Mandate**: Require dealer total verification\
+    \ *before emotional outcome processing*  \n- **Error-Adaptive Stand Thresholds**:\
+    \ +1 per error → +2 per error, compounding every 3 games  \n- **Phase-Specific\
+    \ Aggression**: Quadruple hit frequency in Early phase against Q upcards when\
+    \ player total ≤24\nPlease read the behavioral guideline and world modeling carefully.\
+    \ Then you should analyze your own cards and your strategies in Self-belief and\
+    \ then analyze the dealer cards in World-belief. Lastly, please select your action\
+    \ from {\"Stand\",\"Hit\"}.### Output Format: Self-Belief is {Belief about youself}.\
+    \ World-Belief is {Belief about the dealer}. My action is {Your action}. Please\
+    \ output in the given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {Current total = 18 (Diamond 8 + Club K), Early phase (2
+    cards), must aggressively target 27+ while avoiding bust}. World-Belief is {Dealer’s
+    visible Spade A (11) + hidden card; dealer must hit until ≥27, high bust risk
+    if hidden card ≤9}. My action is Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Spade A}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Diamond\
+    \ 8,Club K,Heart 3}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**:\
+    \ Maximize card totals toward 31 while enforcing real-time error immunity – achieve\
+    \ ≥28 in mid-phase (3 cards) and ≥30 in late phase, with mandatory post-game dealer\
+    \ total recalculation to override system mislabeling.  \n2. **Strategy**:  \n\
+    \   - **Phase Enforcement**:  \n     - Early (≤2 cards): Hit until 25 against\
+    \ Q/J/K upcards (*58% dealer bust exploit*), then target 27  \n     - Mid (3 cards):\
+    \ Stand at 28+ (*+1 error buffer*) unless dealer shows A, with parallel hidden-card\
+    \ probability calc  \n     - Late (≥4 cards): Stand at 27+ but auto-hit below\
+    \ 26 if dealer’s visible card is Q/J/K (*+3 escalation*)  \n   - **Variance Control**:\
+    \  \n     - 82% stand threshold at 28+ against Q upcards (prev 78%)  \n     -\
+    \ Ban hit actions above 29 regardless of phase (*overrides prior Ace demotion\
+    \ rules*)  \n   - **Draw Sequencing**:  \n     - Post-3rd card, prioritize 2-6\
+    \ draws only if dealer’s hidden card ≤8 (probabilistic targeting)  \n3. **Demonstration**:\
+    \ This game is the *definitive error-resilience case* – standing at 30 (Mid phase)\
+    \ was optimal despite system mislabeling, proving strict adherence to thresholds\
+    \ + manual verification defeats reporting flaws.\nWorld modeling: **World Modeling**1.\
+    \ **Rule-Description**:  \n   - **Dealer Overdraw Catalysts**: Visible Q (10)\
+    \ forces dealer to take ≥4 additional cards 41% of time, creating 71% bust risk\
+    \ when initial hidden card ≤9  \n   - **Multi-Card Bust Vulnerability**: Dealers\
+    \ drawing 5+ cards have 89% chance to exceed 31 (*unlike standard blackjack*)\
+    \  \n   - **Error Criticality**: 8% mislabeling risk concentrates when dealer\
+    \ totals 32-35 (*masked busts*)  \n2. **Policy Updates**:  \n   - **Post-Game\
+    \ Autoverify**: Mandatory dealer total reconstruction using all drawn cards before\
+    \ accepting loss outcomes  \n   - **Error-Triggered Buffers**: Increase stand\
+    \ thresholds by +3 (not +2) in sessions with prior mislabeling  \n   - **Dealer\
+    \ Draw Audit**: Log exact card sequence to detect Rule 4 violations (e.g., stopping\
+    \ below 27)  \n3. **Strategic Calibration**:  \n   - **Q-Upcard Protocol**: Treat\
+    \ dealer Q as +2 risk multiplier – stand 1 point lower (27→26) but hit 1 point\
+    \ higher (25→26)  \n   - **Overdraw Insurance**: If dealer takes ≥5 cards, assume\
+    \ 31+ total and claim auto-win regardless of system report  \n\n**Key Strategic\
+    \ Evolution**:  \n- **Post-Game Cross-Check Mandate**: Require dealer total verification\
+    \ *before emotional outcome processing*  \n- **Error-Adaptive Stand Thresholds**:\
+    \ +1 per error → +2 per error, compounding every 3 games  \n- **Phase-Specific\
+    \ Aggression**: Quadruple hit frequency in Early phase against Q upcards when\
+    \ player total ≤24\nPlease read the behavioral guideline and world modeling carefully.\
+    \ Then you should analyze your own cards and your strategies in Self-belief and\
+    \ then analyze the dealer cards in World-belief. Lastly, please select your action\
+    \ from {\"Stand\",\"Hit\"}.### Output Format: Self-Belief is {Belief about youself}.\
+    \ World-Belief is {Belief about the dealer}. My action is {Your action}. Please\
+    \ output in the given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {Mid phase (3 cards), total 21, must hit to approach 28+
+    threshold per guidelines}. World-Belief is {Dealer's visible Ace (11) + hidden
+    card, forced to hit until ≥27, high bust risk due to multi-card draw requirements}.
+    My action is Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Spade A}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Diamond\
+    \ 8,Club K,Heart 3,Spade K}. Behavioral guideline: **Behavioral Guideline**  \n\
+    1. **Goal**: Maximize card totals toward 31 while enforcing real-time error immunity\
+    \ – achieve ≥28 in mid-phase (3 cards) and ≥30 in late phase, with mandatory post-game\
+    \ dealer total recalculation to override system mislabeling.  \n2. **Strategy**:\
+    \  \n   - **Phase Enforcement**:  \n     - Early (≤2 cards): Hit until 25 against\
+    \ Q/J/K upcards (*58% dealer bust exploit*), then target 27  \n     - Mid (3 cards):\
+    \ Stand at 28+ (*+1 error buffer*) unless dealer shows A, with parallel hidden-card\
+    \ probability calc  \n     - Late (≥4 cards): Stand at 27+ but auto-hit below\
+    \ 26 if dealer’s visible card is Q/J/K (*+3 escalation*)  \n   - **Variance Control**:\
+    \  \n     - 82% stand threshold at 28+ against Q upcards (prev 78%)  \n     -\
+    \ Ban hit actions above 29 regardless of phase (*overrides prior Ace demotion\
+    \ rules*)  \n   - **Draw Sequencing**:  \n     - Post-3rd card, prioritize 2-6\
+    \ draws only if dealer’s hidden card ≤8 (probabilistic targeting)  \n3. **Demonstration**:\
+    \ This game is the *definitive error-resilience case* – standing at 30 (Mid phase)\
+    \ was optimal despite system mislabeling, proving strict adherence to thresholds\
+    \ + manual verification defeats reporting flaws.\nWorld modeling: **World Modeling**1.\
+    \ **Rule-Description**:  \n   - **Dealer Overdraw Catalysts**: Visible Q (10)\
+    \ forces dealer to take ≥4 additional cards 41% of time, creating 71% bust risk\
+    \ when initial hidden card ≤9  \n   - **Multi-Card Bust Vulnerability**: Dealers\
+    \ drawing 5+ cards have 89% chance to exceed 31 (*unlike standard blackjack*)\
+    \  \n   - **Error Criticality**: 8% mislabeling risk concentrates when dealer\
+    \ totals 32-35 (*masked busts*)  \n2. **Policy Updates**:  \n   - **Post-Game\
+    \ Autoverify**: Mandatory dealer total reconstruction using all drawn cards before\
+    \ accepting loss outcomes  \n   - **Error-Triggered Buffers**: Increase stand\
+    \ thresholds by +3 (not +2) in sessions with prior mislabeling  \n   - **Dealer\
+    \ Draw Audit**: Log exact card sequence to detect Rule 4 violations (e.g., stopping\
+    \ below 27)  \n3. **Strategic Calibration**:  \n   - **Q-Upcard Protocol**: Treat\
+    \ dealer Q as +2 risk multiplier – stand 1 point lower (27→26) but hit 1 point\
+    \ higher (25→26)  \n   - **Overdraw Insurance**: If dealer takes ≥5 cards, assume\
+    \ 31+ total and claim auto-win regardless of system report  \n\n**Key Strategic\
+    \ Evolution**:  \n- **Post-Game Cross-Check Mandate**: Require dealer total verification\
+    \ *before emotional outcome processing*  \n- **Error-Adaptive Stand Thresholds**:\
+    \ +1 per error → +2 per error, compounding every 3 games  \n- **Phase-Specific\
+    \ Aggression**: Quadruple hit frequency in Early phase against Q upcards when\
+    \ player total ≤24\nPlease read the behavioral guideline and world modeling carefully.\
+    \ Then you should analyze your own cards and your strategies in Self-belief and\
+    \ then analyze the dealer cards in World-belief. Lastly, please select your action\
+    \ from {\"Stand\",\"Hit\"}.### Output Format: Self-Belief is {Belief about youself}.\
+    \ World-Belief is {Belief about the dealer}. My action is {Your action}. Please\
+    \ output in the given format. Do not write anything else."
+  role: user
+- content: Self-Belief is {Total 31 (Diamond 8 + Club K + Heart 3 + Spade K), Late
+    phase, cannot hit without busting}. World-Belief is {Dealer's visible Spade A
+    (11 or 1) and hidden card; must hit until ≥27, high bust risk due to mandatory
+    draws}. My action is Stand.
+  role: assistant
+- final cards: 'dealer [''S2'', ''SA'', ''D3'', ''H2'', ''S3'', ''H8''], player [''D8'',
+    ''CK'', ''H3'', ''SK''], '
+  final results: win.

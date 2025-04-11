@@ -1,0 +1,106 @@
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Club 4}. The dealer has another\
+    \ hidden card. You don't know what it is. Your current cards are {Heart K,Heart\
+    \ J}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**: Achieve survival\
+    \ thresholds that outpace dealer multi-card compounding, prioritizing soft total\
+    \ exploitation over rigid hard total ceilings. Balance 31-chasing with probabilistic\
+    \ dealer outcome modeling.  \n2. **Strategy**:  \n   - **Phase-Locked Aggression**:\
+    \  \n     - Treat hard totals ≤25 as mandatory hits against upcards 7-9 (was 26)\
+    \  \n     - Only stand at 27+ hard vs 7-9 upcards (prev 26) to counter dealer\
+    \ 4-card builds  \n   - **Ace Deprivation Protocol**:  \n     - When Ace-less,\
+    \ cap hard totals at 27 (not 31) to avoid bust cascade  \n     - Prioritize 3-card\
+    \ 24-27 ranges over risky 4-card attempts  \n   - **Dealer Pressure Grading**:\
+    \  \n     - Upcard 7-9: Require 27+ hard / 29+ soft (prev 26/28)  \n     - Upcard\
+    \ 2-6: Stand at 23+ hard (prev 22) to force dealer 5-card requirements  \n3. **Demonstration**:\
+    \ Preserve as *Multi-Card Compounding Exemplar* - shows failure of static hard\
+    \ thresholds against dealer incremental builds, necessitating higher survival\
+    \ floors.\nWorld modeling: **World Modeling**1. **Rule-Description**:  \n   -\
+    \ **Small-Card Compounding**: Dealers achieve 27+ in 58% of cases through 3-4\
+    \ small cards (7+4+9+9), not just Ace optimization  \n   - **Hidden Card Distribution**:\
+    \ Upcard 7 correlates with 42% dealer hidden cards ≤6 (enabling safe multi-hit\
+    \ sequences)  \n2. **Strategic Recognition**:  \n   - **Threshold Inflation**:\
+    \ Player totals ≤26 hard lose to 63% of dealer 7-upcard outcomes post-forced hitting\
+    \  \n   - **Bust Cascade**: Each hit beyond 20 hard increases bust risk by 15%\
+    \ per point (not exponential but progressive)  \n3. **Calibration Matrix**:  \n\
+    \   - **Upcard 7-9**: Survival floor = 27 hard / 29 soft (prev 26/28)  \n   -\
+    \ **Upcard 2-6**: Stand at 23+ hard (prev 22) to require dealer 5+ cards  \n\n\
+    **Key Evolutionary Changes**:  \n- Introduced phase-locked aggression thresholds\
+    \ against mid upcards  \n- Quantified dealer small-card compounding likelihood\
+    \  \n- Replaced exponential bust model with progressive risk scaling  \n- Elevated\
+    \ survival floors to counter dealer multi-hit endurance\nPlease read the behavioral\
+    \ guideline and world modeling carefully. Then you should analyze your own cards\
+    \ and your strategies in Self-belief and then analyze the dealer cards in World-belief.\
+    \ Lastly, please select your action from {\"Stand\",\"Hit\"}.### Output Format:\
+    \ Self-Belief is {Belief about youself}. World-Belief is {Belief about the dealer}.\
+    \ My action is {Your action}. Please output in the given format. Do not write\
+    \ anything else."
+  role: user
+- content: Self-Belief is {Hard total 20 (Ace-less), below 23 threshold for upcard
+    2-6, must hit to reach survival floor}. World-Belief is {Dealer upcard 4 requires
+    27+, hidden card ≤6 (42% chance), high risk of dealer multi-card compounding to
+    27+}. My action is Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Club 4}. The dealer has another\
+    \ hidden card. You don't know what it is. Your current cards are {Heart K,Heart\
+    \ J,Heart 5}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**: Achieve\
+    \ survival thresholds that outpace dealer multi-card compounding, prioritizing\
+    \ soft total exploitation over rigid hard total ceilings. Balance 31-chasing with\
+    \ probabilistic dealer outcome modeling.  \n2. **Strategy**:  \n   - **Phase-Locked\
+    \ Aggression**:  \n     - Treat hard totals ≤25 as mandatory hits against upcards\
+    \ 7-9 (was 26)  \n     - Only stand at 27+ hard vs 7-9 upcards (prev 26) to counter\
+    \ dealer 4-card builds  \n   - **Ace Deprivation Protocol**:  \n     - When Ace-less,\
+    \ cap hard totals at 27 (not 31) to avoid bust cascade  \n     - Prioritize 3-card\
+    \ 24-27 ranges over risky 4-card attempts  \n   - **Dealer Pressure Grading**:\
+    \  \n     - Upcard 7-9: Require 27+ hard / 29+ soft (prev 26/28)  \n     - Upcard\
+    \ 2-6: Stand at 23+ hard (prev 22) to force dealer 5-card requirements  \n3. **Demonstration**:\
+    \ Preserve as *Multi-Card Compounding Exemplar* - shows failure of static hard\
+    \ thresholds against dealer incremental builds, necessitating higher survival\
+    \ floors.\nWorld modeling: **World Modeling**1. **Rule-Description**:  \n   -\
+    \ **Small-Card Compounding**: Dealers achieve 27+ in 58% of cases through 3-4\
+    \ small cards (7+4+9+9), not just Ace optimization  \n   - **Hidden Card Distribution**:\
+    \ Upcard 7 correlates with 42% dealer hidden cards ≤6 (enabling safe multi-hit\
+    \ sequences)  \n2. **Strategic Recognition**:  \n   - **Threshold Inflation**:\
+    \ Player totals ≤26 hard lose to 63% of dealer 7-upcard outcomes post-forced hitting\
+    \  \n   - **Bust Cascade**: Each hit beyond 20 hard increases bust risk by 15%\
+    \ per point (not exponential but progressive)  \n3. **Calibration Matrix**:  \n\
+    \   - **Upcard 7-9**: Survival floor = 27 hard / 29 soft (prev 26/28)  \n   -\
+    \ **Upcard 2-6**: Stand at 23+ hard (prev 22) to require dealer 5+ cards  \n\n\
+    **Key Evolutionary Changes**:  \n- Introduced phase-locked aggression thresholds\
+    \ against mid upcards  \n- Quantified dealer small-card compounding likelihood\
+    \  \n- Replaced exponential bust model with progressive risk scaling  \n- Elevated\
+    \ survival floors to counter dealer multi-hit endurance\nPlease read the behavioral\
+    \ guideline and world modeling carefully. Then you should analyze your own cards\
+    \ and your strategies in Self-belief and then analyze the dealer cards in World-belief.\
+    \ Lastly, please select your action from {\"Stand\",\"Hit\"}.### Output Format:\
+    \ Self-Belief is {Belief about youself}. World-Belief is {Belief about the dealer}.\
+    \ My action is {Your action}. Please output in the given format. Do not write\
+    \ anything else."
+  role: user
+- content: Self-Belief is {Hard total 25 (Ace-less), under upcard 4 (2-6 range), meets
+    23+ threshold for standing to pressure dealer}. World-Belief is {Dealer must hit
+    to 27+ with 4-upcard, high bust risk due to multi-card compounding requirements}.
+    My action is Stand.
+  role: assistant
+- final cards: 'dealer [''HQ'', ''C4'', ''S6'', ''C8''], player [''HK'', ''HJ'', ''H5''], '
+  final results: lose.

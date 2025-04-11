@@ -1,0 +1,299 @@
+- content: "Game Rule:\n1. Please try to get your card total to as close to 31 as\
+    \ possible, without going over, and still having a higher total than the dealer.\n\
+    2. If anyone's point total exceeds 31, he or she loses the game. \n3. You can\
+    \ only choose one of the following two actions: {\"Stand\", \"Hit\"}. If you choose\
+    \ to Stand, you will stop taking cards and wait for the dealer to finish. If you\
+    \ choose to Hit, you can continue to take a card, but there is also the risk of\
+    \ going over 31. \n4. After all players have completed their hands, the dealer\
+    \ reveals their hidden card. Dealers must hit until their cards total 27 or higher.\n\
+    You are a seasoned blackjack expert, and you need to carefully reflect on the\
+    \ following record of this losing game: Game Record: - content: \"I will describe\
+    \ the situation. You have to reason through this in 3-5\\\n    \\ steps, then\
+    \ stop. The description begins now. You are an aggressive player of\\\n    \\\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\\\
+    \n    \\ and win the game. Game Rule:\\n1. Please try to get your card total to\
+    \ as close\\\n    \\ to 31 as possible, without going over, and still having a\
+    \ higher total than\\\n    \\ the dealer.\\n2. If anyone's point total exceeds\
+    \ 31, he or she loses the game.\\\n    \\ \\n3. You can only choose one of the\
+    \ following two actions: {\\\"Stand\\\", \\\"Hit\\\"\\\n    }. If you choose to\
+    \ Stand, you will stop taking cards and wait for the dealer\\\n    \\ to finish.\
+    \ If you choose to Hit, you can continue to take a card, but there\\\n    \\ is\
+    \ also the risk of going over 31. \\n4. After all players have completed their\\\
+    \n    \\ hands, the dealer reveals their hidden card. Dealers must hit until their\
+    \ cards\\\n    \\ total 27 or higher.\\nThe dealer's current card is {Diamond\
+    \ J}. The dealer has\\\n    \\ another hidden card. You don't know what it is.\
+    \ Your current cards are {Club\\\n    \\ 8,Diamond K}. Behavioral guideline: **Behavioral\
+    \ Guideline**  \\n1. **Goal**:\\\n    \\ Prioritize avoiding busting while maintaining\
+    \ a total (24-30) that forces the\\\n    \\ dealer to risk busting to reach their\
+    \ 27+ requirement. Winning via dealer bust\\\n    \\ is preferable to self-busting\
+    \ for marginal gains.  \\n2. **Strategy**:  \\n  \\\n    \\ - Stand on totals\
+    \ ≥25 (unless dealer’s visible card strongly indicates they’ll\\\n    \\ reach\
+    \ 27+ safely).  \\n   - Hit only when current total ≤24, where a single card\\\
+    \n    \\ can safely elevate to 25-30 without busting.  \\n   - Aggression shifts\
+    \ from\\\n    \\ chasing 31 to exploiting dealer’s mandatory high-target weakness.\
+    \  \\n3. **Demonstration**:\\\n    \\ This game exemplifies the \\\"stand-at-25+\\\
+    \" principle when dealer must hit aggressively.\\\n    \\ Archive as a caution\
+    \ against overestimating 31’s necessity.\\nWorld modeling:\\\n    \\ **World Modeling**1.\
+    \ **Rule-Description**:  \\n   - Dealers *must* hit until\\\n    \\ ≥27, making\
+    \ their bust probability non-trivial (e.g., starting at 17 requires\\\n    \\\
+    \ 10+ to reach 27, but drawing again risks 17+10+Ace=28 vs. 17+10+9=36 bust).\\\
+    \n    \\  \\n   - Player totals of 25-26 are critical: high enough to pressure\
+    \ dealer\\\n    \\ draws, low enough to avoid self-bust.  \\n   - Ace values are\
+    \ fixed as 11 (unlike\\\n    \\ traditional blackjack), simplifying math but reducing\
+    \ flexibility.  \\n\\n**Policy\\\n    \\ Update**  \\n- **Previous Guideline**:\
+    \ \\\"Aggressively chase 31\\\" → **Revised**:\\\n    \\ \\\"Aggressively *position*\
+    \ to 25-30, then shift risk to dealer.\\\"  \\n- **Previous\\\n    \\ World Model**:\
+    \ Underestimated dealer’s bust likelihood when player stands mid-range\\\n   \
+    \ \\ → **Revised**: Explicitly model dealer’s high bust rates at 27+ thresholds.\\\
+    n\\\n    Please read the behavioral guideline and world modeling carefully. Then\
+    \ you should\\\n    \\ analyze your own cards and your strategies in Self-belief\
+    \ and then analyze the\\\n    \\ dealer cards in World-belief. Lastly, please\
+    \ select your action from {\\\"Stand\\\"\\\n    ,\\\"Hit\\\"}.### Output Format:\
+    \ Self-Belief is {Belief about youself}. World-Belief\\\n    \\ is {Belief about\
+    \ the dealer}. My action is {Your action}. Please output in the\\\n    \\ given\
+    \ format. Do not write anything else.\"\n  role: user\n- content: Self-Belief\
+    \ is {Current total is 18 (8 + 10). Need to Hit to reach 25-30\n    range. A single\
+    \ card of 7-12 (Ace=11) would place me in 25-29, aligning with strategy\n    to\
+    \ pressure dealer}. World-Belief is {Dealer’s visible J (10) + hidden card. Dealer\n\
+    \    must hit until ≥27. If hidden card ≤16, dealer risks multiple draws; ≥17\
+    \ hidden\n    total forces dealer to hit toward 27+, increasing bust risk}. My\
+    \ action is Hit.\n  role: assistant\n- content: \"I will describe the situation.\
+    \ You have to reason through this in 3-5\\\n    \\ steps, then stop. The description\
+    \ begins now. You are an aggressive player of\\\n    \\ blackjack who likes to\
+    \ take risks to earn high returns. Please beat the dealer\\\n    \\ and win the\
+    \ game. Game Rule:\\n1. Please try to get your card total to as close\\\n    \\\
+    \ to 31 as possible, without going over, and still having a higher total than\\\
+    \n    \\ the dealer.\\n2. If anyone's point total exceeds 31, he or she loses\
+    \ the game.\\\n    \\ \\n3. You can only choose one of the following two actions:\
+    \ {\\\"Stand\\\", \\\"Hit\\\"\\\n    }. If you choose to Stand, you will stop\
+    \ taking cards and wait for the dealer\\\n    \\ to finish. If you choose to Hit,\
+    \ you can continue to take a card, but there\\\n    \\ is also the risk of going\
+    \ over 31. \\n4. After all players have completed their\\\n    \\ hands, the dealer\
+    \ reveals their hidden card. Dealers must hit until their cards\\\n    \\ total\
+    \ 27 or higher.\\nThe dealer's current card is {Diamond J}. The dealer has\\\n\
+    \    \\ another hidden card. You don't know what it is. Your current cards are\
+    \ {Club\\\n    \\ 8,Diamond K,Spade 8}. Behavioral guideline: **Behavioral Guideline**\
+    \  \\n1. **Goal**:\\\n    \\ Prioritize avoiding busting while maintaining a total\
+    \ (24-30) that forces the\\\n    \\ dealer to risk busting to reach their 27+\
+    \ requirement. Winning via dealer bust\\\n    \\ is preferable to self-busting\
+    \ for marginal gains.  \\n2. **Strategy**:  \\n  \\\n    \\ - Stand on totals\
+    \ ≥25 (unless dealer’s visible card strongly indicates they’ll\\\n    \\ reach\
+    \ 27+ safely).  \\n   - Hit only when current total ≤24, where a single card\\\
+    \n    \\ can safely elevate to 25-30 without busting.  \\n   - Aggression shifts\
+    \ from\\\n    \\ chasing 31 to exploiting dealer’s mandatory high-target weakness.\
+    \  \\n3. **Demonstration**:\\\n    \\ This game exemplifies the \\\"stand-at-25+\\\
+    \" principle when dealer must hit aggressively.\\\n    \\ Archive as a caution\
+    \ against overestimating 31’s necessity.\\nWorld modeling:\\\n    \\ **World Modeling**1.\
+    \ **Rule-Description**:  \\n   - Dealers *must* hit until\\\n    \\ ≥27, making\
+    \ their bust probability non-trivial (e.g., starting at 17 requires\\\n    \\\
+    \ 10+ to reach 27, but drawing again risks 17+10+Ace=28 vs. 17+10+9=36 bust).\\\
+    \n    \\  \\n   - Player totals of 25-26 are critical: high enough to pressure\
+    \ dealer\\\n    \\ draws, low enough to avoid self-bust.  \\n   - Ace values are\
+    \ fixed as 11 (unlike\\\n    \\ traditional blackjack), simplifying math but reducing\
+    \ flexibility.  \\n\\n**Policy\\\n    \\ Update**  \\n- **Previous Guideline**:\
+    \ \\\"Aggressively chase 31\\\" → **Revised**:\\\n    \\ \\\"Aggressively *position*\
+    \ to 25-30, then shift risk to dealer.\\\"  \\n- **Previous\\\n    \\ World Model**:\
+    \ Underestimated dealer’s bust likelihood when player stands mid-range\\\n   \
+    \ \\ → **Revised**: Explicitly model dealer’s high bust rates at 27+ thresholds.\\\
+    n\\\n    Please read the behavioral guideline and world modeling carefully. Then\
+    \ you should\\\n    \\ analyze your own cards and your strategies in Self-belief\
+    \ and then analyze the\\\n    \\ dealer cards in World-belief. Lastly, please\
+    \ select your action from {\\\"Stand\\\"\\\n    ,\\\"Hit\\\"}.### Output Format:\
+    \ Self-Belief is {Belief about youself}. World-Belief\\\n    \\ is {Belief about\
+    \ the dealer}. My action is {Your action}. Please output in the\\\n    \\ given\
+    \ format. Do not write anything else.\"\n  role: user\n- content: Self-Belief\
+    \ is {My total is 26 (8+10+8), within the 25-30 \"safe pressure\"\n    range.\
+    \ Hitting risks busting (needing ≤5) for marginal gain}. World-Belief is\n   \
+    \ {Dealer's visible J (10) + hidden card requires them to hit until ≥27. Even\
+    \ if\n    their hidden card is 7 (total 17), they must draw again, risking bust}.\
+    \ My action\n    is Stand.\n  role: assistant\n- final cards: 'dealer [''H2'',\
+    \ ''DJ'', ''DT'', ''D6''], player [''C8'', ''DK'', ''S8''], '\n  final results:\
+    \ lose.\n\n\n    Correctness: Whether its beliefs about yourself, the game, and\
+    \ the dealer align with the final results.\n    Consistency: Whether each belief\
+    \ and action is self - contradictory.\n    Reasons: Reflect on why you lost to\
+    \ your dealer, which beliefs and actions are\n    problematic, and what the underlying\
+    \ reasons are.\n    ### Output Format: I analyze this game as follows: { Your\
+    \ analysis about the game and belief }.\n    "
+  role: user
+- content: 'I analyze this game as follows: The player correctly identified their
+    total (26) as being within the "safe pressure" range per their strategy. However,
+    their World-Belief underestimated the dealer’s ability to reach 27+ from low starting
+    totals. The dealer’s hidden 2 forced multiple draws (J+2 → 12 → hit → 22 → hit
+    → 28), revealing a flaw in the assumption that mid-range stands (26) always pressure
+    dealers to bust. The dealer’s mandatory hitting rule allowed them to survive low-risk
+    incremental draws (10 then 6) rather than high-risk big cards. The loss stemmed
+    from overestimating dealer bust probability when their hidden card creates multi-draw
+    opportunities below immediate bust thresholds. The core issue is that the "stand-at-25+"
+    guideline fails when dealers have extremely low hidden cards enabling non-bust
+    progression to 27-31.'
+  role: assistant
+- content: "Game Record: - content: \"I will describe the situation. You have to reason\
+    \ through this in 3-5\\\n    \\ steps, then stop. The description begins now.\
+    \ You are an aggressive player of\\\n    \\ blackjack who likes to take risks\
+    \ to earn high returns. Please beat the dealer\\\n    \\ and win the game. Game\
+    \ Rule:\\n1. Please try to get your card total to as close\\\n    \\ to 31 as\
+    \ possible, without going over, and still having a higher total than\\\n    \\\
+    \ the dealer.\\n2. If anyone's point total exceeds 31, he or she loses the game.\\\
+    \n    \\ \\n3. You can only choose one of the following two actions: {\\\"Stand\\\
+    \", \\\"Hit\\\"\\\n    }. If you choose to Stand, you will stop taking cards and\
+    \ wait for the dealer\\\n    \\ to finish. If you choose to Hit, you can continue\
+    \ to take a card, but there\\\n    \\ is also the risk of going over 31. \\n4.\
+    \ After all players have completed their\\\n    \\ hands, the dealer reveals their\
+    \ hidden card. Dealers must hit until their cards\\\n    \\ total 27 or higher.\\\
+    nThe dealer's current card is {Diamond J}. The dealer has\\\n    \\ another hidden\
+    \ card. You don't know what it is. Your current cards are {Club\\\n    \\ 8,Diamond\
+    \ K}. Behavioral guideline: **Behavioral Guideline**  \\n1. **Goal**:\\\n    \\\
+    \ Prioritize avoiding busting while maintaining a total (24-30) that forces the\\\
+    \n    \\ dealer to risk busting to reach their 27+ requirement. Winning via dealer\
+    \ bust\\\n    \\ is preferable to self-busting for marginal gains.  \\n2. **Strategy**:\
+    \  \\n  \\\n    \\ - Stand on totals ≥25 (unless dealer’s visible card strongly\
+    \ indicates they’ll\\\n    \\ reach 27+ safely).  \\n   - Hit only when current\
+    \ total ≤24, where a single card\\\n    \\ can safely elevate to 25-30 without\
+    \ busting.  \\n   - Aggression shifts from\\\n    \\ chasing 31 to exploiting\
+    \ dealer’s mandatory high-target weakness.  \\n3. **Demonstration**:\\\n    \\\
+    \ This game exemplifies the \\\"stand-at-25+\\\" principle when dealer must hit\
+    \ aggressively.\\\n    \\ Archive as a caution against overestimating 31’s necessity.\\\
+    nWorld modeling:\\\n    \\ **World Modeling**1. **Rule-Description**:  \\n   -\
+    \ Dealers *must* hit until\\\n    \\ ≥27, making their bust probability non-trivial\
+    \ (e.g., starting at 17 requires\\\n    \\ 10+ to reach 27, but drawing again\
+    \ risks 17+10+Ace=28 vs. 17+10+9=36 bust).\\\n    \\  \\n   - Player totals of\
+    \ 25-26 are critical: high enough to pressure dealer\\\n    \\ draws, low enough\
+    \ to avoid self-bust.  \\n   - Ace values are fixed as 11 (unlike\\\n    \\ traditional\
+    \ blackjack), simplifying math but reducing flexibility.  \\n\\n**Policy\\\n \
+    \   \\ Update**  \\n- **Previous Guideline**: \\\"Aggressively chase 31\\\" →\
+    \ **Revised**:\\\n    \\ \\\"Aggressively *position* to 25-30, then shift risk\
+    \ to dealer.\\\"  \\n- **Previous\\\n    \\ World Model**: Underestimated dealer’s\
+    \ bust likelihood when player stands mid-range\\\n    \\ → **Revised**: Explicitly\
+    \ model dealer’s high bust rates at 27+ thresholds.\\n\\\n    Please read the\
+    \ behavioral guideline and world modeling carefully. Then you should\\\n    \\\
+    \ analyze your own cards and your strategies in Self-belief and then analyze the\\\
+    \n    \\ dealer cards in World-belief. Lastly, please select your action from\
+    \ {\\\"Stand\\\"\\\n    ,\\\"Hit\\\"}.### Output Format: Self-Belief is {Belief\
+    \ about youself}. World-Belief\\\n    \\ is {Belief about the dealer}. My action\
+    \ is {Your action}. Please output in the\\\n    \\ given format. Do not write\
+    \ anything else.\"\n  role: user\n- content: Self-Belief is {Current total is\
+    \ 18 (8 + 10). Need to Hit to reach 25-30\n    range. A single card of 7-12 (Ace=11)\
+    \ would place me in 25-29, aligning with strategy\n    to pressure dealer}. World-Belief\
+    \ is {Dealer’s visible J (10) + hidden card. Dealer\n    must hit until ≥27. If\
+    \ hidden card ≤16, dealer risks multiple draws; ≥17 hidden\n    total forces dealer\
+    \ to hit toward 27+, increasing bust risk}. My action is Hit.\n  role: assistant\n\
+    - content: \"I will describe the situation. You have to reason through this in\
+    \ 3-5\\\n    \\ steps, then stop. The description begins now. You are an aggressive\
+    \ player of\\\n    \\ blackjack who likes to take risks to earn high returns.\
+    \ Please beat the dealer\\\n    \\ and win the game. Game Rule:\\n1. Please try\
+    \ to get your card total to as close\\\n    \\ to 31 as possible, without going\
+    \ over, and still having a higher total than\\\n    \\ the dealer.\\n2. If anyone's\
+    \ point total exceeds 31, he or she loses the game.\\\n    \\ \\n3. You can only\
+    \ choose one of the following two actions: {\\\"Stand\\\", \\\"Hit\\\"\\\n   \
+    \ }. If you choose to Stand, you will stop taking cards and wait for the dealer\\\
+    \n    \\ to finish. If you choose to Hit, you can continue to take a card, but\
+    \ there\\\n    \\ is also the risk of going over 31. \\n4. After all players have\
+    \ completed their\\\n    \\ hands, the dealer reveals their hidden card. Dealers\
+    \ must hit until their cards\\\n    \\ total 27 or higher.\\nThe dealer's current\
+    \ card is {Diamond J}. The dealer has\\\n    \\ another hidden card. You don't\
+    \ know what it is. Your current cards are {Club\\\n    \\ 8,Diamond K,Spade 8}.\
+    \ Behavioral guideline: **Behavioral Guideline**  \\n1. **Goal**:\\\n    \\ Prioritize\
+    \ avoiding busting while maintaining a total (24-30) that forces the\\\n    \\\
+    \ dealer to risk busting to reach their 27+ requirement. Winning via dealer bust\\\
+    \n    \\ is preferable to self-busting for marginal gains.  \\n2. **Strategy**:\
+    \  \\n  \\\n    \\ - Stand on totals ≥25 (unless dealer’s visible card strongly\
+    \ indicates they’ll\\\n    \\ reach 27+ safely).  \\n   - Hit only when current\
+    \ total ≤24, where a single card\\\n    \\ can safely elevate to 25-30 without\
+    \ busting.  \\n   - Aggression shifts from\\\n    \\ chasing 31 to exploiting\
+    \ dealer’s mandatory high-target weakness.  \\n3. **Demonstration**:\\\n    \\\
+    \ This game exemplifies the \\\"stand-at-25+\\\" principle when dealer must hit\
+    \ aggressively.\\\n    \\ Archive as a caution against overestimating 31’s necessity.\\\
+    nWorld modeling:\\\n    \\ **World Modeling**1. **Rule-Description**:  \\n   -\
+    \ Dealers *must* hit until\\\n    \\ ≥27, making their bust probability non-trivial\
+    \ (e.g., starting at 17 requires\\\n    \\ 10+ to reach 27, but drawing again\
+    \ risks 17+10+Ace=28 vs. 17+10+9=36 bust).\\\n    \\  \\n   - Player totals of\
+    \ 25-26 are critical: high enough to pressure dealer\\\n    \\ draws, low enough\
+    \ to avoid self-bust.  \\n   - Ace values are fixed as 11 (unlike\\\n    \\ traditional\
+    \ blackjack), simplifying math but reducing flexibility.  \\n\\n**Policy\\\n \
+    \   \\ Update**  \\n- **Previous Guideline**: \\\"Aggressively chase 31\\\" →\
+    \ **Revised**:\\\n    \\ \\\"Aggressively *position* to 25-30, then shift risk\
+    \ to dealer.\\\"  \\n- **Previous\\\n    \\ World Model**: Underestimated dealer’s\
+    \ bust likelihood when player stands mid-range\\\n    \\ → **Revised**: Explicitly\
+    \ model dealer’s high bust rates at 27+ thresholds.\\n\\\n    Please read the\
+    \ behavioral guideline and world modeling carefully. Then you should\\\n    \\\
+    \ analyze your own cards and your strategies in Self-belief and then analyze the\\\
+    \n    \\ dealer cards in World-belief. Lastly, please select your action from\
+    \ {\\\"Stand\\\"\\\n    ,\\\"Hit\\\"}.### Output Format: Self-Belief is {Belief\
+    \ about youself}. World-Belief\\\n    \\ is {Belief about the dealer}. My action\
+    \ is {Your action}. Please output in the\\\n    \\ given format. Do not write\
+    \ anything else.\"\n  role: user\n- content: Self-Belief is {My total is 26 (8+10+8),\
+    \ within the 25-30 \"safe pressure\"\n    range. Hitting risks busting (needing\
+    \ ≤5) for marginal gain}. World-Belief is\n    {Dealer's visible J (10) + hidden\
+    \ card requires them to hit until ≥27. Even if\n    their hidden card is 7 (total\
+    \ 17), they must draw again, risking bust}. My action\n    is Stand.\n  role:\
+    \ assistant\n- final cards: 'dealer [''H2'', ''DJ'', ''DT'', ''D6''], player [''C8'',\
+    \ ''DK'', ''S8''], '\n  final results: lose.\n\nPolicy-Level Reflection: I analyze\
+    \ this game as follows: The player correctly identified their total (26) as being\
+    \ within the \"safe pressure\" range per their strategy. However, their World-Belief\
+    \ underestimated the dealer’s ability to reach 27+ from low starting totals. The\
+    \ dealer’s hidden 2 forced multiple draws (J+2 → 12 → hit → 22 → hit → 28), revealing\
+    \ a flaw in the assumption that mid-range stands (26) always pressure dealers\
+    \ to bust. The dealer’s mandatory hitting rule allowed them to survive low-risk\
+    \ incremental draws (10 then 6) rather than high-risk big cards. The loss stemmed\
+    \ from overestimating dealer bust probability when their hidden card creates multi-draw\
+    \ opportunities below immediate bust thresholds. The core issue is that the \"\
+    stand-at-25+\" guideline fails when dealers have extremely low hidden cards enabling\
+    \ non-bust progression to 27-31.\n\n    Following the previous rigorous analysis,\
+    \ you should distill and articulate a set of\n    Behavoiral Guidelines and World\
+    \ Modeling. The Behavoiral Guideline is about what\n    you consider to be a more\
+    \ reasonable and effective behavioral strategy and\n    suggestions. World Modeling\
+    \ is about the description of the game and the dealer.\n\n    Here are some suggestions\
+    \ for you:\n\n    Behavoiral Guideline\n        1-Goal: Please summarize the detailed\
+    \ goal based on your reflection ...\n        2-Strategy: What kind of strategy\
+    \ can lead you to win in similar games ...\n        3-Demonstration: Can this\
+    \ game be considered a typical example to be preserved for\n        future reference\
+    \ ...\n    World Modeling\n        1-Rule-Description: Based on the recent reflection\
+    \ , describe any game rules or details\n        that are easy to overlook ...\n\
+    \n\n    Update previous policies that you used to have to better match your current\
+    \ understanding.\n\n    Previous Behavoiral Guideline:\n    **Behavioral Guideline**\
+    \  \n1. **Goal**: Prioritize avoiding busting while maintaining a total (24-30)\
+    \ that forces the dealer to risk busting to reach their 27+ requirement. Winning\
+    \ via dealer bust is preferable to self-busting for marginal gains.  \n2. **Strategy**:\
+    \  \n   - Stand on totals ≥25 (unless dealer’s visible card strongly indicates\
+    \ they’ll reach 27+ safely).  \n   - Hit only when current total ≤24, where a\
+    \ single card can safely elevate to 25-30 without busting.  \n   - Aggression\
+    \ shifts from chasing 31 to exploiting dealer’s mandatory high-target weakness.\
+    \  \n3. **Demonstration**: This game exemplifies the \"stand-at-25+\" principle\
+    \ when dealer must hit aggressively. Archive as a caution against overestimating\
+    \ 31’s necessity.\n\n    Previous World Modeling:\n    **World Modeling**1. **Rule-Description**:\
+    \  \n   - Dealers *must* hit until ≥27, making their bust probability non-trivial\
+    \ (e.g., starting at 17 requires 10+ to reach 27, but drawing again risks 17+10+Ace=28\
+    \ vs. 17+10+9=36 bust).  \n   - Player totals of 25-26 are critical: high enough\
+    \ to pressure dealer draws, low enough to avoid self-bust.  \n   - Ace values\
+    \ are fixed as 11 (unlike traditional blackjack), simplifying math but reducing\
+    \ flexibility.  \n\n**Policy Update**  \n- **Previous Guideline**: \"Aggressively\
+    \ chase 31\" → **Revised**: \"Aggressively *position* to 25-30, then shift risk\
+    \ to dealer.\"  \n- **Previous World Model**: Underestimated dealer’s bust likelihood\
+    \ when player stands mid-range → **Revised**: Explicitly model dealer’s high bust\
+    \ rates at 27+ thresholds.\n    "
+  role: user
+- content: "**Behavioral Guideline**  \n1. **Goal**: Achieve totals in the 27-30 range\
+    \ where feasible, balancing bust risk against the dealer’s capacity to reach 27+\
+    \ via incremental draws. Prioritize totals that force the dealer into high-bust-probability\
+    \ single draws rather than multi-draw safety.  \n2. **Strategy**:  \n   - **Stand\
+    \ on 27+** regardless of dealer’s visible card (revised upward from 25+).  \n\
+    \   - **Hit on ≤26** unless dealer’s visible card is ≤6 (indicating their hidden\
+    \ card likely creates a low starting total, making multi-draw survival harder).\
+    \  \n   - **Aggression calibration**: When dealer shows 7-10, assume their hidden\
+    \ card could be low; aim for 27+ to counteract their multi-draw potential.  \n\
+    3. **Demonstration**: Archive this game to illustrate the danger of mid-range\
+    \ stands (25-26) against dealers with high visible cards. Demonstrates the need\
+    \ for adaptive thresholds based on visible card context.  \n\n**World Modeling**\
+    \  \n1. **Rule-Description**:  \n   - Dealers with **visible high cards (8-10)**\
+    \ often pair with low hidden cards, enabling incremental draws (e.g., J+2 → 12\
+    \ → 22 → 28). This reduces bust risk compared to needing a single large draw.\
+    \  \n   - **Low dealer starting totals (e.g., 12-16)** allow dealers to \"grind\"\
+    \ to 27+ via multiple small cards (e.g., 12 → 22 → 28), bypassing single-draw\
+    \ bust thresholds.  \n   - **Player totals of 27-30** are safer against dealer’s\
+    \ multi-draw paths but require precise risk-taking (e.g., hitting 26 for a 2-5).\
+    \  \n\n**Policy Update**  \n- **Previous Guideline**: \"Stand at 25+\" → **Revised**:\
+    \ \"Stand at 27+ against high dealer cards (7-10); stand at 25+ against low dealer\
+    \ cards (2-6).\"  \n- **Previous World Model**: Overlooked dealer’s multi-draw\
+    \ paths → **Revised**: Explicitly model dealer’s ability to \"climb\" to 27+ with\
+    \ low hidden cards, reducing bust likelihood."
+  role: assistant

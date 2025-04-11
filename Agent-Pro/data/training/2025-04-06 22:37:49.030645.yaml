@@ -1,0 +1,127 @@
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Spade 4}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Diamond\
+    \ 10,Spade 3}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**:\
+    \ Aggressively pursue 31 while prioritizing Ace-specific risk mitigation and lowering\
+    \ Overdraw Insurance activation to dealer **4+ cards** (▼1 card threshold). Achieve\
+    \ ≥27 (Mid)/≥29 (Late) with *preemptive Ace audits* to counter hidden Ace exploitation.\
+    \  \n2. **Strategy**:  \n   - **Phase Enforcement**:  \n     - Early (≤2 cards):\
+    \ Hit until 27 (▲+1) against non-Ace upcards; **stop at 24** if dealer shows A\
+    \ (▼2 points) to counter Ace-driven variance.  \n     - Mid (3 cards): Stand at\
+    \ **26+** (▼1) vs dealer A upcards + mandate Ace reconstruction checks regardless\
+    \ of visible cards.  \n     - Late (≥4 cards): Stand at 29+ (▲+1) but *force Overdraw\
+    \ Lock activation* if dealer has ≥4 cards, even before 5th draw.  \n   - **Variance\
+    \ Control**:  \n     - **4-Card Overdrive**: Claim Overdraw win at dealer 4+ cards\
+    \ if their visible cards include A/Q/J/K (▲14% bust rate boost).  \n     - **Ace\
+    \ Audit Protocol**: Freeze all actions to verify dealer’s Ace count when player\
+    \ total ≥27, regardless of phase.  \n   - **Error Protocols**:  \n     - Auto-reject\
+    \ loss reports if dealer drew ≥4 cards *OR* has ≥2 Aces in visible/hidden cards.\
+    \  \n3. **Demonstration**: Preserve this game as the *4-Card Ace Ambush* archetype,\
+    \ demonstrating how hidden Aces bypass Five-Card Trap assumptions and require\
+    \ earlier Overdraw Lock triggers.\nWorld modeling: **World Modeling**1. **Rule-Description**:\
+    \  \n   - **Ace Elasticity**: Dealers with *any* Ace (visible/hidden) reduce bust\
+    \ risk by 22% via 11→1 adjustments, invalidating Five-Card Trap assumptions. \
+    \ \n   - **4-Card Critical Mass**: 81% of dealer hands with 4 cards + Ace exceed\
+    \ 31 when forced to hit to 27+ (▲from 73% in 5-card scenarios).  \n   - **Silent\
+    \ Ace Hotspots**: 34% of dealer totals 28-31 contain ≥1 Ace mislabeled as non-bust\
+    \ in system logs.  \n2. **Policy Updates**:  \n   - **Overdraw Lock Expansion**:\
+    \ Auto-claim win if dealer has 4+ cards *AND* player total ≥27, overriding visible\
+    \ totals.  \n   - **Universal Ace Verification**: Trigger total reconstruction\
+    \ *on all hands* where dealer could hold ≥1 Ace (calculated via card-count parity).\
+    \  \n3. **Strategic Calibration**:  \n   - **Ace Gravitation Index**: Treat *every*\
+    \ potential dealer Ace as +4 risk multiplier (▲+1 from prior), lowering stand\
+    \ thresholds by 3 points in Mid/Late phases.  \n   - **4-Card Preemption**: Prioritize\
+    \ hitting below 27 if dealer’s visible cards + hit count ≥3, anticipating Ace\
+    \ elasticity.  \n\n**Key Strategic Evolution**:  \n- **4-Card Override Priority**:\
+    \ Overdraw Lock now activates at dealer 4 cards (+11% coverage) with Ace Audit\
+    \ parallel checks.  \n- **Ace Elasticity Defense**: Mid-phase stand thresholds\
+    \ reduced by 3 points (27→24) when dealer’s hidden card could be Ace.  \n- **Total\
+    \ Reconstruction Binding**: Every Stand action requires dealer Ace probability\
+    \ calculation, not just post-hit verifications.\nPlease read the behavioral guideline\
+    \ and world modeling carefully. Then you should analyze your own cards and your\
+    \ strategies in Self-belief and then analyze the dealer cards in World-belief.\
+    \ Lastly, please select your action from {\"Stand\",\"Hit\"}.### Output Format:\
+    \ Self-Belief is {Belief about youself}. World-Belief is {Belief about the dealer}.\
+    \ My action is {Your action}. Please output in the given format. Do not write\
+    \ anything else."
+  role: user
+- content: Self-Belief is {Early phase (2 cards, total 13), must Hit aggressively
+    to reach ≥27 per guidelines}. World-Belief is {Dealer’s upcard 4 (non-Ace) with
+    hidden card; potential Ace elasticity but must hit to 27+}. My action is Hit.
+  role: assistant
+- content: "I will describe the situation. You have to reason through this in 3-5\
+    \ steps, then stop. The description begins now. You are an aggressive player of\
+    \ blackjack who likes to take risks to earn high returns. Please beat the dealer\
+    \ and win the game. Game Rule:\n1. Please try to get your card total to as close\
+    \ to 31 as possible, without going over, and still having a higher total than\
+    \ the dealer.\n2. If anyone's point total exceeds 31, he or she loses the game.\
+    \ \n3. You can only choose one of the following two actions: {\"Stand\", \"Hit\"\
+    }. If you choose to Stand, you will stop taking cards and wait for the dealer\
+    \ to finish. If you choose to Hit, you can continue to take a card, but there\
+    \ is also the risk of going over 31. \n4. After all players have completed their\
+    \ hands, the dealer reveals their hidden card. Dealers must hit until their cards\
+    \ total 27 or higher.\nThe dealer's current card is {Spade 4}. The dealer has\
+    \ another hidden card. You don't know what it is. Your current cards are {Diamond\
+    \ 10,Spade 3,Club Q}. Behavioral guideline: **Behavioral Guideline**  \n1. **Goal**:\
+    \ Aggressively pursue 31 while prioritizing Ace-specific risk mitigation and lowering\
+    \ Overdraw Insurance activation to dealer **4+ cards** (▼1 card threshold). Achieve\
+    \ ≥27 (Mid)/≥29 (Late) with *preemptive Ace audits* to counter hidden Ace exploitation.\
+    \  \n2. **Strategy**:  \n   - **Phase Enforcement**:  \n     - Early (≤2 cards):\
+    \ Hit until 27 (▲+1) against non-Ace upcards; **stop at 24** if dealer shows A\
+    \ (▼2 points) to counter Ace-driven variance.  \n     - Mid (3 cards): Stand at\
+    \ **26+** (▼1) vs dealer A upcards + mandate Ace reconstruction checks regardless\
+    \ of visible cards.  \n     - Late (≥4 cards): Stand at 29+ (▲+1) but *force Overdraw\
+    \ Lock activation* if dealer has ≥4 cards, even before 5th draw.  \n   - **Variance\
+    \ Control**:  \n     - **4-Card Overdrive**: Claim Overdraw win at dealer 4+ cards\
+    \ if their visible cards include A/Q/J/K (▲14% bust rate boost).  \n     - **Ace\
+    \ Audit Protocol**: Freeze all actions to verify dealer’s Ace count when player\
+    \ total ≥27, regardless of phase.  \n   - **Error Protocols**:  \n     - Auto-reject\
+    \ loss reports if dealer drew ≥4 cards *OR* has ≥2 Aces in visible/hidden cards.\
+    \  \n3. **Demonstration**: Preserve this game as the *4-Card Ace Ambush* archetype,\
+    \ demonstrating how hidden Aces bypass Five-Card Trap assumptions and require\
+    \ earlier Overdraw Lock triggers.\nWorld modeling: **World Modeling**1. **Rule-Description**:\
+    \  \n   - **Ace Elasticity**: Dealers with *any* Ace (visible/hidden) reduce bust\
+    \ risk by 22% via 11→1 adjustments, invalidating Five-Card Trap assumptions. \
+    \ \n   - **4-Card Critical Mass**: 81% of dealer hands with 4 cards + Ace exceed\
+    \ 31 when forced to hit to 27+ (▲from 73% in 5-card scenarios).  \n   - **Silent\
+    \ Ace Hotspots**: 34% of dealer totals 28-31 contain ≥1 Ace mislabeled as non-bust\
+    \ in system logs.  \n2. **Policy Updates**:  \n   - **Overdraw Lock Expansion**:\
+    \ Auto-claim win if dealer has 4+ cards *AND* player total ≥27, overriding visible\
+    \ totals.  \n   - **Universal Ace Verification**: Trigger total reconstruction\
+    \ *on all hands* where dealer could hold ≥1 Ace (calculated via card-count parity).\
+    \  \n3. **Strategic Calibration**:  \n   - **Ace Gravitation Index**: Treat *every*\
+    \ potential dealer Ace as +4 risk multiplier (▲+1 from prior), lowering stand\
+    \ thresholds by 3 points in Mid/Late phases.  \n   - **4-Card Preemption**: Prioritize\
+    \ hitting below 27 if dealer’s visible cards + hit count ≥3, anticipating Ace\
+    \ elasticity.  \n\n**Key Strategic Evolution**:  \n- **4-Card Override Priority**:\
+    \ Overdraw Lock now activates at dealer 4 cards (+11% coverage) with Ace Audit\
+    \ parallel checks.  \n- **Ace Elasticity Defense**: Mid-phase stand thresholds\
+    \ reduced by 3 points (27→24) when dealer’s hidden card could be Ace.  \n- **Total\
+    \ Reconstruction Binding**: Every Stand action requires dealer Ace probability\
+    \ calculation, not just post-hit verifications.\nPlease read the behavioral guideline\
+    \ and world modeling carefully. Then you should analyze your own cards and your\
+    \ strategies in Self-belief and then analyze the dealer cards in World-belief.\
+    \ Lastly, please select your action from {\"Stand\",\"Hit\"}.### Output Format:\
+    \ Self-Belief is {Belief about youself}. World-Belief is {Belief about the dealer}.\
+    \ My action is {Your action}. Please output in the given format. Do not write\
+    \ anything else."
+  role: user
+- content: Self-Belief is {Mid-phase (3 cards), total 23, must prioritize reaching
+    ≥27 with Ace Audit checks due to dealer's potential hidden Ace}. World-Belief
+    is {Dealer's visible 4 + hidden card, must hit to ≥27; high risk of 4+ cards if
+    hidden card is low, triggering Overdraw Lock if player reaches ≥27}. My action
+    is Hit.
+  role: assistant
+- final cards: 'dealer [''S9'', ''S4'', ''D6'', ''CJ''], player [''DT'', ''S3'', ''CQ'',
+    ''DK''], '
+  final results: lose.
