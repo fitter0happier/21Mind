@@ -2,14 +2,6 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-## Description
+## Overview
 
-An LLM agent that is capable of playing Blackjack.
-
-## Technologies Used
-
-This project is built using:
-
-- **Frontend:** 
-- **Backend:** 
-- **Other Tools:** Git
+An LLM agent that is capable of playing Blackjack. Tested on DeepSeek R1.
